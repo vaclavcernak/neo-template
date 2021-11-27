@@ -1,9 +1,9 @@
 $accordion-padding-y:                     1rem;
 $accordion-padding-x:                     1.25rem;
 $accordion-color:                         $c-text;
-$accordion-bg:                            #ffffff;
+$accordion-bg:                            $c-content;
 $accordion-border-width:                  1px;
-$accordion-border-color:                  #e2e2e2;
+$accordion-border-color:                  $c-wrapper-border;
 $accordion-border-radius:                 5px;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
 
@@ -15,7 +15,7 @@ $accordion-button-padding-x:              $accordion-padding-x;
 $accordion-button-color:                  $c-text;
 $accordion-button-bg:                     $accordion-bg;
 $accordion-transition:                    $btn-transition, border-radius .15s ease;
-$accordion-button-active-bg:              #ffffff;
+$accordion-button-active-bg:              $c-content;
 $accordion-button-active-color:           $c-text;
 
 $accordion-button-focus-border-color:     $c-text;
@@ -51,7 +51,7 @@ $accordion-icon-transform:                rotate(-180deg);
         padding-bottom: 13px;
       }
       &:hover {
-        background-color: #ecf5fb;
+        background-color: $c-accordion-hover;
         .heading {
           color: $c-primary;
         }

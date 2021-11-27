@@ -84,7 +84,7 @@
       color: $c-text;
       text-align: center;
       &:hover {
-        background-color: #e8e8e8;
+        background-color: $c-wrapper-border;
       }
 
       @include media-breakpoint-down(xxl) {

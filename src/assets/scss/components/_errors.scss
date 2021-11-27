@@ -132,9 +132,9 @@ $runProgressTimer: 8.5s;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  border: 1px solid #c4deef;
-  background-color: #ecf5fb;
-
+  color: $c-info-strip-text;
+  border: 1px solid $c-info-strip-border;
+  background-color: $c-info-strip-bg;
   @include media-breakpoint-down(md) {
     padding: 10px 15px;
   }

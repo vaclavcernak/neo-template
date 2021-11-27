@@ -15,10 +15,11 @@
     padding: 10px 18px;
     border-radius: 5px 0 0 5px;
     border: 1px solid $c-secondary;
-    background-color: $c-text-input;
+    background-color: $c-input-bg;
+    color: $c-text;
     height: 46px;
     outline: none;
-    @include placeholder { color: $c-secondary; }
+    @include placeholder { color: $c-placeholder; }
   }
 
   &__btn {
@@ -51,13 +52,15 @@
 .form-control {
   display: block;
   width: 100%;
-  border: 1px solid $c-secondary;
+  border: 1px solid $c-input-border;
+  background-color: $c-input-bg;
+  color: $c-text;
   border-radius: 5px;
   padding: 15px 20px;
   font-size: 16px;
   margin-bottom: 15px;
   outline-color: $c-primary;
-  @include placeholder { color: #b9b9b9; }
+  @include placeholder { color: $c-placeholder; }
 
   &:focus {
 
@@ -65,7 +68,8 @@
 
   &--submit {
     background-color: $c-primary;
-    color: #ffffff;
+    color: $c-input-bg;
+    font-weight: $fw-medium;
     border-radius: 5px;
     display: inline-block;
     cursor: pointer;
@@ -112,7 +116,7 @@
     vertical-align: text-top;
     width: 20px;
     height: 20px;
-    background: white;
+    background: transparent;
     border: 2px solid $c-primary;
     border-radius: 5px;
     position: absolute;
@@ -178,9 +182,9 @@
 }
 
 .select-selected {
-  background-color: #ffffff;
+  background-color: $c-input-bg;
   border-radius: 5px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $c-input-border;
 }
 
 /* Style the arrow inside the select element: */
@@ -202,16 +206,16 @@
 .select-items div,.select-selected {
   padding: 10px 40px 10px 15px;
   cursor: pointer;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $c-input-border;
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: #ffffff;
-  border-top: 1px solid #e5e5e5;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
+  background-color: $c-input-bg;
+  border-top: 1px solid $c-input-border;
+  border-left: 1px solid $c-input-border;
+  border-right: 1px solid $c-input-border;
   top: calc(100% - 2px);
   left: 0;
   right: 0;
@@ -273,7 +277,7 @@
   }
 
   .select-selected {
-    border: 1px solid $c-secondary;
+    border: 1px solid $c-input-border;
     @include media-breakpoint-up(xl) {
       width: 430px;
     }

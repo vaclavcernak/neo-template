@@ -1,5 +1,5 @@
 .modal {
-  background-color: #ffffff;
+  background-color: $c-content;
   max-width: 100%;
   width: 780px;
   margin: 0 auto;
@@ -63,8 +63,8 @@
           }
         }
         &--right {
-          background-color: $c-primary;
-          color: #ffffff;
+          background-color: $c-modal-half-bg;
+          color: $c-header-text;
           padding: 85px 40px 30px;
           @include media-breakpoint-up(sm) {
             width: 40%;
@@ -76,7 +76,7 @@
             padding: 20px;
           }
           a {
-            color: #ffffff;
+            color: $c-header-text;
           }
         }
       }
@@ -84,7 +84,7 @@
 
     .mfp-close {
       @include media-breakpoint-up(sm) {
-        color: #ffffff;
+        color: $c-header-text;
       }
     }
   }
