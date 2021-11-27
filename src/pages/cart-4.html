@@ -1,0 +1,94 @@
+---
+layout: cart
+---
+
+<div class="row">
+    <main class="main-content main-content--cart main-content--cart--with-sidebar row__col">
+        <div class="content-wrapper content-wrapper--wide content-wrapper--cart rounded">
+            <div class="delivery-details row">
+                <div class="delivery-details__item row__col">
+                    <h3 class="delivery-heading">Dodací údaje</h3>
+                    <address>
+                        Jenda Levejhák<br>
+                        Za Úvozem 12<br>
+                        26681 Dolní Dvořiště<br>
+                        Česká republika
+                    </address>
+                </div>
+
+                <div class="delivery-details__item row__col">
+                    <h3 class="delivery-heading">Fakturační údaje</h3>
+                    <address>
+                        1. Investiční společnost, s.r.o.<br>
+                        IČ: 55544222<br>
+                        DIČ: CZ55544222<br>
+                        Za Úvozem 12<br>
+                        26681 Dolní Dvořiště<br>
+                        Česká republika
+                    </address>
+                </div>
+
+                <div class="delivery-details__item row__col">
+                    <h3 class="delivery-heading">Osobní údaje</h3>
+                    <address>
+                        Jenda Levejhák<br>
+                        jenda@levejhak.com<br>
+                        +420 777 555 222
+                    </address>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper content-wrapper--wide content-wrapper--cart rounded">
+            <h3 class="delivery-heading">Doplňkové údaje</h3>
+            <p>Vlastní pole: text</p>
+            <p>Chcete nám něco sdělit? Napište nám to do poznámky:</p>
+            <textarea name="" id="" class="form-control"></textarea>
+        </div>
+
+        <div class="content-wrapper content-wrapper--wide content-wrapper--cart rounded">
+            <h3 class="delivery-heading">Doručení</h3>
+            <div class="delivery-type">
+                <div class="delivery-type__upper">
+                    <div class="delivery-type__main">
+                        <span class="delivery-type__heading">Česká pošta - balík do Balíkovny</span>
+                        <span class="delivery-type__date">Předpokládané datum doručení <span class="delivery-type__date__value">Úterý 23.10.</span></span>
+                    </div>
+                    <div class="delivery-type__desc">
+                        Určíte si adresu, kam chcete balík doručit. Garantujeme doručení následující pracovní den.
+                    </div>
+                    <div class="delivery-type__price">
+                        99 Kč
+                    </div>
+                </div>
+                <div class="delivery-type__bottom">
+                    <div class="info-strip info-strip--small info-strip--no-close">
+                        <div class="info-strip__content">
+                            <div class="info-strip__text"><strong>Vybraná balíkovna:</strong> Benešov u Prahy, Poštovní 478, 25601, Benešov, PSČ: 25601</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper content-wrapper--wide content-wrapper--cart rounded">
+            <h3 class="delivery-heading">Způsob platby</h3>
+            <div class="payment-type">
+                <div class="payment-type__heading">
+                    Platební bránou Comgate
+                </div>
+                <div class="payment-type__desc">
+                    <p>Platební kartou online. Zde bude popis platební metody vyplněný v administraci.</p>
+                </div>
+                <div class="payment-type__price">
+                    ZDARMA
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <aside class="sidebar sidebar--cart sidebar--right row__col">
+        {{> cart__your-order}}
+    </aside>
+</div>

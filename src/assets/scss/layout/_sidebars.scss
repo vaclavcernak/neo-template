@@ -1,0 +1,27 @@
+.sidebar {
+  @include media-breakpoint-only(xxl) {
+    width: 27%;
+  }
+
+  @include media-breakpoint-between(lg,xxl) {
+    width: 30%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &--left {
+      order: 1;
+    }
+    &--right {
+      order: 3;
+    }
+  }
+
+  &--cart {
+    @include media-breakpoint-up(xl) {
+      width: 30%;
+    }
+    @include media-breakpoint-between(lg,xl) {
+      width: 35%;
+    }
+  }
+}

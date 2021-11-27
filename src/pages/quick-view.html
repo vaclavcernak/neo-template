@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<main class="main-content main-content--full row__col">
+    <div class="content-wrapper">
+        {{> sample-content--basic}}
+
+        <a href="#modal-quickview" class="btn btn--primary popup-modal">Klikni pro rychlý náhled produktu</a>
+
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Produkt je skladem. Odesíláme do
+druhého pracovního dne.">
+            Tooltip with HTML
+        </button>
+    </div>
+</main>
+
+{{> modals__quickview}}

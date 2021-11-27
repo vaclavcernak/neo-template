@@ -1,0 +1,47 @@
+.editor {
+  ul,ol {
+    margin: 1rem 0;
+    ul,ol {
+      margin: 0 0 0 2rem;
+    }
+    li {
+      margin: 5px 0;
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        @include neo-icon();
+        content: "\f100";
+        padding-right: 2px;
+        font-size: 20px;
+        color: $c-primary;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: item;
+
+    li {
+      list-style: none;
+      &:before {
+        content: counters(item, ".") ". ";
+        counter-increment: (item);
+      }
+    }
+  }
+
+  a {
+    color: $c-primary;
+    text-decoration: underline;
+    transition: .2s;
+    &:hover {
+      text-decoration: none;
+      color: $c-primary;
+    }
+  }
+}

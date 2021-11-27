@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import 'src/assets/fonts/Neo/scss/styles';
+@import 'abstracts/main';
+@import 'vendors/main';
+@import 'base/main';
+@import 'layout/main';
+@import 'components/main';
+@import 'pages/main';
+
+
+:root {
+  --c-primary: #419ed8;
+  --c-primary-dark: hsl(from var(--c-primary) h s calc(l - 10%));
+  --c-secondary: #464c50;
+  --c-secondary-dark: hsl(from var(--c-secondary) h s calc(l - 10%));
+  --c-content: #ffffff;
+  --c-content-dark: hsl(from var(--c-content) h s calc(l - 10%));
+  --c-background: #fafafa;
+  --c-conversion: #a0c200;
+  --c-conversion-dark: hsl(from var(--c-conversion) h s calc(l - 10%));
+  --c-navigation: #ffffff;
+  --c-text-input: #ffffff;
+  --c-error-warning: #a45100;
+  --c-bg-error-warning: #ffb267;
+  --c-error-success: #5f882a;
+  --c-bg-error-success: #b1de76;
+  --c-error-info: #1d76a3;
+  --c-bg-error-info: #c5e3f5;
+  --c-in-stock: #61b111;
+  --c-not-in-stock: #cb202d;
+
+  --c-text: #535353;
+  --c-text-dark:  hsl(from var(--c-text) h s calc(l - 10%));
+  --c-wrapper-border: #eeeeee;
+  --c-header-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-primary: #64abe2;
+    --c-primary-dark: hsl(from var(--c-primary) h s calc(l - 10%));
+    --c-secondary: #3b4556;
+    --c-secondary-dark: hsl(from var(--c-secondary) h s calc(l - 10%));
+    --c-content: #2c3443;
+    --c-content-dark: hsl(from var(--c-content) h s calc(l - 10%));
+    --c-background: #242b38;
+    --c-conversion: #54964f;
+    --c-conversion-dark: hsl(from var(--c-conversion) h s calc(l - 10%));
+    --c-navigation: #333d4e;
+    --c-text-input: #242b38;
+    --c-error-warning: #7f351d;
+    --c-bg-error-warning: #dc7857;
+    --c-error-success: #88b54d;
+    --c-bg-error-success: #466917;
+    --c-error-info: #166389;
+    --c-bg-error-info: #81b2d0;
+    --c-in-stock: #69bc63;
+    --c-not-in-stock: #ed4754;
+
+    --c-text: #cbd5df;
+    --c-text-dark:  hsl(from var(--c-text) h s calc(l - 10%));
+    --c-wrapper-border: #191f28;
+    --c-header-text: #cbd5df;
+  }
+}

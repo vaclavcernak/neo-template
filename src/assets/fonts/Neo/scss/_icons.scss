@@ -1,0 +1,243 @@
+// Icons
+// -------------------------
+
+.neo-forward:before,
+.neo-back:before,
+.neo-collapse-arrow:before,
+.neo-expand-arrow:before,
+.neo-sell-stock:before,
+.neo-shopping-cart:before,
+.neo-scales:before,
+.neo-male-user:before,
+.neo-share:before,
+.neo-phone:before,
+.neo-mail:before,
+.neo-search:before,
+.neo-error:before,
+.neo-document:before,
+.neo-opened-folder:before,
+.neo-time-machine:before,
+.neo-checkmark:before,
+.neo-basket:before,
+.neo-add-to-basket:before,
+.neo-full-shopping-basket:before,
+.neo-shopping-basket:before,
+.neo-add-to-shopping-basket:before,
+.neo-add-shopping-cart:before,
+.neo-calculator:before,
+.neo-checked-checkbox:before,
+.neo-unchecked-checkbox:before,
+.neo-ok:before,
+.neo-attendance:before,
+.neo-shopping-bag:before,
+.neo-menu:before,
+.neo-money:before,
+.neo-gift:before,
+.neo-credit-card-contactless:before,
+.neo-u-turn-to-left:before,
+.neo-shipped:before,
+.neo-info:before,
+.neo-menu-vertical:before,
+.neo-zoom-in:before,
+.neo-plus--:before,
+.neo-minus-sign:before,
+.neo-info-2:before,
+.neo-edit:before,
+.neo-expand-arrow-2:before,
+.neo-collapse-arrow-2:before,
+.neo-back-2:before,
+.neo-forward-2:before,
+.neo-heart:before,
+.neo-star:before,
+.neo-star-half:before,
+.neo-facebook:before,
+.neo-instagram:before,
+.neo-twitter:before,
+.neo-youtube-logo:before,
+.neo-more:before,
+.neo-tick-box:before,
+.neo-add-shopping-cart-2:before,
+.neo-buy:before,
+.neo-buying:before,
+[data-icons8]:before {
+  @include icons8-font;
+}
+
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
+
+.neo-forward:before {
+  content: $icons8-var-forward;
+}
+.neo-back:before {
+  content: $icons8-var-back;
+}
+.neo-collapse-arrow:before {
+  content: $icons8-var-collapse-arrow;
+}
+.neo-expand-arrow:before {
+  content: $icons8-var-expand-arrow;
+}
+.neo-sell-stock:before {
+  content: $icons8-var-sell-stock;
+}
+.neo-shopping-cart:before {
+  content: $icons8-var-shopping-cart;
+}
+.neo-scales:before {
+  content: $icons8-var-scales;
+}
+.neo-male-user:before {
+  content: $icons8-var-male-user;
+}
+.neo-share:before {
+  content: $icons8-var-share;
+}
+.neo-phone:before {
+  content: $icons8-var-phone;
+}
+.neo-mail:before {
+  content: $icons8-var-mail;
+}
+.neo-search:before {
+  content: $icons8-var-search;
+}
+.neo-error:before {
+  content: $icons8-var-error;
+}
+.neo-document:before {
+  content: $icons8-var-document;
+}
+.neo-opened-folder:before {
+  content: $icons8-var-opened-folder;
+}
+.neo-time-machine:before {
+  content: $icons8-var-time-machine;
+}
+.neo-checkmark:before {
+  content: $icons8-var-checkmark;
+}
+.neo-basket:before {
+  content: $icons8-var-basket;
+}
+.neo-add-to-basket:before {
+  content: $icons8-var-add-to-basket;
+}
+.neo-full-shopping-basket:before {
+  content: $icons8-var-full-shopping-basket;
+}
+.neo-shopping-basket:before {
+  content: $icons8-var-shopping-basket;
+}
+.neo-add-to-shopping-basket:before {
+  content: $icons8-var-add-to-shopping-basket;
+}
+.neo-add-shopping-cart:before {
+  content: $icons8-var-add-shopping-cart;
+}
+.neo-calculator:before {
+  content: $icons8-var-calculator;
+}
+.neo-checked-checkbox:before {
+  content: $icons8-var-checked-checkbox;
+}
+.neo-unchecked-checkbox:before {
+  content: $icons8-var-unchecked-checkbox;
+}
+.neo-ok:before {
+  content: $icons8-var-ok;
+}
+.neo-attendance:before {
+  content: $icons8-var-attendance;
+}
+.neo-shopping-bag:before {
+  content: $icons8-var-shopping-bag;
+}
+.neo-menu:before {
+  content: $icons8-var-menu;
+}
+.neo-money:before {
+  content: $icons8-var-money;
+}
+.neo-gift:before {
+  content: $icons8-var-gift;
+}
+.neo-credit-card-contactless:before {
+  content: $icons8-var-credit-card-contactless;
+}
+.neo-u-turn-to-left:before {
+  content: $icons8-var-u-turn-to-left;
+}
+.neo-shipped:before {
+  content: $icons8-var-shipped;
+}
+.neo-info:before {
+  content: $icons8-var-info;
+}
+.neo-menu-vertical:before {
+  content: $icons8-var-menu-vertical;
+}
+.neo-zoom-in:before {
+  content: $icons8-var-zoom-in;
+}
+.neo-plus--:before {
+  content: $icons8-var-plus--;
+}
+.neo-minus-sign:before {
+  content: $icons8-var-minus-sign;
+}
+.neo-info-2:before {
+  content: $icons8-var-info-2;
+}
+.neo-edit:before {
+  content: $icons8-var-edit;
+}
+.neo-expand-arrow-2:before {
+  content: $icons8-var-expand-arrow-2;
+}
+.neo-collapse-arrow-2:before {
+  content: $icons8-var-collapse-arrow-2;
+}
+.neo-back-2:before {
+  content: $icons8-var-back-2;
+}
+.neo-forward-2:before {
+  content: $icons8-var-forward-2;
+}
+.neo-heart:before {
+  content: $icons8-var-heart;
+}
+.neo-star:before {
+  content: $icons8-var-star;
+}
+.neo-star-half:before {
+  content: $icons8-var-star-half;
+}
+.neo-facebook:before {
+  content: $icons8-var-facebook;
+}
+.neo-instagram:before {
+  content: $icons8-var-instagram;
+}
+.neo-twitter:before {
+  content: $icons8-var-twitter;
+}
+.neo-youtube-logo:before {
+  content: $icons8-var-youtube-logo;
+}
+.neo-more:before {
+  content: $icons8-var-more;
+}
+.neo-tick-box:before {
+  content: $icons8-var-tick-box;
+}
+.neo-add-shopping-cart-2:before {
+  content: $icons8-var-add-shopping-cart-2;
+}
+.neo-buy:before {
+  content: $icons8-var-buy;
+}
+.neo-buying:before {
+  content: $icons8-var-buying;
+}

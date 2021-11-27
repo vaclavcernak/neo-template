@@ -1,0 +1,114 @@
+.breadcrumb {
+  margin: 15px 0;
+  ul {
+    li {
+      display: inline;
+      color: #b9b9b9;
+      font-size: rem(12px);
+      @include media-breakpoint-down(sm) {
+        display: none;
+        &:nth-last-of-type(-n+2) {
+          display: inline;
+        }
+      }
+
+      &:not(:last-child) {
+        &:after {
+          content: ">";
+          color: $c-text;
+          margin-left: 10px;
+          margin-right: 7px;
+        }
+      }
+      a {
+        color: $c-text;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// CART NAVIGATION
+.cart-nav {
+  margin: 15px 0 0;
+
+  &__links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    margin: 2px 30px;
+    @include fluid-type(14px, 20px);
+    color: $c-text;
+    text-transform: uppercase;
+    &.active {
+      color: $c-primary;
+      a {
+        color: $c-primary;
+      }
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      text-transform: initial;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      text-transform: initial;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    a {
+      display: flex;
+      padding: 22px 40px;
+      text-decoration: none;
+      border-radius: 10px;
+      color: $c-text;
+      text-align: center;
+      &:hover {
+        background-color: #e8e8e8;
+      }
+
+      @include media-breakpoint-down(xxl) {
+        padding: 20px 20px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        padding: 10px 0;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__num {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    @include media-breakpoint-down(lg) {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+}

@@ -1,0 +1,71 @@
+.wrapper {
+  margin: 15px 0;
+  flex: 1 0 auto;
+}
+
+.page-title {
+  padding-left: 31px;
+  padding-right: 31px;
+  @include media-breakpoint-down(md) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &--with-sidebar {
+    @include media-breakpoint-only(xxl) {
+      margin-left: calc(27% + 8.5px);
+    }
+    @include media-breakpoint-between(lg,xxl) {
+      margin-left: calc(30% + 8.5px);
+    }
+  }
+}
+
+%content-wrapper {
+  padding: 30px 30px 10px;
+  background-color: $c-content;
+  //@include box-shadow;
+  border: 1px solid $c-wrapper-border;
+  margin-bottom: 20px;
+  @include media-breakpoint-down(md) {
+    padding: 15px 15px 5px;
+  }
+}
+
+.content-wrapper {
+  @extend %content-wrapper;
+
+  &--wide {
+    @include media-breakpoint-up(xxl) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+  }
+
+  &--narrow {
+    padding-right: 10px;
+    padding-left: 10px;
+    @include media-breakpoint-down(xxl) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+
+  &--cart {
+    padding-top: 20px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 15px;
+    }
+  }
+}
+
+.sidebar .content-wrapper {
+  padding: 20px;
+  @include media-breakpoint-down(sm) {
+    padding: 15px;
+  }
+}

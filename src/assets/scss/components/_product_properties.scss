@@ -1,0 +1,107 @@
+.property {
+  margin-bottom: 10px;
+
+  * {
+    transition: .2s;
+  }
+
+  .subheading {
+    font-size: 16px;
+    font-weight: $fw-medium;
+    color: $c-text;
+    margin-bottom: 8px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Color properties
+  &__color {
+    &__item {
+      display: inline-block;
+
+      input {
+        display: none;
+
+        &:checked {
+          + label {
+            box-shadow: 0 0 5px rgba(0,0,0,.3);
+            transform: scale(1.1);
+            &:before {
+              @include neo-icon();
+              content: "\f110";
+              color: #ffffff;
+              text-shadow: 0px 0px 1px #000000;
+            }
+          }
+        }
+      }
+
+      label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #bbbbbb;
+        border-radius: 5px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 5px rgba(0,0,0,.3);
+        }
+      }
+    }
+  }
+
+  // Size properties
+  &__size {
+    &__item {
+      display: inline-block;
+
+      input {
+        display: none;
+
+        &:checked {
+          + label {
+            box-shadow: 0 0 5px rgba(0,0,0,.3);
+            transform: scale(1.1);
+            background-color: $c-primary;
+            color: #ffffff;
+          }
+        }
+        &:disabled {
+          + label {
+            color: #bbbbbb;
+            cursor: default;
+          }
+        }
+      }
+
+      label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #bbbbbb;
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin-right: 8px;
+        margin-bottom: 5px;
+        position: relative;
+        cursor: pointer;
+        padding: 5px 10px;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 5px rgba(0,0,0,.3);
+        }
+      }
+    }
+  }
+}

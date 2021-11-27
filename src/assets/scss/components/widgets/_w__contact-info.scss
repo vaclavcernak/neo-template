@@ -1,0 +1,26 @@
+.widget--contact-info {
+  .name {
+    font-size: 16px;
+    color: $c-text;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  ul {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  i {
+    color: $c-primary;
+    padding-right: 3px;
+    position: relative;
+    top: 2px;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,328 @@
+.required {
+  color: #e60000;
+}
+
+[type="submit"] {
+  &:active {
+    //transform: translateY(5px);
+  }
+}
+
+.input-with-btn {
+  display: flex;
+
+  &__input {
+    padding: 10px 18px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid $c-secondary;
+    background-color: $c-text-input;
+    height: 46px;
+    outline: none;
+    @include placeholder { color: $c-secondary; }
+  }
+
+  &__btn {
+    background-color: $c-secondary;
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: $c-header-text;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include rfs(14px);
+
+    &:hover {
+      background-color: $c-secondary-dark;
+    }
+    &:active {
+      background-color: $c-secondary;
+    }
+
+    i {
+      font-size: 25px;
+    }
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  border: 1px solid $c-secondary;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  outline-color: $c-primary;
+  @include placeholder { color: #b9b9b9; }
+
+  &:focus {
+
+  }
+
+  &--submit {
+    background-color: $c-primary;
+    color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    text-transform: uppercase;
+    //box-shadow: inset 0px -3px 0px $c-primary-dark;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+    &:hover {
+      background-color: $c-primary-dark;
+    }
+    &:active {
+      background-color: $c-primary;
+    }
+  }
+}
+
+// Checkboxes
+
+.checkbox-list {
+  margin: 20px 0;
+  > * {
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    padding: 0;
+    margin-left: 30px;
+    display: block;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid $c-primary;
+    border-radius: 5px;
+    position: absolute;
+    left: -30px;
+    cursor: pointer;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    //background: $c-primary;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    //background: $c-primary;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 9px;
+    background: $c-primary;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+            2px 0 0 $c-primary,
+            4px 0 0 $c-primary,
+            4px -2px 0 $c-primary,
+            4px -4px 0 $c-primary,
+            4px -6px 0 $c-primary,
+            4px -8px 0 $c-primary;
+    transform: rotate(45deg);
+  }
+}
+
+/**** SELECT BOX ****/
+
+/* The container must be positioned relative: */
+.select-wrap {
+  position: relative;
+  select {
+    display: none; /*hide original SELECT element: */
+  }
+}
+
+.select-selected {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  @include neo-icon();
+  content: "\f103";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 25px;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  content: "\f102";
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  padding: 10px 40px 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  top: calc(100% - 2px);
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/**************/
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  @include media-breakpoint-down(xl) {
+    display: block;
+  }
+
+  .label {
+    white-space: nowrap;
+    @include media-breakpoint-only(xxl) {
+      width: 30%;
+      margin-right: 30px;
+      text-align: right;
+    }
+    @include media-breakpoint-only(xl) {
+      width: 20%;
+      margin-right: 30px;
+      text-align: right;
+    }
+    @include media-breakpoint-down(xl) {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .form-control {
+    padding: 10px 20px;
+    margin-bottom: 0;
+    width: 100%;
+    @include media-breakpoint-up(xl) {
+      width: 430px;
+    }
+  }
+
+  .select-selected {
+    border: 1px solid $c-secondary;
+    @include media-breakpoint-up(xl) {
+      width: 430px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/*** RADIO BUTTON ***/
+
+.radio-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked ~ .checkmark {
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid $c-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after {
+      display: none;
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $c-primary;
+    }
+  }
+}

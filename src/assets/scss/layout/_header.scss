@@ -1,0 +1,230 @@
+.top-header {
+  background-color: $c-primary;
+  color: $c-header-text;
+  //padding: 17px 0 22px;
+  @media (prefers-color-scheme: dark) {
+    background-color: $c-content;
+  }
+
+  a {
+    color: $c-header-text;
+    text-decoration: none;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    //align-items: center;
+  }
+
+  .logo {
+    //width: 30%;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    &__top {
+      display: flex;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &__link {
+      display: block;
+      img {
+        float: left;
+        @include media-breakpoint-down(sm) {
+          max-height: 35px;
+        }
+      }
+    }
+
+  }
+
+  .search {
+    //width: 35%;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+
+    .input-with-btn__input {
+      @include media-breakpoint-up(xl) {
+        width: 350px;
+      }
+    }
+
+    .input-with-btn__btn {
+      width: 46px;
+    }
+  }
+
+  .user {
+    //width: 35%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__item {
+
+      display: flex;
+
+      &__wrapper {
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: rgba(255,255,255,.2);
+        }
+
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    // user-login box
+    &__login {
+      &__icon {
+        padding-right: 10px;
+        &:before {
+          @include neo-icon;
+          content: "\f107";
+          font-size: 45px;
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+
+        &__heading {
+          font-size: 18px;
+          font-weight: $fw-medium;
+        }
+
+        &__subheading {
+          font-size: 12px;
+          font-weight: $fw-medium;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    // user-compare box
+    &__compare {
+      &__icon {
+        position: relative;
+        &:before {
+          @include neo-icon;
+          content: "\f106";
+          font-size: 45px;
+        }
+
+        .notify-num {
+          right: -5px;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    // user-basket box
+    &__cart {
+      &__icon {
+        position: relative;
+        &:before {
+          @include neo-icon;
+          content: "\f104";
+          @include fluid-type(30px, 45px);
+        }
+
+        .notify-num {
+          right: -10px;
+        }
+      }
+
+      &__price {
+        padding-left: 18px;
+        font-size: 18px;
+        font-weight: $fw-bold;
+        white-space: nowrap;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  //
+
+  .switcher {
+    font-size: rem(14px);
+    font-weight: $fw-medium;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    &:last-child {
+      margin-right: 10px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid $c-header-text;
+    }
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+
+  .contact {
+    display: inline-block;
+    font-size: rem(14px);
+    margin-bottom: 10px;
+    padding-right: 20px;
+
+    i {
+      position: relative;
+      top: 2px;
+      font-size: 18px;
+    }
+
+    &--menu {
+      ul {
+        li {
+          display: inline-block;
+          &:not(:last-child) {
+            padding-right: 9px;
+            border-right: 1px solid $c-header-text;
+          }
+          &:not(:first-child) {
+            padding-left: 8px;
+          }
+
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

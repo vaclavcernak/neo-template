@@ -1,0 +1,72 @@
+.claims {
+  padding: 40px 0 60px;
+  display: flex;
+  @include media-breakpoint-only(md) {
+    padding: 20px 0 20px;
+  }
+  @include media-breakpoint-down(md) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.claim {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 15px;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-down(md) {
+    text-align: left;
+    margin-bottom: 30px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__icon {
+    color: $c-primary;
+    i {
+      @include fluid-type(4rem, 6rem);
+    }
+    @include media-breakpoint-down(md) {
+      margin-right: 15px;
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__heading {
+    color: $c-primary;
+    font-weight: $fw-bold;
+    //@include rfs(40px);
+    @include fluid-type(26px, 38px);
+    text-transform: uppercase;
+
+    @include media-breakpoint-only(xl) {
+      font-size: 36px;
+    }
+    @include media-breakpoint-only(lg) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-only(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__subheading {
+    color: $c-text;
+    font-weight: $fw-bold;
+    @include fluid-type(16px, 25px);
+    //@include rfs(25px);
+    text-transform: uppercase;
+
+    @include media-breakpoint-only(lg) {
+      font-size: 18px;
+    }
+  }
+}

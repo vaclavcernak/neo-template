@@ -1,0 +1,33 @@
+.tag {
+  display: inline-block;
+  background: $c-primary;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 6px 10px;
+  font-weight: $fw-light;
+  border-radius: 5px;
+  margin-right: 3px;
+  margin-bottom: 6px;
+}
+
+.sticker {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #eb3333;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: $fw-medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+
+  @include media-breakpoint-down(lg) {
+    width: 65px;
+    height: 65px;
+    font-size: 18px;
+  }
+}

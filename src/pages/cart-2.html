@@ -1,0 +1,99 @@
+---
+layout: cart
+---
+
+<div class="row">
+    <main class="main-content main-content--cart main-content--cart--with-sidebar row__col">
+        <div class="content-wrapper content-wrapper--wide content-wrapper--cart rounded">
+            <div class="info-strip">
+                <div class="info-strip__content">
+                    <div class="info-strip__text"><p>Jste-li registrovaný zákazník, můžete se <a href="#">přihlásit</a> a požadované údaje se Vám doplní automaticky</p></div>
+                    <span class="info-strip__close-icon"></span>
+                </div>
+            </div>
+
+            <h2>Osobní údaje</h2>
+
+            <div class="inputs">
+                <div class="input-row">
+                    <label class="label" for="name">Jméno <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="name" name="name" required />
+                </div>
+                <div class="input-row">
+                    <label class="label" for="surname">Příjmení <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="surname" name="surname" required />
+                </div>
+                <div class="input-row">
+                    <label class="label" for="email">E-mail <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="email" name="email" required />
+                </div>
+                <div class="input-row">
+                    <label class="label" for="phone">Telefon <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="phone" name="phone" required />
+                </div>
+                <div class="input-row">
+                    <div class="label"></div>
+                    <div>
+                        <input class="checkbox" id="checkbox-1" type="checkbox" value="value1">
+                        <label for="checkbox-1">Chci se zaregistrovat a souhlasím se <a class="link--dotted" href="#">zpracováním osobních údajů</a></label>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Fakturační údaje</h2>
+
+            <div class="inputs">
+                <div class="input-row">
+                    <div class="label"></div>
+                    <input class="checkbox" id="checkbox-2" type="checkbox" value="value2">
+                    <label for="checkbox-2">Nakupuji na firmu</label>
+                </div>
+                <div class="input-row">
+                    <label class="label" for="street">Ulice, č.p. <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="street" name="street" required />
+                </div>
+                <div class="input-row">
+                    <label class="label" for="zip">PSČ <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="zip" name="zip" required />
+                </div>
+                <div class="input-row">
+                    <label class="label" for="city">Město <span class="required">*</span></label>
+                    <input class="form-control" type="text" id="city" name="city" required />
+                </div>
+                <div class="input-row">
+                    <label class="label" for="country">Země <span class="required">*</span></label>
+                    <div class="select-wrap">
+                        <select name="country" id="country" class="form-control">
+                            <option value="0">- Vyberte -</option>
+                            <option value="1">Česká republika</option>
+                            <option value="2">Slovensko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="label"></div>
+                    <input class="checkbox" id="checkbox-3" type="checkbox" value="value3">
+                    <label for="checkbox-3">Zaslat zboží na jinou adresu</label>
+                </div>
+            </div>
+
+            <h2>Doplňkové údaje</h2>
+
+            <div class="inputs">
+                <div class="input-row">
+                    <label class="label" for="custom">Vlastní pole:</label>
+                    <input class="form-control" type="text" id="custom" name="custom"/>
+                </div>
+                <div class="input-row">
+                    <div class="label"></div>
+                    <p><span class="required">*</span> Označené položky jsou povinné</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <aside class="sidebar sidebar--cart sidebar--right row__col">
+        {{> cart__your-order}}
+    </aside>
+</div>

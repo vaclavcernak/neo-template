@@ -1,0 +1,112 @@
+---
+layout: cart
+---
+
+<div class="row">
+    <main class="main-content main-content--cart main-content--cart--with-sidebar row__col">
+        <div class="content-wrapper content-wrapper--cart content-wrapper--narrow rounded">
+            <div class="content-wrapper--wide">
+                <h2>Zvolte způsob dopravy (skupina)</h2>
+            </div>
+            <div class="info-strip info-strip--small info-strip--wide info-strip--no-close">
+                <div class="info-strip__content">
+                    <div class="info-strip__text"><strong>Vybraná balíkovna:</strong> Benešov u Prahy, Poštovní 478, 25601, Benešov, PSČ: 25601 | <a href="#">Změnit poštu</a></div>
+                </div>
+            </div>
+
+            <div class="accordion accordion--delivery" id="personal">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#personalBody"  aria-controls="personalBody">
+                            <div class="main"><span class="heading">Osobní odběr</span>
+                                <div class="date"><span class="hidden-mobile">Můžete si vyzvednout již</span> od pondělí 22.10.</div>
+                            </div>
+                            <div class="price">od <span class="value">ZDARMA</span></div>
+                        </div>
+                    </div>
+                    <div id="personalBody" class="accordion-collapse collapse" data-bs-parent="#personal">
+                        <div class="accordion-body">
+                            bla bla
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion--delivery" id="all">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#allBody"  aria-controls="allBody">
+                            <div class="main">
+                                <span class="heading">Doručení po celé ČR</span>
+                            </div>
+                            <div class="price">od <span class="value">99 Kč</span></div>
+                        </div>
+                    </div>
+                    <div id="allBody" class="accordion-collapse collapse show" data-bs-parent="#all">
+                        <div class="accordion-body">
+                            <div class="delivery-radio-group">
+                                {{> cart__delivery-method}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion--delivery" id="prague">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pragueBody"  aria-controls="pragueBody">
+                            <div class="main">
+                                <span class="heading">Kurýrem po Praze</span>
+                            </div>
+                            <div class="price">od <span class="value">ZDARMA</span></div>
+                        </div>
+                    </div>
+                    <div id="pragueBody" class="accordion-collapse collapse" data-bs-parent="#prague">
+                        <div class="accordion-body">
+                            bla bla
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-wrapper content-wrapper--cart content-wrapper--narrow rounded">
+            <div class="content-wrapper--wide">
+                <h2>Zvolte způsob dopravy</h2>
+            </div>
+
+            {{> cart__delivery-method}}
+
+        </div>
+
+
+        <div class="content-wrapper content-wrapper--cart content-wrapper--narrow rounded">
+            <div class="content-wrapper--wide">
+                <h2>Vyberte způsob platby</h2>
+            </div>
+
+            <div class="payment-method">
+
+                <div class="payment-method__unavailable">
+                    Nejprve vyberte způsob dopravy (TODO JS)
+                </div>
+
+                {{> cart__payment-method}}
+
+            </div>
+
+            <div class="eet-note">
+                <p>Podle zákona o evidenci tržeb je prodávající povinen vystavit kupujícímu účtenku. Zároveň je povinen zaevidovat přijatou tržbu u správce daně online; v případě technického výpadku pak nejpozději do 48 hodin.</p>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <aside class="sidebar sidebar--cart sidebar--right row__col">
+        {{> cart__your-order}}
+    </aside>
+</div>

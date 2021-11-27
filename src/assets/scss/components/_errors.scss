@@ -1,0 +1,193 @@
+$fadeOutTimer: 10s;
+$runProgressTimer: 8.5s;
+
+.errors {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  &--active {
+    display: flex;
+    animation: fadeOut $fadeOutTimer linear forwards;
+  }
+}
+
+.error {
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px 10px rgba(0,1,1,.03);
+  position: relative;
+  max-width: 800px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &--active {
+    animation: fadeOut $fadeOutTimer linear forwards;
+    &::after {
+      animation: runProgress $runProgressTimer linear forwards 0.5s;
+    }
+  }
+  &--warning {
+    background-color: $bg-error-warning;
+    color: $c-error-warning;
+  }
+  &--success {
+    background-color: $bg-error-success;
+    color: $c-error-success;
+  }
+  &--info {
+    background-color: $bg-error-info;
+    color: $c-error-info;
+  }
+  &__text {
+    font-size: 14px;
+    padding: 5px 30px 5px 0;
+    //font-weight: $fw-medium;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    &:before {
+      @include neo-icon;
+      font-size: 25px;
+    }
+
+    &--warning {
+      &:before {
+        content: "\f10c";
+      }
+    }
+
+    &--check {
+      &:before {
+        content: "\f11b";
+      }
+    }
+
+    &--info {
+      &:before {
+        content: "\f124";
+      }
+    }
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 0;
+    right: -3px;
+    cursor: pointer;
+
+    &:before {
+      @include neo-icon;
+      content: "\f107";
+      font-size: 25px;
+    }
+  }
+}
+
+@keyframes fadeOut {
+  0% 	{ opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; transform: translateY(0px);}
+  99% { opacity: 0; transform: translateY(-10px);}
+  100% { opacity: 0;}
+}
+
+@keyframes runProgress {
+  0%	{ width: 0%; background: rgba(255,255,255,0.3); }
+  100% { width: 100%; background: rgba(255,255,255,1); }
+}
+
+
+.info-strip {
+  border-radius: 5px;
+  padding: 17px 25px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: 1px solid #c4deef;
+  background-color: #ecf5fb;
+
+  @include media-breakpoint-down(md) {
+    padding: 10px 15px;
+  }
+
+  &--small {
+    padding: 12px 20px;
+    @include media-breakpoint-down(md) {
+      padding: 10px 15px;
+    }
+    .info-strip__text {
+      font-size: 15px;
+    }
+  }
+
+  &--wide {
+    @include media-breakpoint-up(xxl) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  &--no-close {
+    .info-strip__text {
+      padding-right: 0;
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__text {
+    @include fluid-type(14px, 16px);
+    padding: 5px 30px 5px 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 0;
+    right: -3px;
+    cursor: pointer;
+
+    &:before {
+      @include neo-icon;
+      content: "\f107";
+      font-size: 25px;
+    }
+  }
+}

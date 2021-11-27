@@ -1,0 +1,95 @@
+---
+layout: cart
+---
+
+<div class="error error--warning">
+    <div class="error__content">
+        <div class="error__text"><p><strong>Minimální hodnota objednávky je 2 000 Kč.</strong> Pro dokončení objednávky je potřeba nakoupit ještě <strong>za 380 Kč</strong>.</p></div>
+        <span class="error__close-icon"></span>
+    </div>
+</div>
+
+{{> age-confirm}}
+
+<main class="main-content main-content--full">
+    <div class="cart">
+        <div class="cart__item">
+            <div class="cart__item__main">
+                <div class="cart__item__image">
+                    <img src="assets/images/samples/boty.png" alt="">
+                </div>
+                <div class="cart__item__desc">
+                    <span class="cart__item__desc__name">
+                        Boty dětské sportovní
+                    </span>
+                    <span class="cart__item__desc__info">
+                        Barva: Černá, Velikost: 40
+                    </span>
+                    <span class="store store--not">
+                        není skladem
+                    </span>
+                </div>
+                <div class="cart__item__quantity">
+                    1
+                </div>
+                <div class="cart__item__price">
+                    1 299 Kč / ks
+                </div>
+                <div class="cart__item__price-sum">
+                    1 299 Kč
+                </div>
+                <div class="cart__item__delete">
+                    X
+                </div>
+            </div>
+
+            <div class="cart__item__bonus">
+                <div class="cart__item__bonus__item">
+                    <div class="cart__bonus__image">
+                        <img src="https://dummyimage.com/50x40/000/fff" alt="">
+                    </div>
+                    <div class="cart__bonus__desc">
+                        <span class="gift">Dárek zdarma</span>
+                        <span class="cart__item__desc__name"><a href="#">Tkaničky do bot červené</a></span>
+                    </div>
+                    <div class="cart__bonus__quantity">
+                        1
+                    </div>
+                    <div class="cart__bonus__price"></div>
+                    <div class="cart__bonus__price-sum">ZDARMA</div>
+                </div>
+
+                <div class="cart__item__bonus__item">
+                    <div class="cart__bonus__image">
+                        <img src="assets/images/samples/guarantee.png" alt="">
+                    </div>
+                    <div class="cart__bonus__desc">
+                        <span class="cart__item__desc__name">Prodloužená záruka</span>
+                        <ul class="checkbox-list">
+                            <li>
+                                <input class="checkbox" id="checkbox-1" type="checkbox" value="value1" checked>
+                                <label for="checkbox-1">+ 1 rok</label>
+                            </li>
+                            <li>
+                                <input class="checkbox" id="checkbox-2" type="checkbox" value="value2">
+                                <label for="checkbox-2">+ 2 roky <span>+ 299 Kč / ks</span></label>
+                            </li>
+                            <li>
+                                <input class="checkbox" id="checkbox-4" type="checkbox" value="value4">
+                                <label for="checkbox-4">+ 3 roky <span>+ 299 Kč / ks</span></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cart__bonus__quantity">
+                        1
+                    </div>
+                    <div class="cart__bonus__price"></div>
+                    <div class="cart__bonus__price-sum">ZDARMA</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart__item">
+        </div>
+    </div>
+</main>

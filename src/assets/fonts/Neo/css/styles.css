@@ -1,0 +1,286 @@
+/*!
+ * Icon Font JZshop Neo
+ * Made with love by Icons8 [ https://icons8.com/ ] using webfont [ https://github.com/itgalaxy/webfont ]
+ *
+ * Contacts:
+ *    [ https://icons8.com/contact ]
+ *
+ * Follow Icon8 on
+ *    Twitter [ https://twitter.com/icons_8 ]
+ *    Facebook [ https://www.facebook.com/Icons8 ]
+ *    Google+ [ https://plus.google.com/+Icons8 ]
+ *    GitHub [ https://github.com/icons8 ]
+ */
+
+@font-face {
+  font-family: "JZshop Neo";
+  src: url("../fonts/JZshop Neo.eot");
+  src: url("../fonts/JZshop Neo.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/JZshop Neo.woff2") format("woff2"),
+  url("../fonts/JZshop Neo.woff") format("woff"),
+  url("../fonts/JZshop Neo.ttf") format("truetype"),
+  url("../fonts/JZshop Neo.svg#font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "JZshop Neo";
+    src: url("../fonts/JZshop Neo.svg#JZshop Neo") format("svg");
+  }
+}
+
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
+
+.neo-forward:before,
+.neo-back:before,
+.neo-collapse-arrow:before,
+.neo-expand-arrow:before,
+.neo-sell-stock:before,
+.neo-shopping-cart:before,
+.neo-scales:before,
+.neo-male-user:before,
+.neo-share:before,
+.neo-phone:before,
+.neo-mail:before,
+.neo-search:before,
+.neo-error:before,
+.neo-document:before,
+.neo-opened-folder:before,
+.neo-time-machine:before,
+.neo-checkmark:before,
+.neo-basket:before,
+.neo-add-to-basket:before,
+.neo-full-shopping-basket:before,
+.neo-shopping-basket:before,
+.neo-add-to-shopping-basket:before,
+.neo-add-shopping-cart:before,
+.neo-calculator:before,
+.neo-checked-checkbox:before,
+.neo-unchecked-checkbox:before,
+.neo-ok:before,
+.neo-attendance:before,
+.neo-shopping-bag:before,
+.neo-menu:before,
+.neo-money:before,
+.neo-gift:before,
+.neo-credit-card-contactless:before,
+.neo-u-turn-to-left:before,
+.neo-shipped:before,
+.neo-info:before,
+.neo-menu-vertical:before,
+.neo-zoom-in:before,
+.neo-plus--:before,
+.neo-minus-sign:before,
+.neo-info-2:before,
+.neo-edit:before,
+.neo-expand-arrow-2:before,
+.neo-collapse-arrow-2:before,
+.neo-back-2:before,
+.neo-forward-2:before,
+.neo-heart:before,
+.neo-star:before,
+.neo-star-half:before,
+.neo-facebook:before,
+.neo-instagram:before,
+.neo-twitter:before,
+.neo-youtube-logo:before,
+.neo-more:before,
+.neo-tick-box:before,
+.neo-add-shopping-cart-2:before,
+.neo-buy:before,
+.neo-buying:before,
+.icons8,
+[data-icons8]:before {
+  display: inline-block;
+  font-family: "JZshop Neo";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+.neo-forward:before {
+  content: "\f100";
+}
+.neo-back:before {
+  content: "\f101";
+}
+.neo-collapse-arrow:before {
+  content: "\f102";
+}
+.neo-expand-arrow:before {
+  content: "\f103";
+}
+.neo-sell-stock:before {
+  content: "\f104";
+}
+.neo-shopping-cart:before {
+  content: "\f105";
+}
+.neo-scales:before {
+  content: "\f106";
+}
+.neo-male-user:before {
+  content: "\f107";
+}
+.neo-share:before {
+  content: "\f108";
+}
+.neo-phone:before {
+  content: "\f109";
+}
+.neo-mail:before {
+  content: "\f10a";
+}
+.neo-search:before {
+  content: "\f10b";
+}
+.neo-error:before {
+  content: "\f10c";
+}
+.neo-document:before {
+  content: "\f10d";
+}
+.neo-opened-folder:before {
+  content: "\f10e";
+}
+.neo-time-machine:before {
+  content: "\f10f";
+}
+.neo-checkmark:before {
+  content: "\f110";
+}
+.neo-basket:before {
+  content: "\f112";
+}
+.neo-add-to-basket:before {
+  content: "\f113";
+}
+.neo-full-shopping-basket:before {
+  content: "\f114";
+}
+.neo-shopping-basket:before {
+  content: "\f115";
+}
+.neo-add-to-shopping-basket:before {
+  content: "\f116";
+}
+.neo-add-shopping-cart:before {
+  content: "\f117";
+}
+.neo-calculator:before {
+  content: "\f118";
+}
+.neo-checked-checkbox:before {
+  content: "\f119";
+}
+.neo-unchecked-checkbox:before {
+  content: "\f11a";
+}
+.neo-ok:before {
+  content: "\f11b";
+}
+.neo-attendance:before {
+  content: "\f11c";
+}
+.neo-shopping-bag:before {
+  content: "\f11d";
+}
+.neo-menu:before {
+  content: "\f11e";
+}
+.neo-money:before {
+  content: "\f11f";
+}
+.neo-gift:before {
+  content: "\f120";
+}
+.neo-credit-card-contactless:before {
+  content: "\f121";
+}
+.neo-u-turn-to-left:before {
+  content: "\f122";
+}
+.neo-shipped:before {
+  content: "\f123";
+}
+.neo-info:before {
+  content: "\f124";
+}
+.neo-menu-vertical:before {
+  content: "\f125";
+}
+.neo-zoom-in:before {
+  content: "\f126";
+}
+.neo-plus--:before {
+  content: "\f127";
+}
+.neo-minus-sign:before {
+  content: "\f128";
+}
+.neo-info-2:before {
+  content: "\f129";
+}
+.neo-edit:before {
+  content: "\f12a";
+}
+.neo-expand-arrow-2:before {
+  content: "\f12c";
+}
+.neo-collapse-arrow-2:before {
+  content: "\f12d";
+}
+.neo-back-2:before {
+  content: "\f12e";
+}
+.neo-forward-2:before {
+  content: "\f12f";
+}
+.neo-heart:before {
+  content: "\f130";
+}
+.neo-star:before {
+  content: "\f131";
+}
+.neo-star-half:before {
+  content: "\f132";
+}
+.neo-facebook:before {
+  content: "\f133";
+}
+.neo-instagram:before {
+  content: "\f134";
+}
+.neo-twitter:before {
+  content: "\f135";
+}
+.neo-youtube-logo:before {
+  content: "\f136";
+}
+.neo-more:before {
+  content: "\f137";
+}
+.neo-tick-box:before {
+  content: "\f138";
+}
+.neo-add-shopping-cart-2:before {
+  content: "\f139";
+}
+.neo-buy:before {
+  content: "\f13a";
+}
+.neo-buying:before {
+  content: "\f13b";
+}

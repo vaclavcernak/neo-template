@@ -1,0 +1,131 @@
+.widget--featured {
+  .featured {
+    &:not(:last-of-type) {
+      padding-bottom: 20px;
+      &::after {
+        display: block;
+        content: "";
+        height: 1px;
+        background-color: $c-wrapper-border;
+        margin-top: 20px;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+    }
+
+    &__image {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .sticker {
+        right: 0;
+        bottom: 0;
+        @include media-breakpoint-down(md) {
+          right: 15px;
+          bottom: 15px;
+        }
+      }
+      img {
+        width: auto !important;
+      }
+    }
+
+    &__store-rating {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .store {
+      font-size: 12px;
+      font-weight: $fw-medium;
+    }
+
+    &__rating {
+      display: flex;
+      .neo-icon {
+        color: #d4d4d4;
+        margin: 0;
+        &.neo-star,
+        &.neo-star-half {
+          color: #e9a400;
+        }
+      }
+
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__price-buy {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__price {
+      font-size: 22px;
+      font-weight: $fw-medium;
+    }
+  }
+
+  /***/
+
+  .owl-carousel {
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        background-color: #fafafa;
+        border: 1px solid $c-wrapper-border;
+        width: 38px;
+        height: 60px;
+        line-height: 50px;
+        position: absolute;
+        top: 20%;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: $c-wrapper-border;
+        }
+
+        i {
+          font-size: 50px;
+          position: relative;
+          left: -4px;
+        }
+      }
+
+      .owl-prev {
+        border-left: 0;
+        left: -15px;
+      }
+
+      .owl-next {
+        border-right: 0;
+        right: -15px;
+      }
+    }
+  }
+
+  /***/
+
+  /*@include media-breakpoint-only(md) {
+    .owl-item.active {
+      &:not(:first-of-type) {
+        border-left: 1px solid $c-wrapper-border;
+        padding-left: 15px
+      }
+    }
+  }*/
+}

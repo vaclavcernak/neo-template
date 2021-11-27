@@ -1,0 +1,31 @@
+.main-content {
+  @include media-breakpoint-up(lg) {
+    order: 2;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--with-sidebar {
+    @include media-breakpoint-only(xxl) {
+      width: 73%;
+    }
+
+    @include media-breakpoint-between(lg,xxl) {
+      width: 70%;
+    }
+  }
+
+  &--cart {
+    &--with-sidebar {
+      @include media-breakpoint-only(xxl) {
+        width: 70%;
+      }
+      @include media-breakpoint-between(lg,xxl) {
+        width: 65%;
+      }
+    }
+  }
+}
+
