@@ -1,0 +1,125 @@
+.featured-categories {
+  margin-top: 15px;
+  margin-bottom: 40px;
+
+  &.owl-carousel .owl-stage {
+    display: flex;
+  }
+
+
+  // images type
+  &--images {
+    display: flex;
+
+    .item {
+      background-color: $c-content;
+      text-align: center;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid $c-wrapper-border;
+      //padding: 15px 10px;
+      margin: 5px;
+      height: calc(100% - 10px);
+      &:hover {
+        @include box-shadow--card;
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        height: 100%;
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        padding: 15px 10px;
+        &:hover {
+          .item__title {
+            color: $c-primary;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__image {
+        @include media-breakpoint-down(sm) {
+          max-width: 230px;
+        }
+      }
+
+      &__title {
+        display: block;
+        margin-top: 15px;
+        color: $c-text;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // icons type
+  &--icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+
+    .item {
+      background-color: $c-content;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid $c-wrapper-border;
+      margin: 5px;
+      width: calc(20% - 10px);
+      &:hover {
+        @include box-shadow--card;
+      }
+      @include media-breakpoint-down(xxl) {
+        width: calc(25% - 10px);
+      }
+      @include media-breakpoint-down(lg) {
+        width: calc(33.3333% - 10px);
+      }
+      @include media-breakpoint-down(md) {
+        width: calc(50% - 10px);
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 7px;
+        width: 100%;
+        height: 100%;
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        padding: 15px 10px;
+        &:hover {
+          .item__title {
+            color: $c-primary;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__image-wrapper {
+        width: 70px;
+        min-width: 70px;
+        margin-right: 5px;
+        text-align: center;
+      }
+
+      &__image {
+
+      }
+
+      &__title {
+        font-size: 16px;
+        display: block;
+        color: $c-text;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -41,6 +41,8 @@
   --c-info-strip-border: #c4deef;
   --c-info-strip-text: var(--c-text);
   --c-accordion-hover: #ecf5fb;
+  --c-tag-bg: #f5fafd;
+  --c-tag-border: #dff2fd;
 }
 
 @mixin dark-theme {
@@ -76,6 +78,8 @@
   --c-info-strip-border: var(--c-error-info);
   --c-info-strip-text: var(--c-info-strip-border);
   --c-accordion-hover: #242b38;
+  --c-tag-bg: var(--c-background);
+  --c-tag-border: var(--c-content-dark);
 
   .info-strip a {
     color: var(--c-content);
@@ -87,7 +91,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  @include dark-theme;
+  :root {@include dark-theme;}
+
 }
 
 [data-theme="dark"] {

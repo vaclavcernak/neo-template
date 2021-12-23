@@ -25,6 +25,7 @@
 }
 
 .store {
+  color: #b4b4b4;
   &--not {
     color: $c-store-not;
   }
@@ -36,7 +37,7 @@
 .rounded {
   border-radius: 10px;
   @include media-breakpoint-down(sm) {
-    border-radius: 4px;
+    border-radius: 5px;
   }
 }
 
@@ -64,6 +65,10 @@
   text-decoration-style: dotted;
 }
 
+.fs-18 {
+  font-size: 18px;
+}
+
 .smaller-text {
   font-size: 14px;
 }
@@ -84,4 +89,22 @@
   @include media-breakpoint-down(md) {
     display: none;
   }
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  @include media-breakpoint-down(md) {
+    margin-top: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+  }
+}
+
+.more-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
 }

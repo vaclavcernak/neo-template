@@ -1,0 +1,32 @@
+.minibanners {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .item {
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin: 0 0 10px;
+      border-radius: 0;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

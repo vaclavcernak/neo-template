@@ -57,6 +57,10 @@ $animation-speed: 0.3s !default;
   box-shadow: 0 0 4px 4px $c-wrapper-border;
 }
 
+@mixin box-shadow--card {
+  box-shadow: 0 0 7px 7px $c-wrapper-border;
+}
+
 //- Mixin: Fluid Type
 ///
 /// Magic calc + vh to allow text to be fluid between minimum

@@ -2,6 +2,15 @@ import 'owl.carousel';
 import 'magnific-popup';
 //import { createPopper } from '@popperjs/core';
 import { Tooltip, Accordion } from 'bootstrap';
+import LazyLoad from 'vanilla-lazyload'; // https://github.com/verlok/vanilla-lazyload
+
+
+// vanilla-lazyload
+var lazyLoadInstance = new LazyLoad({
+    // Your custom settings go here
+});
+
+lazyLoadInstance.update();
 
 
 $(document).ready(function() {
@@ -323,4 +332,282 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // Set our currenet theme to the new one
         document.documentElement.setAttribute("data-theme", switchToTheme);
     }
+});
+
+
+$('.delivery-radio__item').click(function() {
+    $(this).find('input[type="radio"]').prop("checked", true);
+});
+
+BannerSlider()
+
+function BannerSlider() {
+
+    var mainBanner = $("#mainBanner");
+
+    mainBanner.owlCarousel({
+        items             : 1,
+        margin            : 0,
+        nav               : true,
+        autoplay          : true,
+        autoplayTimeout   : 5000,
+        dots              : true,
+        lazyLoad          : true,
+        lazyLoadEager     : 1,
+        navText           : ['<i class="neo-back-2"></i>','<i class="neo-forward-2"></i>'],
+        loop              : true
+    });
+}
+
+FeaturedCategoriesSlider()
+
+function FeaturedCategoriesSlider() {
+
+    var featuredCategories = $(".featured-categories--images");
+
+    featuredCategories.owlCarousel({
+        items             : 5,
+        margin            : 0,
+        nav               : true,
+        dots              : false,
+        lazyLoad          : true,
+        lazyLoadEager     : 1,
+        navContainerClass : "owl-nav owl-nav--general",
+        navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
+        loop              : false,
+        responsive:{
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            },
+            1200:{
+                items:5
+            },
+        }
+    });
+}
+
+$('.item__quick-action').hover(function() {
+    $(this).toggleClass('active');
+});
+
+BrandsSlider()
+
+function BrandsSlider() {
+
+    var brandsSlider = $(".brands--slider");
+
+    brandsSlider.owlCarousel({
+        items             : 7,
+        margin            : 0,
+        nav               : true,
+        dots              : false,
+        lazyLoad          : true,
+        lazyLoadEager     : 1,
+        navContainerClass : "owl-nav owl-nav--general",
+        navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
+        loop              : false,
+        responsive:{
+            0:{
+                items:2
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:5
+            },
+            1200:{
+                items:7
+            },
+        }
+    });
+}
+
+LatestNewsSlider()
+
+function LatestNewsSlider() {
+
+    var latestNews = $(".latest-news");
+
+    latestNews.owlCarousel({
+        items             : 4,
+        margin            : 0,
+        nav               : true,
+        dots              : false,
+        lazyLoad          : true,
+        lazyLoadEager     : 1,
+        navContainerClass : "owl-nav owl-nav--general",
+        navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
+        loop              : false,
+        responsive:{
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
+            },
+        }
+    });
+}
+
+ProductsGridSlider()
+
+function ProductsGridSlider() {
+
+    var productsGridSlider = $(".pruducts-grid--slider");
+
+    productsGridSlider.owlCarousel({
+        items             : 4,
+        margin            : 0,
+        nav               : true,
+        dots              : false,
+        lazyLoad          : true,
+        lazyLoadEager     : 1,
+        navContainerClass : "owl-nav owl-nav--general",
+        navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
+        loop              : false,
+        responsive:{
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:3
+            },
+            1400:{
+                items:4
+            },
+        }
+    });
+}
+
+
+$(function() {
+    var owl = $('.pruducts-grid--grid'),
+        owlOptions = {
+            items             : 4,
+            margin            : 0,
+            nav               : true,
+            dots              : false,
+            lazyLoad          : true,
+            lazyLoadEager     : 1,
+            navContainerClass : "owl-nav owl-nav--general",
+            navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
+            loop              : false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                576:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                992:{
+                    items:3
+                },
+                1200:{
+                    items:3
+                },
+                1400:{
+                    items:4
+                },
+            }
+        };
+
+    if ( $(window).width() < 991.5 ) {
+        owl.owlCarousel(owlOptions);
+    } else {
+        owl.addClass('off');
+    }
+
+    $(window).resize(function() {
+        if ( $(window).width() < 991.5 ) {
+            if ( $('.owl-carousel').hasClass('off') ) {
+                owl.owlCarousel(owlOptions);
+                owl.removeClass('off');
+            }
+        } else {
+            if ( !$('.owl-carousel').hasClass('off') ) {
+                owl.addClass('off').trigger('destroy.owl.carousel');
+                owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+            }
+        }
+    });
+});
+
+
+// News thumbnail hover effect
+$('.news__item__image-wrapper').mouseenter(function() {
+    $(this).find('.news__item__image').addClass('hover');
+});
+
+$('.news__item__image-wrapper').mouseleave(function() {
+    $(this).find('.news__item__image').removeClass('hover');
+});
+
+$(function() {
+    var owl = $('.main-banner--secondary'),
+        owlOptions = {
+            items             : 1,
+            margin            : 0,
+            nav               : true,
+            autoplay          : true,
+            autoplayTimeout   : 5000,
+            dots              : true,
+            lazyLoad          : true,
+            lazyLoadEager     : 1,
+            navText           : ['<i class="neo-back-2"></i>','<i class="neo-forward-2"></i>'],
+            loop              : true
+        };
+
+    if ( $(window).width() < 991.5 ) {
+        owl.owlCarousel(owlOptions);
+    } else {
+        owl.addClass('off');
+    }
+
+    $(window).resize(function() {
+        if ( $(window).width() < 991.5 ) {
+            if ( $('.owl-carousel').hasClass('off') ) {
+                owl.owlCarousel(owlOptions);
+                owl.removeClass('off');
+            }
+        } else {
+            if ( !$('.owl-carousel').hasClass('off') ) {
+                owl.addClass('off').trigger('destroy.owl.carousel');
+                owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+            }
+        }
+    });
 });

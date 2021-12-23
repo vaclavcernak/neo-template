@@ -27,8 +27,12 @@
   //@include box-shadow;
   border: 1px solid $c-wrapper-border;
   margin-bottom: 20px;
+  border-radius: 10px;
   @include media-breakpoint-down(md) {
     padding: 15px 15px 5px;
+  }
+  @include media-breakpoint-down(sm) {
+    border-radius: 5px;
   }
 }
 

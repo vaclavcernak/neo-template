@@ -1,5 +1,6 @@
 .widget--featured {
   .featured {
+    position: relative;
     &:not(:last-of-type) {
       padding-bottom: 20px;
       &::after {
@@ -52,6 +53,24 @@
         &.neo-star-half {
           color: #e9a400;
         }
+        &.neo-star-half {
+          position: relative;
+          &:after {
+            @include neo-icon;
+            content: "\f131";
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            bottom: 3px;
+            color: #d4d4d4;
+          }
+        }
+        &.neo-star-empty {
+          &:after {
+            @include neo-icon;
+            content: "\f131";
+          }
+        }
       }
 
     }
@@ -59,6 +78,7 @@
     &__title {
       margin-bottom: 20px;
       a {
+        color: $c-text;
         text-decoration: none;
         &:hover {
           text-decoration: underline;

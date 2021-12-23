@@ -1,0 +1,314 @@
+.main-banner {
+  margin-bottom: 10px;
+  @include media-breakpoint-down(sm) {
+    width: 100vw;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .owl-stage-outer {
+    border-radius: 7px;
+    @include media-breakpoint-down(sm) {
+      border-radius: 0;
+    }
+  }
+
+  &__image {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #dddddd;
+    &.with-filter:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.25);
+    }
+    @include media-breakpoint-down(xl) {
+      height: 400px;
+    }
+    @include media-breakpoint-down(md) {
+      height: 250px;
+    }
+
+    &.dark-text {
+      .main-banner__content > *{
+        color: #555;
+      }
+      .main-banner__btn {
+        border-color: #555;
+        color: #555;
+        &:hover {
+          background-color: #555;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 120px;
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-down(md) {
+      margin: 0 70px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: $fw-regular;
+    text-transform: none;
+    color: #ffffff;
+    margin: 0;
+    @include media-breakpoint-down(lg) {
+      font-size: 35px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 43px;
+    font-weight: $fw-medium;
+    text-transform: none;
+    color: #ffffff;
+    margin: 0 0 10px;
+    @include media-breakpoint-down(lg) {
+      font-size: 28px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__desc {
+    font-size: 22px;
+    color: #ffffff;
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__btn-wrapper {
+    margin-top: 35px;
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn {
+    font-size: 22px;
+    color: #ffffff;
+    padding: 15px 40px;
+    border: 3px solid #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #ffffff;
+      color: $c-text;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 12px 20px;
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    color: #ffffff;
+
+    button.owl-prev,
+    button.owl-next {
+      position: absolute;
+      background-color: rgba(#eaeaea, .2);
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+
+      &:hover {
+        background-color: rgba(#eaeaea, .3);
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: 50px;
+        height: 50px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .owl-prev {
+      left: 30px;
+      @include media-breakpoint-down(md) {
+        left: 10px;
+      }
+
+      i {
+        margin-left: -5px;
+      }
+    }
+
+    .owl-next {
+      right: 30px;
+      @include media-breakpoint-down(md) {
+        right: 10px;
+      }
+    }
+
+    i {
+      font-size: 30px;
+      @include media-breakpoint-down(lg) {
+        font-size: 25px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    .owl-dot {
+      border-radius: 100%;
+      border: 5px solid #ffffff;
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+
+      &:hover,
+      &.active {
+        border-color: $c-primary;
+      }
+    }
+  }
+}
+
+// Secondary type of main banner slider
+.main-banner--secondary {
+  display: flex;
+  position: relative;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  .item {
+    @include media-breakpoint-up(sm) {
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      @include box-shadow--card;
+    }
+
+    &:first-child {
+      @include media-breakpoint-up(lg) {
+        width: calc(70% - 15px);
+        margin-right: 15px;
+
+        .main-banner__content {
+          margin-right: 45px;
+          margin-left: 45px;
+        }
+      }
+      .main-banner__image {
+        @include media-breakpoint-up(xl) {
+          height: 430px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      width: 30%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-bottom: 15px;
+      height: calc(50% - 5px);
+
+      .main-banner__image {
+        height: 100%;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 30%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: calc(50% - 5px);
+
+      .main-banner__image {
+        height: 100%;
+      }
+    }
+  }
+
+  .item:not(:first-child) {
+    .main-banner__content {
+      margin-right: 15px;
+      margin-left: 15px;
+      padding-bottom: 15px;
+      justify-content: end;
+    }
+
+    .main-banner__title {
+      font-size: 22px;
+    }
+
+    .main-banner__subtitle {
+      font-size: 20px;
+    }
+
+    .main-banner__desc {
+      font-size: 16px;
+    }
+  }
+
+  .main-banner__image {
+    position: relative;
+  }
+  .main-banner__btn {
+    background-color: $c-primary;
+    border: 0;
+    padding: 12px 20px;
+    font-size: 18px;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $c-primary-dark;
+    }
+  }
+}

@@ -8,6 +8,10 @@
     display: block;
     padding: 0;
   }
+
+  &--hp {
+    padding-bottom: 10px;
+  }
 }
 
 .claim {
@@ -44,7 +48,7 @@
     color: $c-primary;
     font-weight: $fw-bold;
     //@include rfs(40px);
-    @include fluid-type(26px, 38px);
+    @include fluid-type(25px, 38px);
     text-transform: uppercase;
 
     @include media-breakpoint-only(xl) {

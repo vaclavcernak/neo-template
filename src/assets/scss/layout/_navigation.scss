@@ -112,3 +112,75 @@
   }
 
 }
+
+
+.owl-nav.owl-nav--general {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  color: #ffffff;
+
+  button.owl-prev,
+  button.owl-next {
+    position: absolute;
+    background-color: $c-primary;
+    width: 40px;
+    height: 65px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      box-shadow: 0px 0px 5px 0px #aaaaaa;
+    }
+    @include media-breakpoint-down(md) {
+      width: 32px;
+      height: 50px;
+    }
+  }
+
+  .owl-prev {
+    left: -50px;
+    @media screen and (max-width: 1500px) and (min-width: 1400px) {
+      left: -5px
+    }
+    @media screen and (max-width: 1250px) and (min-width: 1200px) {
+      left: -5px
+    }
+    @media screen and (max-width: 1090px) and (min-width: 992px) {
+      left: -5px
+    }
+    @media screen and (max-width: 840px) and (min-width: 768px) {
+      left: -5px
+    }
+    @media screen and (max-width: 630px) {
+      left: -5px
+    }
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  .owl-next {
+    right: -50px;
+    @media screen and (max-width: 1500px) and (min-width: 1400px) {
+      right: -5px
+    }
+    @media screen and (max-width: 1250px) and (min-width: 1200px) {
+      right: -5px
+    }
+    @media screen and (max-width: 1090px) and (min-width: 992px) {
+      right: -5px
+    }
+    @media screen and (max-width: 840px) and (min-width: 768px) {
+      right: -5px
+    }
+    @media screen and (max-width: 630px) {
+      right: -5px
+    }
+  }
+
+  i {
+    font-size: 45px;
+  }
+}
