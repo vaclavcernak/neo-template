@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="top-header">
+      <div class="container">
+          <div class="top-header__content">
+              <div class="logo">
+                  <div class="logo__top">
+                      <div class="switcher switcher--lang">CZ</div>
+                      <div class="switcher switcher--currency">CZK</div>
+                  </div>
+                  <a href="index.html" class="logo__link">
+                      <img class="lazy" data-src="assets/images/samples/logo.png" alt="logo">
+                  </a>
+              </div>
+              <div class="search">
+                  <div class="search__top">
+                      <span class="contact contact--phone"><i class="neo-phone"></i> 777 123 456</span>
+                      <span class="contact contact--menu">
+                                          <ul>
+                                              <li><a href="#">Kontakt</a></li>
+                                              <li><a href="#">Obchodní podmínky</a></li>
+                                          </ul>
+                                      </span>
+                  </div>
+                  <div class="input-with-btn input-with-btn--search-input">
+                      <input class="input-with-btn__input no-border" type="text" placeholder="Hledaný výraz">
+                      <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
+                  </div>
+                  <button id="theme-switcher">Dark/light <přepínač></přepínač></button>
+              </div>
+              <div class="user">
+                  <div class="user__item user__login">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading"><a href="#">Přihlásit</a></span>
+                              <span class="user__login__subheading"><a href="#">Registrovat</a></span>
+                          </span>
+                      </div>
+                  </div>
+                  <!-- <div class="user__item user__login user__login--logged">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading">Alexandr Solženicyn</span>
+                              <span class="user__login__subheading">Můj účet</span>
+                          </span>
+                      </div>
+                  </div>
+                   -->
+                  <div class="user__item user__compare">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__compare__icon">
+                              <span class="notify-num notify-num--secondary">12</span>
+                          </span>
+                      </a>
+                  </div>
+                  <div class="user__item user__cart">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__cart__icon">
+                              <span class="notify-num notify-num--conversion">6</span>
+                          </span>
+                          <span class="user__cart__price">12 900 Kč</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <nav class="cart-nav">
+      <div class="container">
+          <ul class="cart-nav__links">
+              <li class="cart-nav__link active"><a href="#"><span class="cart-nav__num">1.</span>Nákupní košík</a></li>
+              <li class="cart-nav__link"><a href="#"><span class="cart-nav__num">2.</span>Dodací údaje</a></li>
+              <li class="cart-nav__link"><a href="#"><span class="cart-nav__num">3.</span>Doprava a platba</a></li>
+              <li class="cart-nav__link"><a href="#"><span class="cart-nav__num">4.</span>Shrnutí</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <div class="wrapper container">
+    
+    <div class="row">
+        <main class="main-content main-content--cart main-content--cart--with-sidebar row__col">
+            <div class="content-wrapper content-wrapper--wide content-wrapper--cart">
+                <div class="info-strip">
+                    <div class="info-strip__content">
+                        <div class="info-strip__text"><p>Jste-li registrovaný zákazník, můžete se <a href="#">přihlásit</a> a požadované údaje se Vám doplní automaticky</p></div>
+                        <span class="info-strip__close-icon"></span>
+                    </div>
+                </div>
+    
+                <h2>Osobní údaje</h2>
+    
+                <div class="inputs">
+                    <div class="input-row">
+                        <label class="label" for="name">Jméno <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="name" name="name" required />
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="surname">Příjmení <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="surname" name="surname" required />
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="email">E-mail <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="email" name="email" required />
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="phone">Telefon <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="phone" name="phone" required />
+                    </div>
+                    <div class="input-row">
+                        <div class="label"></div>
+                        <div>
+                            <input class="checkbox" id="checkbox-1" type="checkbox" value="value1">
+                            <label for="checkbox-1">Chci se zaregistrovat a souhlasím se <a class="link--dotted" href="#">zpracováním osobních údajů</a></label>
+                        </div>
+                    </div>
+                </div>
+    
+                <h2>Fakturační údaje</h2>
+    
+                <div class="inputs">
+                    <div class="input-row">
+                        <div class="label"></div>
+                        <input class="checkbox" id="checkbox-2" type="checkbox" value="value2">
+                        <label for="checkbox-2">Nakupuji na firmu</label>
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="street">Ulice, č.p. <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="street" name="street" required />
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="zip">PSČ <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="zip" name="zip" required />
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="city">Město <span class="required">*</span></label>
+                        <input class="form-control" type="text" id="city" name="city" required />
+                    </div>
+                    <div class="input-row">
+                        <label class="label" for="country">Země <span class="required">*</span></label>
+                        <div class="select-wrap">
+                            <select name="country" id="country" class="form-control">
+                                <option value="0">- Vyberte -</option>
+                                <option value="1">Česká republika</option>
+                                <option value="2">Slovensko</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="label"></div>
+                        <input class="checkbox" id="checkbox-3" type="checkbox" value="value3">
+                        <label for="checkbox-3">Zaslat zboží na jinou adresu</label>
+                    </div>
+                </div>
+    
+                <h2>Doplňkové údaje</h2>
+    
+                <div class="inputs">
+                    <div class="input-row">
+                        <label class="label" for="custom">Vlastní pole:</label>
+                        <input class="form-control" type="text" id="custom" name="custom"/>
+                    </div>
+                    <div class="input-row">
+                        <div class="label"></div>
+                        <p><span class="required">*</span> Označené položky jsou povinné</p>
+                    </div>
+                </div>
+    
+            </div>
+        </main>
+    
+        <aside class="sidebar sidebar--cart sidebar--right row__col">
+            <div class="your-order content-wrapper">
+                <div class="title-wrap">
+                    <h2 class="title">Vaše objednávka</h2>
+                    <span class="edit-link"><i class="neo-edit"></i> <a href="cart-1.html">upravit</a></span>
+                </div>
+                <div class="order-list">
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/boty.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                <span class="item__desc__name">Boty dětské sportovní</span>
+                                <span class="item__desc__info">Barva: Černá, Velikost: 40</span>
+                                <span class="store store--yes">Skladem</span>
+                            </div>
+                            <div class="item__price">3 350 Kč / ks</div>
+                        </div>
+            
+                        <div class="item__bonus">
+                            <div class="item__image"></div>
+                            <div class="item__desc">
+                                <span class="item__desc__name"><i class="neo-gift c-red"></i> 2x tkaničky do bot červené</span>
+                            </div>
+                            <div class="item__price">ZDARMA</div>
+                        </div>
+            
+                        <div class="item__bonus">
+                            <div class="item__image"></div>
+                            <div class="item__desc">
+                                <span class="item__desc__name"><strong>Prodloužená záruka</strong> <br>+ 1 rok</span>
+                            </div>
+                            <div class="item__price">299 Kč / ks</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/triko.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                <span class="item__desc__name">3x Tričko pánské, bílé</span>
+                                <span class="store store--yes">Skladem</span>
+                            </div>
+                            <div class="item__price">350 Kč / ks</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/triko.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                        <span class="item__desc__name"><i class="neo-gift c-red"></i> 2x Vans B Otw Checker Fill B
+            Navy/White/Grey S</span>
+                            </div>
+                            <div class="item__price">ZDARMA</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/triko.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                <span class="item__desc__name">2x VP Zoometrix 22410-10 - duhová abeceda 100% bavlna - panelo rozměru cca 60x110 cm</span>
+                                <span class="store store--yes">Skladem více než 12 ks</span>
+                            </div>
+                            <div class="item__price">350 Kč / ks</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/triko.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                <span class="item__desc__name">3x Tričko pánské, bílé</span>
+                                <span class="store store--yes">Skladem</span>
+                            </div>
+                            <div class="item__price">350 Kč / ks</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/boty.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                <span class="item__desc__name">Boty dětské sportovní</span>
+                                <span class="item__desc__info">Barva: Černá, Velikost: 40</span>
+                                <span class="store store--yes">Skladem</span>
+                            </div>
+                            <div class="item__price">3 350 Kč / ks</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                    <div class="item">
+                        <div class="item__main">
+                            <div class="item__image">
+                                <img class="lazy" data-src="assets/images/samples/discount.png" alt="">
+                            </div>
+                            <div class="item__desc">
+                                <span class="item__desc__name">Sleva</span>
+                            </div>
+                            <div class="item__price">- 350 Kč</div>
+                        </div>
+                    </div> <!-- .item -->
+            
+                </div>
+            </div>
+            
+            <div class="additional-strip">
+                <div class="additional-strip__icon">
+                    <img class="lazy" data-src="assets/images/samples/discount.png" alt="">
+                </div>
+                <div class="additional-strip__text">
+                    Na objednávku získáváte <strong>slevu 20%</strong>.
+                </div>
+            </div>
+            
+            <div class="additional-strip">
+                <div class="additional-strip__icon">
+                    <i class="neo-shipped"></i>
+                </div>
+                <div class="additional-strip__text">
+                    K této objednávce získáváte <strong>DOPRAVU ZDARMA!</strong>
+                </div>
+            </div>
+            
+            <div class="order-summary-wrapper">
+            
+                <div class="order-summary__delivery">
+                    <div class="text">
+                        <span class="heading">Doprava</span>
+                        <span class="name">Českou poštou</span>
+                    </div>
+                    <div class="value">
+                        99 Kč
+                    </div>
+                </div>
+            
+                <div class="order-summary__delivery">
+                    <div class="text">
+                        <span class="heading">Platba</span>
+                        <span class="name">Převodem</span>
+                    </div>
+                    <div class="value">
+                        ZDARMA
+                    </div>
+                </div>
+            
+                <div class="order-summary">
+                    <div class="order-summary__price">
+                        <span class="text">Celkem v košíku:</span>
+                        <span class="value">226 488 Kč</span>
+                    </div>
+                    <div class="order-summary__price--small">
+                        <span class="text">Celková cena bez DPH:</span>
+                        <span class="value">116 488 Kč</span>
+                    </div>
+                </div>
+            
+                <ul class="order-summary__checbkoxes">
+                    <li>
+                        <input class="checkbox" id="checkbox-10" type="checkbox" value="value1">
+                        <label for="checkbox-10">Chci dostávat novinky a obchodní sdělení a souhlasím se <a class="link--dotted" href="#">zpracováním osobních údajů</a></label>
+                    </li>
+                    <li>
+                        <input class="checkbox" id="checkbox-11" type="checkbox" value="value1">
+                        <label for="checkbox-11">Další souhlas nebo nesouhlas</label>
+                    </li>
+                </ul>
+            
+                <p><a class="link--dotted" href="#">Informace o zpracování osobních údajů</a> za účelem plnění smlouvy.</p>
+            
+                <a href="#" class="btn btn--conversion btn--order">Pokračovat <i class="neo-forward"></i></a>
+            
+                <div class="next-step-text">Na výběr dopravy a platby</div>
+            </div>
+        </aside>
+    </div>
+    
+  </div>
+
+  <!-- Custom JS -->
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

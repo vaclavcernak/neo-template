@@ -1,0 +1,824 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="top-header">
+      <div class="container">
+          <div class="top-header__content">
+              <div class="logo">
+                  <div class="logo__top">
+                      <div class="switcher switcher--lang">CZ</div>
+                      <div class="switcher switcher--currency">CZK</div>
+                  </div>
+                  <a href="index.html" class="logo__link">
+                      <img class="lazy" data-src="assets/images/samples/logo.png" alt="logo">
+                  </a>
+              </div>
+              <div class="search">
+                  <div class="search__top">
+                      <span class="contact contact--phone"><i class="neo-phone"></i> 777 123 456</span>
+                      <span class="contact contact--menu">
+                                          <ul>
+                                              <li><a href="#">Kontakt</a></li>
+                                              <li><a href="#">Obchodní podmínky</a></li>
+                                          </ul>
+                                      </span>
+                  </div>
+                  <div class="input-with-btn input-with-btn--search-input">
+                      <input class="input-with-btn__input no-border" type="text" placeholder="Hledaný výraz">
+                      <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
+                  </div>
+                  <button id="theme-switcher">Dark/light <přepínač></přepínač></button>
+              </div>
+              <div class="user">
+                  <div class="user__item user__login">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading"><a href="#">Přihlásit</a></span>
+                              <span class="user__login__subheading"><a href="#">Registrovat</a></span>
+                          </span>
+                      </div>
+                  </div>
+                  <!-- <div class="user__item user__login user__login--logged">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading">Alexandr Solženicyn</span>
+                              <span class="user__login__subheading">Můj účet</span>
+                          </span>
+                      </div>
+                  </div>
+                   -->
+                  <div class="user__item user__compare">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__compare__icon">
+                              <span class="notify-num notify-num--secondary">12</span>
+                          </span>
+                      </a>
+                  </div>
+                  <div class="user__item user__cart">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__cart__icon">
+                              <span class="notify-num notify-num--conversion">6</span>
+                          </span>
+                          <span class="user__cart__price">12 900 Kč</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="wrapper container">
+      <main class="main-content main-content--full">
+              <div id="mainBannerSecondary" class="main-banner main-banner--secondary owl-carousel">
+                  <div class="item">
+                      <div class="main-banner__image owl-lazy lazy" data-src="assets/images/samples/main-banner.jpg" src="assets/images/samples/main-banner.jpg" data-bg="assets/images/samples/main-banner.jpg">
+                          <div class="main-banner__content">
+                              <h1 class="main-banner__title">VÝPRODEJ SKLADŮ</h1>
+                              <h2 class="main-banner__subtitle">SLEVY AŽ 50%</h2>
+                              <span class="main-banner__desc">POPIS HLAVNÍHO BANNERU</span>
+                              <div class="main-banner__btn-wrapper">
+                                  <a href="#" class="main-banner__btn">PROHLÉDNOUT</a>
+                              </div>
+              
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="item">
+                      <div class="main-banner__image with-filter owl-lazy lazy" data-src="assets/images/samples/minibanner.png" src="assets/images/samples/minibanner.png" data-bg="assets/images/samples/minibanner.png">
+                          <div class="main-banner__content">
+                              <h1 class="main-banner__title">S podbarvením 0.25</h1>
+                              <h2 class="main-banner__subtitle">SLEVY AŽ 50%</h2>
+                              <span class="main-banner__desc">POPIS HLAVNÍHO BANNERU</span>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="item">
+                      <div class="main-banner__image dark-text owl-lazy lazy" data-src="assets/images/samples/minibanner.png" src="assets/images/samples/minibanner.png" data-bg="assets/images/samples/minibanner.png">
+                          <div class="main-banner__content">
+                              <h1 class="main-banner__title">Bez podbarvení</h1>
+                              <h2 class="main-banner__subtitle">ČERNÝ TEXT</h2>
+                              <span class="main-banner__desc">POPIS HLAVNÍHO BANNERU</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="container">
+                  <div class="claims claims--hp">
+                      <div class="claim">
+                          <div class="claim__icon"><i class="neo-shipped"></i></div>
+                          <div class="claim__text">
+                              <div class="claim__heading">100 000+</div>
+                              <div class="claim__subheading">Produktů skladem</div>
+                          </div>
+                      </div>
+                      <div class="claim">
+                          <div class="claim__icon"><i class="neo-shipped"></i></div>
+                          <div class="claim__text">
+                              <div class="claim__heading">Český produkt</div>
+                              <div class="claim__subheading">Vyrobeno v ČR</div>
+                          </div>
+                      </div>
+                      <div class="claim">
+                          <div class="claim__icon"><i class="neo-shipped"></i></div>
+                          <div class="claim__text">
+                              <div class="claim__heading">Doprava zdarma</div>
+                              <div class="claim__subheading">Na objednávky nad 500 Kč</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <h2 class="section-title">Vybrané kategorie - ikony</h2>
+              <div class="featured-categories featured-categories--icons">
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/batoh-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Turistické batohy</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/kolobezka-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Koloběžky</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/batoh-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Turistické batohy na dva řádky</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/kolobezka-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Lyžařské helmy</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/helma-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Koloběžky</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/batoh-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Koloběžky</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/helma-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Koloběžky</span>
+                      </a>
+                  </div>
+              
+                  <div class="item">
+                      <a href="#" class="item__link">
+                          <span class="item__image-wrapper">
+                              <img class="item__image lazy" data-src="assets/images/samples/kolobezka-icon.png" alt="">
+                          </span>
+                          <span class="item__title">Lyžařské helmy</span>
+                      </a>
+                  </div>
+              </div>
+      
+              <h2 class="section-title">Nejprodávanější produkty - slider</h2>
+              <div class="pruducts-grid pruducts-grid--slider owl-carousel">
+                  <div class="item">
+                      <div class="item__image">
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                      </div>
+                      <div class="item__tags">
+                          <ul>
+                              <li class="item__tag item__tag--blue">Doporučujeme</li>
+                              <li class="item__tag item__tag--black">Dárek zdarma</li>
+                          </ul>
+                      </div>
+                      <div class="item__quick-actions">
+                          <ul>
+                              <li class="item__quick-action item__quick-action--compare">
+                                  <a href="#"><span class="name">Porovnat</span> <i class="neo-scales"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--favourite">
+                                  <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--search">
+                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store store--yes">Skladem více než 10 ks</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-half"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Rossignol Název produktu s názvem na dva řádky ale bez anotace</a></div>
+                      <div class="item__price-buy">
+                          <div class="item__price">156 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                      </div>
+                      <div class="item__tags">
+                          <ul>
+                              <li class="item__tag item__tag--blue">Doporučujeme</li>
+                              <li class="item__tag item__tag--black">Dárek zdarma</li>
+                          </ul>
+                      </div>
+                      <div class="item__quick-actions">
+                          <ul>
+                              <li class="item__quick-action item__quick-action--compare">
+                                  <a href="#"><span class="name">Porovnat</span> <i class="neo-scales"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--favourite">
+                                  <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--search">
+                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store store--yes">Skladem více než 10 ks</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-half"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Rossignol Název produktu s názvem na dva řádky ale bez anotace</a></div>
+                      <div class="item__price-buy">
+                          <div class="item__price">156 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <span class="sticker">-50%</span>
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/notebook.png" alt=""></a>
+                      </div>
+                      <div class="item__quick-actions">
+                          <ul>
+                              <li class="item__quick-action item__quick-action--compare">
+                                  <a href="#"><span class="name">Porovnat</span> <i class="neo-scales"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--favourite">
+                                  <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--search">
+                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store store--not">Není skladem</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Podsedlová brašna Topeak Aero Wedge Pack, Medium - najeď na mě myší</a></div>
+                      <div class="item__desc">Univerzální podsedlová brašna se systémem uchycení QuickClick. Tato brašna Vám nabízí aerodynamický tvar, reflexní prvky a skvělý design.</div>
+                      <div class="item__gift">Podsedlový držák z odlehčené slitiny a nevim co ještě vymyslet na dva řádky</div>
+                      <div class="item__gift">Ještě jeden dárek</div>
+                      <div class="item__price-buy">
+                          <div class="item__price">
+                              <div class="item__price--old">od 211 200 Kč</div>
+                              <div class="item__price--new"><span class="fs-18">od</span> 116 999 Kč</div>
+                          </div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <span class="sticker">-50%</span>
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store">K dispozici více druhů</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Umax VisionBook 14Wr Plus, šedá</a></div>
+                      <div class="item__params">
+                          <ul>
+                              <li><span class="text">Úhlopříčka displeje:</span> <span class="value">14,1”</span></li>
+                              <li><span class="text">Rozlišení displeje:</span> <span class="value">1920 x 1080 (Full HD)</span></li>
+                              <li><span class="text">Typ procesoru:</span> <span class="value">Intel Celeron</span></li>
+                              <li><span class="text">Grafická karta:</span> <span class="value">Intel UHD Graphics 600</span></li>
+                          </ul>
+                      </div>
+                      <div class="item__price-buy">
+                          <div class="item__price">6 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                      </div>
+                      <div class="item__tags">
+                          <ul>
+                              <li class="item__tag item__tag--blue">Doporučujeme</li>
+                              <li class="item__tag item__tag--black">Dárek zdarma</li>
+                          </ul>
+                      </div>
+                      <div class="item__quick-actions">
+                          <ul>
+                              <li class="item__quick-action item__quick-action--compare">
+                                  <a href="#"><span class="name">Porovnat</span> <i class="neo-scales"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--favourite">
+                                  <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--search">
+                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store store--yes">Skladem více než 10 ks</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-half"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Rossignol Název produktu s názvem na dva řádky ale bez anotace</a></div>
+                      <div class="item__price-buy">
+                          <div class="item__price">156 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <span class="sticker">-50%</span>
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store">K dispozici více druhů</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Umax VisionBook 14Wr Plus, šedá</a></div>
+                      <div class="item__params">
+                          <ul>
+                              <li><span class="text">Úhlopříčka displeje:</span> <span class="value">14,1”</span></li>
+                              <li><span class="text">Rozlišení displeje:</span> <span class="value">1920 x 1080 (Full HD)</span></li>
+                              <li><span class="text">Typ procesoru:</span> <span class="value">Intel Celeron</span></li>
+                              <li><span class="text">Grafická karta:</span> <span class="value">Intel UHD Graphics 600</span></li>
+                          </ul>
+                      </div>
+                      <div class="item__price-buy">
+                          <div class="item__price">6 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                      </div>
+                      <div class="item__tags">
+                          <ul>
+                              <li class="item__tag item__tag--blue">Doporučujeme</li>
+                              <li class="item__tag item__tag--black">Dárek zdarma</li>
+                          </ul>
+                      </div>
+                      <div class="item__quick-actions">
+                          <ul>
+                              <li class="item__quick-action item__quick-action--compare">
+                                  <a href="#"><span class="name">Porovnat</span> <i class="neo-scales"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--favourite">
+                                  <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
+                              </li>
+                              <li class="item__quick-action item__quick-action--search">
+                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store store--yes">Skladem více než 10 ks</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-half"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Rossignol Název produktu s názvem na dva řádky ale bez anotace</a></div>
+                      <div class="item__price-buy">
+                          <div class="item__price">156 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="item__image">
+                          <span class="sticker">-50%</span>
+                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
+                      </div>
+                      <div class="item__store-rating">
+                          <div class="store">K dispozici více druhů</div>
+                          <div class="item__rating" title="Hodnocení: 50%">
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star"></span>
+                              <span class="neo-icon neo-star-empty"></span>
+                          </div>
+                      </div>
+                      <div class="item__title"><a href="">Umax VisionBook 14Wr Plus, šedá</a></div>
+                      <div class="item__params">
+                          <ul>
+                              <li><span class="text">Úhlopříčka displeje:</span> <span class="value">14,1”</span></li>
+                              <li><span class="text">Rozlišení displeje:</span> <span class="value">1920 x 1080 (Full HD)</span></li>
+                              <li><span class="text">Typ procesoru:</span> <span class="value">Intel Celeron</span></li>
+                              <li><span class="text">Grafická karta:</span> <span class="value">Intel UHD Graphics 600</span></li>
+                          </ul>
+                      </div>
+                      <div class="item__price-buy">
+                          <div class="item__price">6 900 Kč</div>
+                          <div class="item__buy">
+                              <a href="#" class="btn btn--conversion">Do košíku</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <h2 class="section-title">Nejprodávanější značky</h2>
+              <div class="brands brands--slider owl-carousel">
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand.png" alt="">
+                  </a>
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand.png" alt="">
+                  </a>
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand2.png" alt="">
+                  </a>
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand.png" alt="">
+                  </a>
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand3.png" alt="">
+                  </a>
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand.png" alt="">
+                  </a>
+                  <a class="item" href="#">
+                      <img class="owl-lazy" data-src="assets/images/samples/brand.png" alt="">
+                  </a>
+              </div>
+      
+              <h2 class="section-title">Poslední články z našeho magazínu</h2>
+              <div class="latest-news owl-carousel">
+                  <div class="news__item">
+                      <div class="news__item__image-wrapper">
+                          <a href="#">
+                              <span class="news__item__image">
+                                  <img class="owl-lazy" data-src="assets/images/samples/news-thumb.jpg" alt="">
+                              </span>
+                              <span class="news__item__image__btn"><span class="text">Zobrazit článek</span></span>
+                          </a>
+                      </div>
+                      <div class="news__item__content">
+                          <h3 class="news__item__title"><a href="#">Jak vybrat sedačku</a></h3>
+                          <div class="news__item__tags">
+                              <ul>
+                                  <li class="news__item__tag"><a href="#">Aromaterapie</a></li>
+                                  <li class="news__item__tag"><a href="#">Rady</a></li>
+                              </ul>
+                          </div>
+                          <div class="news__item__text">
+                              <p>Velmi elegantní perfektně zpracovaná sedací souprava tvaru "U" s kvalitním rozkládáním a dvěma úložnými prostory. Na sedací soupravě jsou použity kvalitní součástky ....</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="news__item">
+                      <div class="news__item__image-wrapper">
+                          <a href="#">
+                              <span class="news__item__image">
+                                  <img class="owl-lazy" data-src="assets/images/samples/news-thumb.jpg" alt="">
+                              </span>
+                              <span class="news__item__image__btn"><span class="text">Zobrazit článek</span></span>
+                          </a>
+                      </div>
+                      <div class="news__item__content">
+                          <h3 class="news__item__title"><a href="#">Jak vybrat sedačku</a></h3>
+                          <div class="news__item__tags">
+                              <ul>
+                                  <li class="news__item__tag"><a href="#">Aromaterapie</a></li>
+                                  <li class="news__item__tag"><a href="#">Rady</a></li>
+                              </ul>
+                          </div>
+                          <div class="news__item__text">
+                              <p>Velmi elegantní perfektně zpracovaná sedací souprava tvaru "U" s kvalitním rozkládáním a dvěma úložnými prostory. Na sedací soupravě jsou použity kvalitní součástky ....</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="news__item">
+                      <div class="news__item__image-wrapper">
+                          <a href="#">
+                              <span class="news__item__image">
+                                  <img class="owl-lazy" data-src="assets/images/samples/news-thumb.jpg" alt="">
+                              </span>
+                              <span class="news__item__image__btn"><span class="text">Zobrazit článek</span></span>
+                          </a>
+                      </div>
+                      <div class="news__item__content">
+                          <h3 class="news__item__title"><a href="#">Jak vybrat sedačku</a></h3>
+                          <div class="news__item__tags">
+                              <ul>
+                                  <li class="news__item__tag"><a href="#">Aromaterapie</a></li>
+                                  <li class="news__item__tag"><a href="#">Rady</a></li>
+                              </ul>
+                          </div>
+                          <div class="news__item__text">
+                              <p>Velmi elegantní perfektně zpracovaná sedací souprava tvaru "U" s kvalitním rozkládáním a dvěma úložnými prostory. Na sedací soupravě jsou použity kvalitní součástky ....</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="news__item">
+                      <div class="news__item__image-wrapper">
+                          <a href="#">
+                              <span class="news__item__image">
+                                  <img class="owl-lazy" data-src="assets/images/samples/news-thumb.jpg" alt="">
+                              </span>
+                              <span class="news__item__image__btn"><span class="text">Zobrazit článek</span></span>
+                          </a>
+                      </div>
+                      <div class="news__item__content">
+                          <h3 class="news__item__title"><a href="#">Jak vybrat sedačku</a></h3>
+                          <div class="news__item__tags">
+                              <ul>
+                                  <li class="news__item__tag"><a href="#">Aromaterapie</a></li>
+                                  <li class="news__item__tag"><a href="#">Rady</a></li>
+                              </ul>
+                          </div>
+                          <div class="news__item__text">
+                              <p>Velmi elegantní perfektně zpracovaná sedací souprava tvaru "U" s kvalitním rozkládáním a dvěma úložnými prostory. Na sedací soupravě jsou použity kvalitní součástky ....</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="more-btn-wrapper">
+                  <a href="#" class="btn btn--primary">Další články</a>
+              </div>
+      </main>
+      
+  </div>
+
+  <div class="container">
+      <div class="claims">
+          <div class="claim">
+              <div class="claim__icon"><i class="neo-shipped"></i></div>
+              <div class="claim__text">
+                  <div class="claim__heading">100 000+</div>
+                  <div class="claim__subheading">Produktů skladem</div>
+              </div>
+          </div>
+          <div class="claim">
+              <div class="claim__icon"><i class="neo-shipped"></i></div>
+              <div class="claim__text">
+                  <div class="claim__heading">Český produkt</div>
+                  <div class="claim__subheading">Vyrobeno v ČR</div>
+              </div>
+          </div>
+          <div class="claim">
+              <div class="claim__icon"><i class="neo-shipped"></i></div>
+              <div class="claim__text">
+                  <div class="claim__heading">Doprava zdarma</div>
+                  <div class="claim__subheading">Na objednávky nad 500 Kč</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <footer class="footer">
+      <div class="footer__top">
+          <div class="container">
+              <div class="widget widget--newsletter">
+                  <h3 class="widget__heading">Nadpis widgetu</h3>
+                  <div class="widget__content">
+                      <div class="newsletter__text">
+                          <h3 class="newsletter__heading">Odebírat newsletter</h3>
+                          <div class="newsletter__desc">
+                              <p>Nechcete přijít o slevy a mimořádné akce?</p>
+                              <p>Zadejte nám Vaši e-mailovou adresu a zůstaňte v obraze.</p>
+                          </div>
+                      </div>
+                      <div class="newsletter__action">
+                          <div class="input-with-btn">
+                              <input class="input-with-btn__input" type="text" placeholder="Zadejte e-mail">
+                              <input class="input-with-btn__btn" type="submit" value="Odeslat">
+                          </div>
+                          <div class="newsletter__note">
+                              <p>Odesláním souhlasíte se <a href="#">zpracováním osobních údajů</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer__columns">
+          <div class="container">
+              <div class="footer__columns__row columns-5">
+                  <div class="widget widget--contact-info">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <h4 class="name">Název obchodu</h4>
+                          <ul>
+                              <li><i class="neo-phone"></i> <a href="tel:+420723115235">+420 723 115 235</a></li>
+                              <li><i class="neo-mail"></i> <a href="mailto:info@jzshop.cz">info@jzshop.cz</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="widget widget--menu">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <ul class="menu">
+                              <li><a href="#">Obchodní podmínky</a></li>
+                              <li><a href="#">Kontakty</a></li>
+                              <li><a href="#">O nás</a></li>
+                              <li><a href="#">Magazín</a></li>
+                              <li><a href="#">Doprava a platba</a></li>
+                              <li><a href="#">Jak nakupovat</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="widget widget--articles">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                  
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                  
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                      </div>
+                  </div>
+                  <div class="widget widget--pay">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <div class="widget--pay__logos-row">
+                              <img class="lazy" data-src="assets/images/samples/kreditky.png" alt="">
+                          </div>
+                          <div class="widget--pay__logos-row">
+                              <img class="lazy" data-src="assets/images/samples/gopay-logo-big.png" alt="" style="max-width: 30%">
+                              <img class="lazy" data-src="assets/images/samples/PayPal-logo.png" alt="" style="max-width: 70%">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="widget widget--newsletter">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <div class="newsletter__text">
+                              <h3 class="newsletter__heading">Odebírat newsletter</h3>
+                              <div class="newsletter__desc">
+                                  <p>Nechcete přijít o slevy a mimořádné akce?</p>
+                                  <p>Zadejte nám Vaši e-mailovou adresu a zůstaňte v obraze.</p>
+                              </div>
+                          </div>
+                          <div class="newsletter__action">
+                              <div class="input-with-btn">
+                                  <input class="input-with-btn__input" type="text" placeholder="Zadejte e-mail">
+                                  <input class="input-with-btn__btn" type="submit" value="Odeslat">
+                              </div>
+                              <div class="newsletter__note">
+                                  <p>Odesláním souhlasíte se <a href="#">zpracováním osobních údajů</a></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Pokud chci 6+ sloupce, musím vytvořit novou row, protože flex-basis nefunguje správně, když je uvnitř nějaký flexbox element jako třeba input pro newsletter s tlačítkem odeslat -->
+              <!--<div class="footer__columns__row">
+                  <div class="widget widget--contact-info">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <h4 class="name">Název obchodu</h4>
+                          <ul>
+                              <li><i class="neo-phone"></i> <a href="tel:+420723115235">+420 723 115 235</a></li>
+                              <li><i class="neo-mail"></i> <a href="mailto:info@jzshop.cz">info@jzshop.cz</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>-->
+          </div>
+      </div>
+      <div class="footer__bottom">
+          <div class="container">
+              <div class="footer__bottom__inner">
+                  <div>
+                      <p>Copyright © 2021&nbsp;<a href="#">demo.jzshop.cz</a></p>
+                  </div>
+                  <div>
+                      <p>Vytvořil <strong>JZShop.cz</strong> | Tvorba a pronájem eshopů</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

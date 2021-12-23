@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="top-header">
+      <div class="container">
+          <div class="top-header__content">
+              <div class="logo">
+                  <div class="logo__top">
+                      <div class="switcher switcher--lang">CZ</div>
+                      <div class="switcher switcher--currency">CZK</div>
+                  </div>
+                  <a href="index.html" class="logo__link">
+                      <img class="lazy" data-src="assets/images/samples/logo.png" alt="logo">
+                  </a>
+              </div>
+              <div class="search">
+                  <div class="search__top">
+                      <span class="contact contact--phone"><i class="neo-phone"></i> 777 123 456</span>
+                      <span class="contact contact--menu">
+                                          <ul>
+                                              <li><a href="#">Kontakt</a></li>
+                                              <li><a href="#">Obchodní podmínky</a></li>
+                                          </ul>
+                                      </span>
+                  </div>
+                  <div class="input-with-btn input-with-btn--search-input">
+                      <input class="input-with-btn__input no-border" type="text" placeholder="Hledaný výraz">
+                      <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
+                  </div>
+                  <button id="theme-switcher">Dark/light <přepínač></přepínač></button>
+              </div>
+              <div class="user">
+                  <div class="user__item user__login">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading"><a href="#">Přihlásit</a></span>
+                              <span class="user__login__subheading"><a href="#">Registrovat</a></span>
+                          </span>
+                      </div>
+                  </div>
+                  <!-- <div class="user__item user__login user__login--logged">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading">Alexandr Solženicyn</span>
+                              <span class="user__login__subheading">Můj účet</span>
+                          </span>
+                      </div>
+                  </div>
+                   -->
+                  <div class="user__item user__compare">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__compare__icon">
+                              <span class="notify-num notify-num--secondary">12</span>
+                          </span>
+                      </a>
+                  </div>
+                  <div class="user__item user__cart">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__cart__icon">
+                              <span class="notify-num notify-num--conversion">6</span>
+                          </span>
+                          <span class="user__cart__price">12 900 Kč</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="wrapper container">
+    
+    <div class="row">
+        <main class="main-content main-content--cart row__col">
+            <div class="content-wrapper content-wrapper--wide content-wrapper--cart">
+                <div class="order-confirmation">
+                    <div class="order-confirmation__heading">
+                        <i class="neo-tick-box c-primary"></i> <span>Objednávka <span class="c-primary">č. 20021558</span> byla úspěšně přijata</span>
+                    </div>
+                    <p>Odeslali jsme Vám potvrzení objednávky na Váš e-mail a brzy zašleme další kroky.</p>
+                </div>
+            </div>
+    
+            <div class="order-confirmation-row">
+                <div class="method-item">
+                    <h3 class="method-item__heading">Způsob platby</h3>
+                    <div class="method-item__content">
+                        <div class="method-item__content__image">
+                            <img class="lazy" data-src="assets/images/samples/credit_card_contactless_big.png" alt="">
+                        </div>
+                        <div class="method-item__content__text">
+                            <div class="method-item__content__title">Platební bránou Comgate</div>
+                            <div class="method-item__content__desc">Platební kartou online. Zde bude popis platební metody vyplněný v administraci.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#" class="btn btn--conversion btn--order">Zaplatit objednávku</a>
+                </div>
+            </div>
+    
+            <div class="order-confirmation-row">
+                <div class="method-item">
+                    <h3 class="method-item__heading">Doručení</h3>
+                    <div class="method-item__content">
+                        <div class="method-item__content__image">
+                            <img class="lazy" data-src="assets/images/samples/balik-do-ruky.png" alt="">
+                        </div>
+                        <div class="method-item__content__text">
+                            <div class="method-item__content__title">Česká pošta - balík do ruky</div>
+                            <div class="method-item__content__desc">Určíte si adresu, kam chcete balík doručit. Garantujeme doručení následující pracovní den.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="date">Předpokládané datum doručení <span class="value">Úterý 23.10.</span></div>
+            </div>
+    
+            <div class="paygate-redirect">
+                Budete přesměrováni na platební bránu za
+                <div class="timer">
+                    5 sekund
+                </div>
+            </div>
+        </main>
+    </div>
+    
+  </div>
+
+  <!-- Custom JS -->
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

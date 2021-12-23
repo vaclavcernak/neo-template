@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="top-header">
+      <div class="container">
+          <div class="top-header__content">
+              <div class="logo">
+                  <div class="logo__top">
+                      <div class="switcher switcher--lang">CZ</div>
+                      <div class="switcher switcher--currency">CZK</div>
+                  </div>
+                  <a href="index.html" class="logo__link">
+                      <img class="lazy" data-src="assets/images/samples/logo.png" alt="logo">
+                  </a>
+              </div>
+              <div class="search">
+                  <div class="search__top">
+                      <span class="contact contact--phone"><i class="neo-phone"></i> 777 123 456</span>
+                      <span class="contact contact--menu">
+                                          <ul>
+                                              <li><a href="#">Kontakt</a></li>
+                                              <li><a href="#">Obchodní podmínky</a></li>
+                                          </ul>
+                                      </span>
+                  </div>
+                  <div class="input-with-btn input-with-btn--search-input">
+                      <input class="input-with-btn__input no-border" type="text" placeholder="Hledaný výraz">
+                      <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
+                  </div>
+                  <button id="theme-switcher">Dark/light <přepínač></přepínač></button>
+              </div>
+              <div class="user">
+                  <div class="user__item user__login">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading"><a href="#">Přihlásit</a></span>
+                              <span class="user__login__subheading"><a href="#">Registrovat</a></span>
+                          </span>
+                      </div>
+                  </div>
+                  <!-- <div class="user__item user__login user__login--logged">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading">Alexandr Solženicyn</span>
+                              <span class="user__login__subheading">Můj účet</span>
+                          </span>
+                      </div>
+                  </div>
+                   -->
+                  <div class="user__item user__compare">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__compare__icon">
+                              <span class="notify-num notify-num--secondary">12</span>
+                          </span>
+                      </a>
+                  </div>
+                  <div class="user__item user__cart">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__cart__icon">
+                              <span class="notify-num notify-num--conversion">6</span>
+                          </span>
+                          <span class="user__cart__price">12 900 Kč</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <nav class="breadcrumb">
+      <div class="container">
+          <ul>
+              <li><a href="index.html">Úvod</a></li>
+              <li><a href="">Další položka</a></li>
+              <li>Aktuální stránka</li>
+          </ul>
+      </div>
+  </nav>
+
+  <div class="wrapper container">
+    <h1 class="page-title">Nový nadpis H1</h1>
+    <div class="row">
+      <main class="main-content main-content--full row__col">
+          <div class="content-wrapper">
+              <div class="editor">
+                  <h1>Starý nadpis H1 v editoru</h1>
+                  <h2>Nadpis h2</h2>
+              
+                  <p>Duis urna magna! Elementum ridiculus. Eu magna mus urna, elementum duis, et, quis parturient scelerisque, pellentesque ultricies cras augue. Magnis ridiculus egestas tincidunt. <a href="">Natoque</a>, sit integer! Est, mauris ac? Parturient mauris pulvinar, odio pid elit porta turpis. Auctor mid? Montes rhoncus, et quis mus  nec elementum.</p>
+              
+                  <h3>Nadpis h3 a odrážkový seznam</h3>
+                  <ul>
+                      <li>Duis urna magna! Elementum</li>
+                      <li>Natoque, sit <a href="">integer!</a></li>
+                      <li>arturient mauris pulvinar, odio pid elit porta turpis.
+                          <ul>
+                              <li>vnořená položka</li>
+                          </ul>
+                      </li>
+                      <li>Duis urna magna! Elementum</li>
+                      <li>Natoque, sit integer!</li>
+                  </ul>
+              
+                  <h4>Nadpis h4 a číslovaný seznam</h4>
+                  <ol>
+                      <li>Duis urna magna! Elementum</li>
+                      <li>Natoque, sit integer!
+                          <ol>
+                              <li>vnořená položka</li>
+                          </ol>
+                      </li>
+                      <li>arturient mauris pulvinar, odio pid elit porta turpis.</li>
+                  </ol>
+              
+                  <h5>Nadpis h5 je malý uppercase</h5>
+                  <h6>Nadpis h6 je menší a uppercase</h6>
+              
+                  <h3>Fotogalerie</h3>
+                  <p>
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff" alt="test obrázek"></a>&nbsp;&nbsp;
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff"
+                                                                                                      alt=""></a>&nbsp;&nbsp;
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff"
+                                                                                                      alt=""></a>&nbsp;&nbsp;
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff"
+                                                                                                      alt=""></a>
+                  </p>
+              
+                  <p>Duis urna magna! Elementum ridiculus. Eu magna mus urna, elementum duis, et, quis parturient scelerisque, pellentesque ultricies cras augue. Magnis ridiculus egestas tincidunt. Natoque, sit integer! Est, mauris ac? Parturient mauris pulvinar, odio pid elit porta turpis. Auctor mid? Montes rhoncus, et quis mus ac, lacus cum?</p>
+              
+                  <p>Porttitor ac enim sed rhoncus, mid, habitasse egestas? Lorem integer dictumst scelerisque? Diam integer pellentesque mauris? Sagittis montes, tristique eros tincidunt, arcu augue, porta, <a href="">integer risus</a> pulvinar! Magnis etiam hac, amet porta! Porta vel mauris! Enim. Vel elementum amet mattis, dapibus! Est? Et quis massa dis pulvinar augue, ultrices ultrices cras velit, cum nec, pid, etiam in magna rhoncus porta ac integer dictumst? Dictumst, pellentesque aliquet integer nunc etiam sed nec elementum.</p>
+              
+                  <p>Duis urna magna! Elementum ridiculus. Eu magna mus urna, elementum duis, et, quis parturient scelerisque, pellentesque ultricies cras augue. Magnis ridiculus egestas tincidunt. Natoque, sit integer! Est, mauris ac? Parturient mauris pulvinar, odio pid elit porta turpis. Auctor mid? Montes rhoncus, et quis mus ac, lacus cum?</p>
+              
+                  <p>Porttitor ac enim sed rhoncus, mid, habitasse egestas? Lorem integer dictumst scelerisque? Diam integer pellentesque mauris? Sagittis montes, tristique eros tincidunt, arcu augue, porta, integer risus pulvinar! Magnis etiam hac, amet porta! Porta vel mauris! Enim. Vel elementum amet mattis, dapibus! Est? Et quis massa dis pulvinar augue, ultrices ultrices cras velit, cum nec, pid, etiam in magna rhoncus porta ac integer dictumst? Dictumst, pellentesque aliquet integer nunc etiam sed nec elementum.</p>
+              </div>
+          </div>
+      </main>
+      
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="claims">
+          <div class="claim">
+              <div class="claim__icon"><i class="neo-shipped"></i></div>
+              <div class="claim__text">
+                  <div class="claim__heading">100 000+</div>
+                  <div class="claim__subheading">Produktů skladem</div>
+              </div>
+          </div>
+          <div class="claim">
+              <div class="claim__icon"><i class="neo-shipped"></i></div>
+              <div class="claim__text">
+                  <div class="claim__heading">Český produkt</div>
+                  <div class="claim__subheading">Vyrobeno v ČR</div>
+              </div>
+          </div>
+          <div class="claim">
+              <div class="claim__icon"><i class="neo-shipped"></i></div>
+              <div class="claim__text">
+                  <div class="claim__heading">Doprava zdarma</div>
+                  <div class="claim__subheading">Na objednávky nad 500 Kč</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <footer class="footer">
+      <div class="footer__top">
+          <div class="container">
+              <div class="widget widget--newsletter">
+                  <h3 class="widget__heading">Nadpis widgetu</h3>
+                  <div class="widget__content">
+                      <div class="newsletter__text">
+                          <h3 class="newsletter__heading">Odebírat newsletter</h3>
+                          <div class="newsletter__desc">
+                              <p>Nechcete přijít o slevy a mimořádné akce?</p>
+                              <p>Zadejte nám Vaši e-mailovou adresu a zůstaňte v obraze.</p>
+                          </div>
+                      </div>
+                      <div class="newsletter__action">
+                          <div class="input-with-btn">
+                              <input class="input-with-btn__input" type="text" placeholder="Zadejte e-mail">
+                              <input class="input-with-btn__btn" type="submit" value="Odeslat">
+                          </div>
+                          <div class="newsletter__note">
+                              <p>Odesláním souhlasíte se <a href="#">zpracováním osobních údajů</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer__columns">
+          <div class="container">
+              <div class="footer__columns__row columns-5">
+                  <div class="widget widget--contact-info">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <h4 class="name">Název obchodu</h4>
+                          <ul>
+                              <li><i class="neo-phone"></i> <a href="tel:+420723115235">+420 723 115 235</a></li>
+                              <li><i class="neo-mail"></i> <a href="mailto:info@jzshop.cz">info@jzshop.cz</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="widget widget--menu">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <ul class="menu">
+                              <li><a href="#">Obchodní podmínky</a></li>
+                              <li><a href="#">Kontakty</a></li>
+                              <li><a href="#">O nás</a></li>
+                              <li><a href="#">Magazín</a></li>
+                              <li><a href="#">Doprava a platba</a></li>
+                              <li><a href="#">Jak nakupovat</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="widget widget--articles">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                  
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                  
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                      </div>
+                  </div>
+                  <div class="widget widget--pay">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <div class="widget--pay__logos-row">
+                              <img class="lazy" data-src="assets/images/samples/kreditky.png" alt="">
+                          </div>
+                          <div class="widget--pay__logos-row">
+                              <img class="lazy" data-src="assets/images/samples/gopay-logo-big.png" alt="" style="max-width: 30%">
+                              <img class="lazy" data-src="assets/images/samples/PayPal-logo.png" alt="" style="max-width: 70%">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="widget widget--newsletter">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <div class="newsletter__text">
+                              <h3 class="newsletter__heading">Odebírat newsletter</h3>
+                              <div class="newsletter__desc">
+                                  <p>Nechcete přijít o slevy a mimořádné akce?</p>
+                                  <p>Zadejte nám Vaši e-mailovou adresu a zůstaňte v obraze.</p>
+                              </div>
+                          </div>
+                          <div class="newsletter__action">
+                              <div class="input-with-btn">
+                                  <input class="input-with-btn__input" type="text" placeholder="Zadejte e-mail">
+                                  <input class="input-with-btn__btn" type="submit" value="Odeslat">
+                              </div>
+                              <div class="newsletter__note">
+                                  <p>Odesláním souhlasíte se <a href="#">zpracováním osobních údajů</a></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Pokud chci 6+ sloupce, musím vytvořit novou row, protože flex-basis nefunguje správně, když je uvnitř nějaký flexbox element jako třeba input pro newsletter s tlačítkem odeslat -->
+              <!--<div class="footer__columns__row">
+                  <div class="widget widget--contact-info">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <h4 class="name">Název obchodu</h4>
+                          <ul>
+                              <li><i class="neo-phone"></i> <a href="tel:+420723115235">+420 723 115 235</a></li>
+                              <li><i class="neo-mail"></i> <a href="mailto:info@jzshop.cz">info@jzshop.cz</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>-->
+          </div>
+      </div>
+      <div class="footer__bottom">
+          <div class="container">
+              <div class="footer__bottom__inner">
+                  <div>
+                      <p>Copyright © 2021&nbsp;<a href="#">demo.jzshop.cz</a></p>
+                  </div>
+                  <div>
+                      <p>Vytvořil <strong>JZShop.cz</strong> | Tvorba a pronájem eshopů</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
