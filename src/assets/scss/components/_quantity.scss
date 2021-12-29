@@ -1,0 +1,41 @@
+.quantity-input {
+  &__btn {
+    border: 1px solid $c-quantity-border;
+    border-radius: 5px;
+    background-color: $c-quantity-bg;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: $c-quantity-border;
+    }
+  }
+
+  &__number {
+    border: 1px solid $c-quantity-border;
+    border-radius: 5px;
+    background-color: $c-quantity-number-bg;
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    @include media-breakpoint-down(xxl) {
+      height: 40px;
+      width: 50px;
+    }
+    @include media-breakpoint-down(lg) {
+      height: 30px;
+    }
+  }
+
+  &--disabled {
+    .quantity-input__btn {
+      display: none;
+    }
+    .quantity-input__number,
+    input:disabled {
+      background-color: $c-disabled;
+      color: $c-text;
+    }
+  }
+}

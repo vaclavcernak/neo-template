@@ -4,7 +4,8 @@ layout: cart
 
 <div class="error error--warning">
     <div class="error__content">
-        <div class="error__text"><p><strong>Minimální hodnota objednávky je 2 000 Kč.</strong> Pro dokončení objednávky je potřeba nakoupit ještě <strong>za 380 Kč</strong>.</p></div>
+        <div class="error__text"><p><strong>Minimální hodnota objednávky je 2 000 Kč.</strong> Pro dokončení objednávky
+            je potřeba nakoupit ještě <strong>za 380 Kč</strong>.</p></div>
         <span class="error__close-icon"></span>
     </div>
 </div>
@@ -16,80 +17,289 @@ layout: cart
         <div class="cart__item">
             <div class="cart__item__main">
                 <div class="cart__item__image">
-                    <img class="lazy" data-src="assets/images/samples/boty.png" alt="">
+                    <a href="#"><img class="lazy" data-src="assets/images/samples/boty.png" alt=""></a>
                 </div>
-                <div class="cart__item__desc">
-                    <span class="cart__item__desc__name">
-                        Boty dětské sportovní
-                    </span>
-                    <span class="cart__item__desc__info">
-                        Barva: Černá, Velikost: 40
-                    </span>
-                    <span class="store store--not">
-                        není skladem
-                    </span>
-                </div>
-                <div class="cart__item__quantity">
-                    1
-                </div>
-                <div class="cart__item__price">
-                    1 299 Kč / ks
-                </div>
-                <div class="cart__item__price-sum">
-                    1 299 Kč
-                </div>
-                <div class="cart__item__delete">
-                    X
+                <div class="cart__item__main__inner">
+                    <div class="cart__item__desc">
+                        <span class="cart__item__desc__name">
+                            <a href="#">Boty dětské sportovní</a>
+                        </span>
+                        <span class="cart__item__desc__info">
+                            Barva: Černá, Velikost: 40
+                        </span>
+                        <span class="store store--not">
+                            není skladem
+                        </span>
+                    </div>
+                    <div class="cart__item__quantity">
+                        <div class="quantity-input">
+                            <button class="quantity-input__btn quantity-input__btn--minus">-</button>
+                            <input type="number" step="1" min="1" value="1" id="a" name="quantityCount"
+                                   class="quantity-input__number">
+                            <button class="quantity-input__btn quantity-input__btn--plus">+</button>
+                        </div>
+                    </div>
+                    <div class="cart__item__price">
+                        1 299 Kč / ks
+                    </div>
+                    <div class="cart__item__price-sum">
+                        1 299 Kč
+                    </div>
+                    <div class="cart__item__delete">
+                        ✖
+                    </div>
                 </div>
             </div>
 
             <div class="cart__item__bonus">
                 <div class="cart__item__bonus__item">
                     <div class="cart__bonus__image">
-                        <img class="lazy" data-src="https://dummyimage.com/50x40/000/fff" alt="">
+                        <a href="#"><img class="lazy" data-src="https://dummyimage.com/50x40/000/fff" alt=""></a>
                     </div>
                     <div class="cart__bonus__desc">
-                        <span class="gift">Dárek zdarma</span>
-                        <span class="cart__item__desc__name"><a href="#">Tkaničky do bot červené</a></span>
+                        <span class="gift"><i class="neo-gift"></i> Dárek zdarma</span>
+                        <span class="cart__bonus__desc"><a href="#">Tkaničky do bot červené</a></span>
                     </div>
                     <div class="cart__bonus__quantity">
                         1
                     </div>
-                    <div class="cart__bonus__price"></div>
+                    <div class="cart__bonus__price">(jen test)</div>
                     <div class="cart__bonus__price-sum">ZDARMA</div>
                 </div>
 
-                <div class="cart__item__bonus__item">
+                <div class="cart__item__bonus__item cart__item__bonus__item--with-options">
                     <div class="cart__bonus__image">
                         <img class="lazy" data-src="assets/images/samples/guarantee.png" alt="">
                     </div>
                     <div class="cart__bonus__desc">
-                        <span class="cart__item__desc__name">Prodloužená záruka</span>
-                        <ul class="checkbox-list">
-                            <li>
-                                <input class="checkbox" id="checkbox-1" type="checkbox" value="value1" checked>
-                                <label for="checkbox-1">+ 1 rok</label>
-                            </li>
-                            <li>
-                                <input class="checkbox" id="checkbox-2" type="checkbox" value="value2">
-                                <label for="checkbox-2">+ 2 roky <span>+ 299 Kč / ks</span></label>
-                            </li>
-                            <li>
-                                <input class="checkbox" id="checkbox-4" type="checkbox" value="value4">
-                                <label for="checkbox-4">+ 3 roky <span>+ 299 Kč / ks</span></label>
-                            </li>
-                        </ul>
+                        <span class="cart__bonus__desc__name">Prodloužená záruka <span class="tooltip-item neo-info"
+                                                                                      data-bs-toggle="tooltip"
+                                                                                      data-bs-placement="top"
+                                                                                      title="Tooltip lorem ipsum lalalala lalala"></span></span>
                     </div>
-                    <div class="cart__bonus__quantity">
-                        1
+                    <div class="cart__bonus__options">
+                        <div class="cart__bonus__option">
+                            <div class="cart__bonus__checkbox">
+                                <input class="checkbox checkbox--responsive" id="checkbox-1" type="checkbox" value="value1">
+                                <label for="checkbox-1">+ 1 rok <span class="tooltip-item neo-info"
+                                                                      data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                      title="Tooltip pro jeden rok navíc"></span> <span
+                                        class="unchecked-price">+ 199 Kč / ks</span></label>
+                            </div>
+                            <div class="cart__bonus__quantity">1</div>
+                            <div class="cart__bonus__price">299 Kč / ks</div>
+                            <div class="cart__bonus__price-sum">299 Kč</div>
+                        </div>
+                        <div class="cart__bonus__option">
+                            <div class="cart__bonus__checkbox">
+                                <input class="checkbox checkbox--responsive" id="checkbox-2" type="checkbox" value="value2">
+                                <label for="checkbox-2">+ 2 roky <span
+                                        class="unchecked-price">+ 399 Kč / ks</span></label>
+                            </div>
+                            <div class="cart__bonus__quantity">1</div>
+                            <div class="cart__bonus__price">399 Kč / ks</div>
+                            <div class="cart__bonus__price-sum">399 Kč</div>
+                        </div>
+                        <div class="cart__bonus__option">
+                            <div class="cart__bonus__checkbox">
+                                <input class="checkbox checkbox--responsive" id="checkbox-4" type="checkbox" value="value4">
+                                <label for="checkbox-4">+ 3 roky <span
+                                        class="unchecked-price">+ 499 Kč / ks</span></label>
+                            </div>
+                            <div class="cart__bonus__quantity">1</div>
+                            <div class="cart__bonus__price">499 Kč / ks</div>
+                            <div class="cart__bonus__price-sum">499 Kč</div>
+                        </div>
                     </div>
-                    <div class="cart__bonus__price"></div>
-                    <div class="cart__bonus__price-sum">ZDARMA</div>
+                </div>
+
+                <div class="cart__item__bonus__item cart__item__bonus__item--with-options">
+                    <div class="cart__bonus__image">
+                        <img class="lazy" data-src="assets/images/samples/guarantee.png" alt="">
+                    </div>
+                    <div class="cart__bonus__options">
+                        <div class="cart__bonus__option">
+                            <div class="cart__bonus__checkbox">
+                                <input class="checkbox checkbox--responsive" id="checkbox-11" type="checkbox" value="value11">
+                                <label for="checkbox-11">Služba na přání k produktu <span class="tooltip-item neo-info"
+                                                                                          data-bs-toggle="tooltip"
+                                                                                          data-bs-placement="top"
+                                                                                          title="Tooltip lorem ipsum lalalala lalala"></span></label>
+                            </div>
+                            <div class="cart__bonus__quantity">1</div>
+                            <div class="cart__bonus__price">1 299 Kč / ks</div>
+                            <div class="cart__bonus__price-sum">1 299 Kč</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cart__item">
+            <div class="cart__item__main">
+                <div class="cart__item__image">
+                    <a href="#"><img class="lazy" data-src="assets/images/samples/boty.png" alt=""></a>
+                </div>
+                <div class="cart__item__main__inner">
+                    <div class="cart__item__desc">
+                        <span class="cart__item__desc__name">
+                            <a href="#">V001 Alchemy qlt cot qnann pwab108 rubyx - Rowan Fabrics</a>
+                        </span>
+                        <span class="store store--yes">
+                            skladem více než 12 kusů
+                        </span>
+                    </div>
+                    <div class="cart__item__quantity">
+                        <div class="quantity-input">
+                            <button class="quantity-input__btn quantity-input__btn--minus">-</button>
+                            <input type="number" step="1" min="1" value="102.5" id="b" name="quantityCount"
+                                   class="quantity-input__number">
+                            <button class="quantity-input__btn quantity-input__btn--plus">+</button>
+                        </div>
+                    </div>
+                    <div class="cart__item__price">
+                        1 299 Kč / ks
+                    </div>
+                    <div class="cart__item__price-sum">
+                        1 299 Kč
+                    </div>
+                    <div class="cart__item__delete">
+                        ✖
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="cart__item">
+            <div class="cart__item__main">
+                <div class="cart__item__image">
+                    <a href="#"><img class="lazy" data-src="assets/images/samples/boty.png" alt=""></a>
+                </div>
+                <div class="cart__item__main__inner">
+                    <div class="cart__item__desc">
+                        <span class="gift"><i class="neo-gift"></i> Dárek zdarma</span>
+                        <span class="cart__item__desc__name">
+                            <a href="#">Název produktu dárku zdarma</a>
+                        </span>
+                    </div>
+                    <div class="cart__item__quantity">
+                        <div class="quantity-input quantity-input--disabled">
+                            <button class="quantity-input__btn quantity-input__btn--minus">-</button>
+                            <input type="number" step="1" min="1" value="1" id="b" name="quantityCount"
+                                   class="quantity-input__number" disabled>
+                            <button class="quantity-input__btn quantity-input__btn--plus">+</button>
+                        </div>
+                    </div>
+                    <div class="cart__item__price">
+                    </div>
+                    <div class="cart__item__price-sum">
+                        ZDARMA
+                    </div>
+                    <div class="cart__item__delete">
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="cart__item cart__item--sale">
+            <div class="cart__item__main">
+                <div class="cart__item__image">
+                    <a href="#"><img class="lazy" data-src="assets/images/samples/discount.png" alt=""></a>
+                </div>
+                <div class="cart__item__main__inner">
+                    <div class="cart__item__desc">
+                        <span class="cart__item__desc__name">
+                            Sleva
+                        </span>
+                    </div>
+                    <div class="cart__item__quantity">
+                    </div>
+                    <div class="cart__item__price">
+                    </div>
+                    <div class="cart__item__price-sum">
+                        -299 Kč
+                    </div>
+                    <div class="cart__item__delete">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-bottom">
+        <div class="cart-bottom__half cart-bottom__half--first">
+            <div class="cart-progress-wrapper">
+                <div class="cart-progress cart-progress--delivery">
+                    <div class="cart-progress__icon">
+                        <i class="neo-shipped"></i>
+                    </div>
+                    <div class="cart-progress__content">
+                        <div class="cart-progress__text">
+                            Objednejte ještě za <strong>510 Kč</strong> a získáte <strong>DOPRAVU ZDARMA!</strong>
+                        </div>
+                        <div class="cart-progress__bar">
+                            <progress id="progress-delivery" value="50" max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-progress cart-progress--delivery">
+                    <div class="cart-progress__icon">
+                        <img class="lazy" data-src="assets/images/samples/discount.png" alt="">
+                    </div>
+                    <div class="cart-progress__content">
+                        <div class="cart-progress__text">
+                            Nakupte ještě za <strong>12 971 Kč</strong> a získáte <strong>20%</strong> slevu.
+                        </div>
+                        <div class="cart-progress__bar">
+                            <progress id="progress-sale" value="30" max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{> cart__additional-strip--delivery}}
+            {{> cart__additional-strip--sale}}
+
+        </div>
+
+        <div class="cart-bottom__half cart-bottom__half--second">
+            <div class="cart-bottom__right">
+                <div class="cart-bottom__code">
+                    <input class="checkbox" id="code" type="checkbox" value="value2">
+                    <label for="code" class="code-toggle">Mám slevový kód</label>
+                    <div class="cart-bottom__code__input-wrapper">
+                        <div class="cart-bottom__code__input-text">Číslo kupónu:</div>
+                        <div class="cart-bottom__code__input input-with-btn">
+                            <input class="input-with-btn__input input-with-btn__input--gap" type="text">
+                            <input class="input-with-btn__btn input-with-btn__btn--gap" type="submit" value="Přidat">
+                        </div>
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <div class="order-summary__price">
+                        <span class="text">Celkem v košíku:</span>
+                        <span class="value">226 488 Kč</span>
+                    </div>
+                    <div class="order-summary__price--small">
+                        <span class="text">Celková cena bez DPH:</span>
+                        <span class="value">116 488 Kč</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-bottom__buttons">
+                <div class="cart-bottom__back-btn">
+                    <a href="#" class="btn btn--back"><i class="neo-u-turn-to-left"></i> Zpět k nákupu</a>
+                </div>
+                <div class="cart-bottom__forward-btn cart-bottom__right">
+                    <a href="#" class="btn btn--conversion btn--order">Pokračovat <i class="neo-forward"></i></a>
+                    <div class="next-step-text">K dodacím údajům</div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </main>

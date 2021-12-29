@@ -611,3 +611,28 @@ $(function() {
         }
     });
 });
+
+$('.quantity-input__btn--plus').click(function () {
+    $(this).prev().val(+$(this).prev().val() + 1);
+});
+$('.quantity-input__btn--minus').click(function () {
+    if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+});
+
+
+
+$('.cart__bonus__checkbox input').click(function () {
+    var price = $(this).parent().siblings();
+    if (this.checked) {
+        price.css('opacity','1');
+    } else {
+        price.css('opacity','0');
+    }
+
+})
+
+$('.code-toggle').click(function () {
+    var codeInput = $(this).next('.cart-bottom__code__input-wrapper');
+    codeInput.toggle();
+
+})

@@ -3,9 +3,9 @@
 // scss-docs-start tooltip-variables
 $zindex-tooltip:                    1080;
 $tooltip-max-width:                 320px;
-$tooltip-color:                     #ffffff;
-$tooltip-bg:                        #636363;
-$tooltip-border-radius:             0;
+$tooltip-color:                     $c-text;
+$tooltip-bg:                        $c-content;
+$tooltip-border-radius:             5px;
 $tooltip-opacity:                   1;
 $tooltip-padding-y:                 15px;
 $tooltip-padding-x:                 15px;
@@ -40,6 +40,13 @@ $tooltip-arrow-color:               $tooltip-bg;
       content: "";
       border-color: transparent;
       border-style: solid;
+    }
+  }
+
+  &-item {
+    &.neo-info {
+      color: $c-primary;
+      cursor: pointer;
     }
   }
 }
@@ -126,4 +133,5 @@ $tooltip-arrow-color:               $tooltip-bg;
   color: $tooltip-color;
   background-color: $tooltip-bg;
   border-radius: $tooltip-border-radius;
+  @include box-shadow--tooltip;
 }

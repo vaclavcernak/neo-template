@@ -58,7 +58,11 @@ $animation-speed: 0.3s !default;
 }
 
 @mixin box-shadow--card {
-  box-shadow: 0 0 7px 7px $c-wrapper-border;
+  box-shadow: 0 0 7px 2px $c-wrapper-border;
+}
+
+@mixin box-shadow--tooltip {
+  box-shadow: 0 0 15px 2px $c-tooltip-shadow;
 }
 
 //- Mixin: Fluid Type
