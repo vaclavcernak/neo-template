@@ -7,10 +7,10 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  background-color: $c-content;
+  background-color: var(--c-content);
 }
 progress::-webkit-progress-value {
-  background-color: $c-primary;
+  background-color: var(--c-primary);
 }
 progress::-moz-progress-bar {
   /* style rules */

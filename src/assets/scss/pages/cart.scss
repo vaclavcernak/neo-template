@@ -3,8 +3,8 @@
   margin-bottom: 20px;
   &__item {
     border-radius: 5px;
-    border: 1px solid $c-wrapper-border;
-    background-color: $c-content;
+    border: 1px solid var(--c-wrapper-border);
+    background-color: var(--c-content);
     padding: 15px;
     margin-bottom: 10px;
     @include media-breakpoint-down(sm) {
@@ -92,7 +92,7 @@
         display: block;
         font-size: 18px;
         margin-bottom: 3px;
-        color: $c-text;
+        color: var(--c-text);
         font-weight: $fw-medium;
         @include media-breakpoint-down(xl) {
           font-size: 16px;
@@ -102,9 +102,9 @@
         }
 
         a {
-          color: $c-text;
+          color: var(--c-text);
           &:hover {
-            color: $c-primary;
+            color: var(--c-primary);
           }
         }
       }
@@ -168,7 +168,7 @@
     &__price-sum {
       text-align: right;
       font-size: 20px;
-      color: $c-text;
+      color: var(--c-text);
       font-weight: $fw-medium;
       padding-left: 20px;
       margin-right: 20px;
@@ -218,8 +218,8 @@
 
       &__item {
         border-radius: 5px;
-        border: 1px solid $c-cart-bonus-border;
-        background-color: $c-cart-bonus-bg;
+        border: 1px solid var(--c-cart-bonus-border);
+        background-color: var(--c-cart-bonus-bg);
         display: flex;
         align-items: center;
         padding: 8px 5px;
@@ -321,7 +321,7 @@
       }
 
       a {
-        color: $c-text;
+        color: var(--c-text);
       }
 
       .gift {
@@ -374,7 +374,7 @@
     &__price-sum {
       text-align: right;
       font-size: 16px;
-      color: $c-text;
+      color: var(--c-text);
       font-weight: $fw-medium;
       padding-left: 20px;
       margin-right: 20px;
@@ -568,7 +568,7 @@
   &__icon {
     width: 50px;
     min-width: 50px;
-    color: $c-primary;
+    color: var(--c-primary);
 
     i {
       font-size: 35px;
@@ -600,7 +600,7 @@
   .title {
     @include fluid-type(18px, 25px);
     text-transform: uppercase;
-    color: $c-text;
+    color: var(--c-text);
     margin-bottom: 5px;
   }
 
@@ -636,7 +636,7 @@
     .heading {
       @include fluid-type(16px, 20px);
       margin-bottom: 0px;
-      color: $c-text;
+      color: var(--c-text);
       @include media-breakpoint-down(md) {
         margin-bottom: 5px;
       }
@@ -674,7 +674,7 @@
   .item {
     &:not(:last-of-type) {
       margin-bottom: 15px;
-      border-bottom: 1px solid $c-wrapper-border;
+      border-bottom: 1px solid var(--c-wrapper-border);
     }
 
     &__main,
@@ -703,7 +703,7 @@
 
       &__info {
         font-size: 12px;
-        color: $c-gray;
+        color: var(--c-gray);
       }
 
       .store {
@@ -728,10 +728,10 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  border: 1px solid $c-info-strip-border;
-  background-color: $c-info-strip-bg;
+  border: 1px solid var(--c-info-strip-border);
+  background-color: var(--c-info-strip-bg);
   //font-size: 14px;
-  color: $c-primary;
+  color: var(--c-primary);
 
   &__icon {
     width: 50px;
@@ -792,7 +792,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    color: $c-gray;
+    color: var(--c-gray);
 
     .text {
       font-size: 14px;
@@ -828,7 +828,7 @@
 
     .name {
       font-size: 14px;
-      color: $c-gray;
+      color: var(--c-gray);
     }
 
     .value {
@@ -898,7 +898,7 @@
     display: block;
     font-size: 14px;
     &__value {
-      color: $c-store-yes;
+      color: var(--c-in-stock);
     }
   }
   &__desc {
@@ -997,11 +997,11 @@
     }
 
     &:hover {
-      background-color: $c-accordion-hover;
-      border-color: $c-info-strip-border;
+      background-color: var(--c-accordion-hover);
+      border-color: var(--c-info-strip-border);
 
       .delivery-radio__item__name__heading {
-        color: $c-primary;
+        color: var(--c-primary);
       }
     }
 
@@ -1069,7 +1069,7 @@
 
     &__date {
       font-size: 14px;
-      color: $c-store-yes;
+      color: var(--c-in-stock);
       padding-right: 20px;
       white-space: nowrap;
       @include media-breakpoint-down(xl) {
@@ -1126,7 +1126,7 @@
     justify-content: center;
     font-size: 20px;
     padding: 20px 50px;
-    color: $c-gray;
+    color: var(--c-gray);
   }
   .delivery-radio__item__image {
     width: 40px;
@@ -1177,7 +1177,7 @@
     /*&:before {
       @include neo-icon();
       content: "\f138";
-      color: $c-primary;
+      color: var(--c-primary);
       margin-right: 5px;
       @include fluid-type(18px, 35px);
     }*/
@@ -1253,7 +1253,7 @@
 
   .date {
     .value {
-      color: $c-store-yes;
+      color: var(--c-in-stock);
       padding-left: 10px;
     }
   }
@@ -1273,6 +1273,6 @@
   .timer {
     padding-top: 5px;
     @include fluid-type(30px, 40px);
-    color: $c-primary;
+    color: var(--c-primary);
   }
 }

@@ -3,7 +3,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: $c-content;
+  background-color: var(--c-content);
   z-index: 1;
   padding: 20px 0;
   @include box-shadow--cookies;
@@ -13,7 +13,7 @@
   }
 
   a {
-    color: $c-primary;
+    color: var(--c-primary);
   }
 
   &__inner {
@@ -34,7 +34,7 @@
   }
 
   &__info__heading {
-    color: $c-primary;
+    color: var(--c-primary);
     font-size: 20px;
     font-weight: $fw-medium;
     margin-bottom: 10px;

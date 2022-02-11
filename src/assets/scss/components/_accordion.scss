@@ -1,9 +1,9 @@
 $accordion-padding-y:                     1rem;
 $accordion-padding-x:                     1.25rem;
-$accordion-color:                         $c-text;
-$accordion-bg:                            $c-content;
+$accordion-color:                         var(--c-text);
+$accordion-bg:                            var(--c-content);
 $accordion-border-width:                  1px;
-$accordion-border-color:                  $c-wrapper-border;
+$accordion-border-color:                  var(--c-wrapper-border);
 $accordion-border-radius:                 5px;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
 
@@ -12,18 +12,18 @@ $accordion-body-padding-x:                $accordion-padding-x;
 
 $accordion-button-padding-y:              $accordion-padding-y;
 $accordion-button-padding-x:              $accordion-padding-x;
-$accordion-button-color:                  $c-text;
+$accordion-button-color:                  var(--c-text);
 $accordion-button-bg:                     $accordion-bg;
 $accordion-transition:                    $btn-transition, border-radius .15s ease;
-$accordion-button-active-bg:              $c-content;
-$accordion-button-active-color:           $c-text;
+$accordion-button-active-bg:              var(--c-content);
+$accordion-button-active-color:           var(--c-text);
 
-$accordion-button-focus-border-color:     $c-text;
-$accordion-button-focus-box-shadow:       $c-text;
+$accordion-button-focus-border-color:     var(--c-text);
+$accordion-button-focus-box-shadow:       var(--c-text);
 
 $accordion-icon-width:                    1.25rem;
-$accordion-icon-color:                    $c-primary;
-$accordion-icon-active-color:             $c-primary;
+$accordion-icon-color:                    var(--c-primary);
+$accordion-icon-active-color:             var(--c-primary);
 $accordion-icon-transition:               transform .2s ease-in-out;
 $accordion-icon-transform:                rotate(-180deg);
 
@@ -51,9 +51,9 @@ $accordion-icon-transform:                rotate(-180deg);
         padding-bottom: 13px;
       }
       &:hover {
-        background-color: $c-accordion-hover;
+        background-color: var(--c-accordion-hover);
         .heading {
-          color: $c-primary;
+          color: var(--c-primary);
         }
       }
       &:after {
@@ -66,7 +66,7 @@ $accordion-icon-transform:                rotate(-180deg);
         height: auto;
         font-size: 18px;
         font-weight: bold;
-        color: $c-primary;
+        color: var(--c-primary);
         @include media-breakpoint-down(xxl) {
           right: 12px;
         }
@@ -100,7 +100,7 @@ $accordion-icon-transform:                rotate(-180deg);
       }
       .date {
         font-size: 14px;
-        color: $c-store-yes;
+        color: var(--c-in-stock);
         padding-right: 20px;
         @include media-breakpoint-down(xl) {
           font-size: 12px;

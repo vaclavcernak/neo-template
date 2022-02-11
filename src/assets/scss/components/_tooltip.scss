@@ -3,8 +3,8 @@
 // scss-docs-start tooltip-variables
 $zindex-tooltip:                    1080;
 $tooltip-max-width:                 320px;
-$tooltip-color:                     $c-text;
-$tooltip-bg:                        $c-content;
+$tooltip-color:                     var(--c-text);
+$tooltip-bg:                        var(--c-content);
 $tooltip-border-radius:             5px;
 $tooltip-opacity:                   1;
 $tooltip-padding-y:                 15px;
@@ -45,7 +45,7 @@ $tooltip-arrow-color:               $tooltip-bg;
 
   &-item {
     &.neo-info {
-      color: $c-primary;
+      color: var(--c-primary);
       cursor: pointer;
     }
   }

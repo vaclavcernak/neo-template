@@ -16,7 +16,7 @@
         content: "\f100";
         padding-right: 2px;
         font-size: 20px;
-        color: $c-primary;
+        color: var(--c-primary);
         position: relative;
         top: 2px;
       }
@@ -36,12 +36,12 @@
   }
 
   a {
-    color: $c-primary;
+    color: var(--c-primary);
     text-decoration: underline;
     transition: .2s;
     &:hover {
       text-decoration: none;
-      color: $c-primary;
+      color: var(--c-primary);
     }
   }
 }

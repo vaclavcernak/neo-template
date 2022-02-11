@@ -14,15 +14,15 @@
   &__input {
     padding: 10px 18px;
     border-radius: 5px 0 0 5px;
-    border: 1px solid $c-secondary;
-    background-color: $c-input-bg;
-    color: $c-text;
+    border: 1px solid var(--c-secondary);
+    background-color: var(--c-input-bg);
+    color: var(--c-text);
     height: 46px;
     outline: none;
-    @include placeholder { color: $c-placeholder; }
+    @include placeholder { color: var(--c-placeholder); }
 
     &--gap {
-      border-color: $c-input-border;
+      border-color: var(--c-input-border);
       height: 36px;
       margin-right: 15px;
       border-radius: 5px;
@@ -33,13 +33,13 @@
   }
 
   &__btn {
-    background-color: $c-secondary;
+    background-color: var(--c-secondary);
     border-radius: 0 5px 5px 0;
     border: 0;
     cursor: pointer;
     padding-right: 20px;
     padding-left: 20px;
-    color: $c-header-text;
+    color: var(--c-header-text);
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -47,10 +47,10 @@
     @include rfs(14px);
 
     &:hover {
-      background-color: $c-secondary-dark;
+      background-color: var(--c-secondary-dark);
     }
     &:active {
-      background-color: $c-secondary;
+      background-color: var(--c-secondary);
     }
 
     i {
@@ -66,38 +66,34 @@
 .form-control {
   display: block;
   width: 100%;
-  border: 1px solid $c-input-border;
-  background-color: $c-input-bg;
-  color: $c-text;
+  border: 1px solid var(--c-input-border);
+  background-color: var(--c-input-bg);
+  color: var(--c-text);
   border-radius: 5px;
   padding: 15px 20px;
   font-size: 16px;
   margin-bottom: 15px;
-  outline-color: $c-primary;
-  @include placeholder { color: $c-placeholder; }
-
-  &:focus {
-
-  }
+  outline-color: var(--c-primary);
+  @include placeholder { color: var(--c-placeholder); }
 
   &--submit {
-    background-color: $c-primary;
-    color: $c-input-bg;
+    background-color: var(--c-primary);
+    color: var(--c-input-bg);
     font-weight: $fw-medium;
     border-radius: 5px;
     display: inline-block;
     cursor: pointer;
     width: auto;
     text-transform: uppercase;
-    //box-shadow: inset 0px -3px 0px $c-primary-dark;
+    //box-shadow: inset 0px -3px 0px var(--c-primary-dark);
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
     &:hover {
-      background-color: $c-primary-dark;
+      background-color: var(--c-primary-dark);
     }
     &:active {
-      background-color: $c-primary;
+      background-color: var(--c-primary);
     }
   }
 }
@@ -131,7 +127,7 @@
     width: 20px;
     height: 20px;
     background: transparent;
-    border: 2px solid $c-primary;
+    border: 2px solid var(--c-primary);
     border-radius: 5px;
     position: absolute;
     left: -30px;
@@ -140,17 +136,17 @@
 
   // Box hover
   &:hover + label:before {
-    //background: $c-primary;
+    //background: var(--c-primary);
   }
 
   // Box focus
   &:focus + label:before {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+    //box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
   }
 
   // Box checked
   &:checked + label:before {
-    //background: $c-primary;
+    //background: var(--c-primary);
   }
 
   // Disabled state label.
@@ -162,7 +158,8 @@
   // Disabled box.
   &:disabled + label:before {
     box-shadow: none;
-    background: #ddd;
+    background: #b8b8b8;
+    border-color: #b8b8b8;
   }
 
   // Checkmark. Could be replaced with an image
@@ -172,9 +169,10 @@
     position: absolute;
     left: -25px;
     top: 4px;
-    color: $c-primary;
+    color: var(--c-primary);
     font-size: 12px;
     font-weight: bold;
+    text-decoration: none !important;
   }
 
   &--responsive {
@@ -207,9 +205,9 @@
 }
 
 .select-selected {
-  background-color: $c-input-bg;
+  background-color: var(--c-input-bg);
   border-radius: 5px;
-  border: 1px solid $c-input-border;
+  border: 1px solid var(--c-input-border);
 }
 
 /* Style the arrow inside the select element: */
@@ -231,16 +229,16 @@
 .select-items div,.select-selected {
   padding: 10px 40px 10px 15px;
   cursor: pointer;
-  border-bottom: 1px solid $c-input-border;
+  border-bottom: 1px solid var(--c-input-border);
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: $c-input-bg;
-  border-top: 1px solid $c-input-border;
-  border-left: 1px solid $c-input-border;
-  border-right: 1px solid $c-input-border;
+  background-color: var(--c-input-bg);
+  border-top: 1px solid var(--c-input-border);
+  border-left: 1px solid var(--c-input-border);
+  border-right: 1px solid var(--c-input-border);
   top: calc(100% - 2px);
   left: 0;
   right: 0;
@@ -302,7 +300,7 @@
   }
 
   .select-selected {
-    border: 1px solid $c-input-border;
+    border: 1px solid var(--c-input-border);
     @include media-breakpoint-up(xl) {
       width: 430px;
     }
@@ -341,7 +339,7 @@
     width: 23px;
     background-color: #fff;
     border-radius: 50%;
-    border: 1px solid $c-primary;
+    border: 1px solid var(--c-primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,7 +349,7 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: $c-primary;
+      background: var(--c-primary);
     }
   }
 }

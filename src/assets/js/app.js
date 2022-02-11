@@ -3,6 +3,7 @@ import 'magnific-popup';
 //import { createPopper } from '@popperjs/core';
 import { Tooltip, Accordion } from 'bootstrap';
 import LazyLoad from 'vanilla-lazyload'; // https://github.com/verlok/vanilla-lazyload
+import noUiSlider from 'nouislider';
 
 
 // vanilla-lazyload
@@ -59,18 +60,18 @@ $(function() {
             loop:false,
             margin:15,
             items:1,
-            nav: true,
+            nav: false,
             navText: ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
-            dots: false,
+            dots: true,
             lazyLoad: false,
             responsive:{
                 0:{
                     items:1
                 },
-                /*768:{
+                576:{
                     items:2,
                     margin:20,
-                },*/
+                },
             }
         };
 
@@ -367,29 +368,36 @@ function FeaturedCategoriesSlider() {
 
     featuredCategories.owlCarousel({
         items             : 5,
-        margin            : 0,
-        nav               : true,
+        margin            : 10,
+        nav               : false,
         dots              : false,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
+        autoHeight        : true,
         responsive:{
             0:{
-                items:1
+                items:1,
+                margin:0,
+                dots: true
             },
             576:{
-                items:2
+                items:2,
+                dots: true
             },
             768:{
-                items:3
+                items:3,
+                dots: true
             },
             992:{
-                items:4
+                items:4,
+                dots: true
             },
             1200:{
-                items:5
+                items:5,
+                nav: true
             },
         }
     });
@@ -408,7 +416,7 @@ function BrandsSlider() {
     brandsSlider.owlCarousel({
         items             : 7,
         margin            : 0,
-        nav               : true,
+        nav               : false,
         dots              : false,
         lazyLoad          : true,
         lazyLoadEager     : 1,
@@ -417,16 +425,20 @@ function BrandsSlider() {
         loop              : false,
         responsive:{
             0:{
-                items:2
+                items:2,
+                dots: true
             },
             576:{
-                items:2
+                items:2,
+                dots: true
             },
             768:{
-                items:3
+                items:3,
+                dots: true
             },
             992:{
-                items:5
+                items:5,
+                dots: true
             },
             1200:{
                 items:7
@@ -444,28 +456,35 @@ function LatestNewsSlider() {
     latestNews.owlCarousel({
         items             : 4,
         margin            : 0,
-        nav               : true,
+        nav               : false,
         dots              : false,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
+        autoHeight        : true,
         responsive:{
             0:{
-                items:1
+                items:1,
+                dots: true
             },
             576:{
-                items:1
+                items:2,
+                margin: 10,
+                dots: true
             },
             768:{
-                items:2
+                items:2,
+                dots: true
             },
             992:{
-                items:3
+                items:3,
+                dots: true
             },
             1200:{
-                items:4
+                items:4,
+                nav: true
             },
         }
     });
@@ -479,32 +498,39 @@ function ProductsGridSlider() {
 
     productsGridSlider.owlCarousel({
         items             : 4,
-        margin            : 0,
-        nav               : true,
+        margin            : 10,
+        nav               : false,
         dots              : false,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
+        autoHeight        : true,
         responsive:{
             0:{
-                items:1
+                items:1,
+                dots: true
             },
             576:{
-                items:1
+                items:2,
+                dots: true
             },
             768:{
-                items:2
+                items:2,
+                dots: true
             },
             992:{
-                items:3
+                items:3,
+                dots: true
             },
             1200:{
-                items:3
+                items:3,
+                dots: true
             },
             1400:{
-                items:4
+                items:4,
+                nav: true
             },
         }
     });
@@ -516,36 +542,34 @@ $(function() {
         owlOptions = {
             items             : 4,
             margin            : 0,
-            nav               : true,
+            nav               : false,
             dots              : false,
             lazyLoad          : true,
             lazyLoadEager     : 1,
             navContainerClass : "owl-nav owl-nav--general",
             navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
             loop              : false,
+            autoHeight        :true,
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    dots: true
                 },
                 576:{
-                    items:1
+                    items:2,
+                    margin: 15,
+                    dots: true
                 },
                 768:{
-                    items:2
-                },
-                992:{
-                    items:3
-                },
-                1200:{
-                    items:3
-                },
-                1400:{
-                    items:4
+                    items:2,
+                    margin: 15,
+                    dots: true
                 },
             }
         };
 
     if ( $(window).width() < 991.5 ) {
+        owl.addClass('owl-carousel');
         owl.owlCarousel(owlOptions);
     } else {
         owl.addClass('off');
@@ -553,12 +577,14 @@ $(function() {
 
     $(window).resize(function() {
         if ( $(window).width() < 991.5 ) {
-            if ( $('.owl-carousel').hasClass('off') ) {
+            if ( $('.owl-carousel-ready').hasClass('off') ) {
+                owl.addClass('owl-carousel');
                 owl.owlCarousel(owlOptions);
                 owl.removeClass('off');
             }
         } else {
-            if ( !$('.owl-carousel').hasClass('off') ) {
+            if ( !$('.owl-carousel-ready').hasClass('off') ) {
+                owl.removeClass('owl-carousel');
                 owl.addClass('off').trigger('destroy.owl.carousel');
                 owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
             }
@@ -634,5 +660,52 @@ $('.cart__bonus__checkbox input').click(function () {
 $('.code-toggle').click(function () {
     var codeInput = $(this).next('.cart-bottom__code__input-wrapper');
     codeInput.toggle();
-
 })
+
+
+// MENU
+
+$('.has-submenu--wide-menu, .all-categories').mouseenter(function() {
+    $('.menu-fade-bg').show();
+});
+$('.user__cart').mouseenter(function() {
+    $('.header-fade-bg').show();
+});
+
+$('.has-submenu--wide-menu, .all-categories').mouseleave(function() {
+    $('.menu-fade-bg').hide();
+});
+$('.user__cart').mouseleave(function() {
+    $('.header-fade-bg').hide();
+});
+
+$('.all-categories').mouseenter(function() {
+    var mainMenuWidth = $('.main-menu').innerWidth();
+    var menuWidth = $('.all-categories-menu').innerWidth();
+    var widthDiff =  mainMenuWidth - menuWidth;
+    $('.all-categories-menu > li .wide-menu').css('left', menuWidth).css('width', widthDiff);
+});
+
+// search whisperer
+
+$('.has-whisperer').focus(function() {
+    $(this).nextAll('.search-whisperer').show();
+});
+$('.has-whisperer').focusout(function() {
+    $(this).nextAll('.search-whisperer').hide();
+});
+
+// range slider
+
+const rangeSliders = document.querySelectorAll(".range-slider");
+
+rangeSliders.forEach(function (rangeSlider) {
+    noUiSlider.create(rangeSlider, {
+        start: [20, 80],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 100
+        }
+    });
+});

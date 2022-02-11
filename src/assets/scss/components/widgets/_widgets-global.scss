@@ -1,6 +1,6 @@
 .widget {
   a {
-    color: $c-text;
+    color: var(--c-text);
   }
 
   &__heading {

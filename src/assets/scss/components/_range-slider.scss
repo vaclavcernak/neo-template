@@ -1,0 +1,32 @@
+.range-slider {
+  &.noUi-target {
+    background: var(--c-content-dark);
+    border: 0;
+    height: 10px;
+    box-shadow: none;
+  }
+
+  .noUi-handle {
+    border: 1px solid var(--c-content);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: var(--c-primary);
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    top: -8px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .noUi-connect {
+    background: var(--c-primary);
+  }
+
+
+}

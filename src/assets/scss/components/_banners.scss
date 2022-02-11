@@ -121,7 +121,7 @@
 
     &:hover {
       background-color: #ffffff;
-      color: $c-text;
+      color: var(--c-text);
     }
 
     @include media-breakpoint-down(lg) {
@@ -207,10 +207,12 @@
       width: 25px;
       height: 25px;
       margin: 0 5px;
+      background-color: transparent;
 
       &:hover,
       &.active {
-        border-color: $c-primary;
+        border-color: var(--c-primary);
+        background-color: transparent;
       }
     }
   }
@@ -301,14 +303,56 @@
     position: relative;
   }
   .main-banner__btn {
-    background-color: $c-primary;
+    background-color: var(--c-primary);
     border: 0;
     padding: 12px 20px;
     font-size: 18px;
 
     &:hover {
       color: #ffffff;
-      background-color: $c-primary-dark;
+      background-color: var(--c-primary)-dark;
+    }
+  }
+}
+
+.inpage-banner {
+  height: 230px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+
+  @include media-breakpoint-down(xxl) {
+    display: none;
+  }
+
+  .text {
+    font-size: 52px;
+    color: var(--c-text);
+    margin: 0 30px;
+  }
+
+  &--white-text {
+    .text {
+      color: #ffffff;
+    }
+  }
+
+  .pruducts-grid & {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+
+  &--column {
+    height: auto;
+    align-items: initial;
+    justify-content: center;
+
+    .text {
+      margin: 20px;
     }
   }
 }

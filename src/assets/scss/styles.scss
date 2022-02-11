@@ -8,7 +8,7 @@
 @import 'pages/main';
 
 
-:root {
+@mixin light-theme {
   --c-primary: #419ed8;
   --c-primary-dark: #2b91d1;
   --c-secondary: #464c50;
@@ -31,6 +31,7 @@
 
   --c-text: #535353;
   --c-text-dark: #4a4a4a;
+  --c-text-light: #777777;
   --c-wrapper-border: #eeeeee;
   --c-header-text: #ffffff;
   --c-btn-text: #ffffff;
@@ -51,6 +52,22 @@
   --c-quantity-number-bg: #ffffff;
   --c-disabled: #f5f5f5;
   --c-back-btn: #e8e8e8;
+  --c-category-bg: #f2f7fa;
+  --c-filter-tag-bg: #ecf5fb;
+  --c-top-header: var(--c-primary);
+  --c-menu-border: #f5f5f5;
+  --c-categories-btn: #454a4e;
+  --c-categories-btn-hover: #616161;
+  --c-categories-bg: #ededed;
+  --c-whisperer-hover: #f7fbff;
+  --c-user-cart: var(--c-background);
+  --c-fade-bg: rgba(0,0,0,.3);
+  --c-range-input-border: #d0d0d0;
+
+  --c-red: #eb2f2f;
+  --c-gray: #8c8c8c;
+  --c-blue: #0098e6;
+  --c-black: #343434;
 }
 
 @mixin dark-theme {
@@ -75,7 +92,8 @@
   --c-not-in-stock: #ed4754;
 
   --c-text: #cbd5df;
-  --c-text-dark:  #b0bfce;
+  --c-text-dark: #b0bfce;
+  --c-text-light: #a0bfce;
   --c-wrapper-border: #191f28;
   --c-header-text: var(--c-text);
   --c-btn-text: #1a1d24;
@@ -96,6 +114,22 @@
   --c-quantity-number-bg: #ccc;
   --c-disabled: #8c8c8c;
   --c-back-btn: var(--c-content);
+  --c-category-bg: var(--c-content-dark);
+  --c-filter-tag-bg: var(--c-error-info);
+  --c-top-header: var(--c-content);
+  --c-menu-border: #242b38;
+  --c-categories-btn: #47546a;
+  --c-categories-btn-hover: #596d8e;
+  --c-categories-bg: #404c60;
+  --c-whisperer-hover: #47546a;
+  --c-user-cart: var(--c-content-dark);
+  --c-fade-bg: rgba(155,155,155,.3);
+  --c-range-input-border: #596d8e;
+
+  --c-red: #eb2f2f;
+  --c-gray: #8c8c8c;
+  --c-blue: #0098e6;
+  --c-black: #343434;
 
   .info-strip a {
     color: var(--c-content);
@@ -108,9 +142,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {@include dark-theme;}
+}
 
+@media (prefers-color-scheme: light) {
+  :root {@include light-theme;}
 }
 
 [data-theme="dark"] {
   @include dark-theme;
+}
+
+[data-theme="light"] {
+  @include light-theme;
 }

@@ -5,7 +5,7 @@
   margin-right: auto;
   margin-left: auto;
   @include media-breakpoint-up(xs) {
-    max-width: 540px;
+    max-width: 575px;
   }
   @include media-breakpoint-up(md) {
     max-width: 760px;
@@ -17,7 +17,7 @@
     max-width: 1160px;
   }
   @include media-breakpoint-up(xxl) {
-    max-width: 1410px;
+    max-width: 1500px;
   }
 }
 

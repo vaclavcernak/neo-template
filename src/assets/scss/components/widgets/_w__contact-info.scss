@@ -1,7 +1,7 @@
 .widget--contact-info {
   .name {
     font-size: 16px;
-    color: $c-text;
+    color: var(--c-text);
     text-transform: uppercase;
     margin-bottom: 7px;
   }
@@ -12,7 +12,7 @@
     }
   }
   i {
-    color: $c-primary;
+    color: var(--c-primary);
     padding-right: 3px;
     position: relative;
     top: 2px;

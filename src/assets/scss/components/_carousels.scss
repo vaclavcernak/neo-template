@@ -51,7 +51,7 @@
         align-items: center;
 
         &:hover {
-          background-color: $c-wrapper-border;
+          background-color: var(--c-wrapper-border);
         }
 
         i {
@@ -68,6 +68,35 @@
 
       .owl-next {
         right: -15px;
+      }
+    }
+  }
+}
+
+.owl-carousel {
+  .owl-nav {
+    .disabled {
+      opacity: 0;
+    }
+  }
+
+  .owl-dots {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .owl-dot {
+      border-radius: 100%;
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+      background-color: var(--c-content-dark);
+
+      &:hover,
+      &.active {
+        background-color: var(--c-primary);
       }
     }
   }

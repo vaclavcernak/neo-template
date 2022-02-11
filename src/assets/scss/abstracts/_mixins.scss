@@ -50,19 +50,23 @@ $animation-speed: 0.3s !default;
 /**************/
 
 @mixin box-shadow {
-  box-shadow: 0 0 1px 1px $c-wrapper-border;
+  box-shadow: 0 0 1px 1px var(--c-wrapper-border);
 }
 
 @mixin box-shadow--cookies {
-  box-shadow: 0 0 4px 4px $c-wrapper-border;
+  box-shadow: 0 0 4px 4px var(--c-wrapper-border);
 }
 
 @mixin box-shadow--card {
-  box-shadow: 0 0 7px 2px $c-wrapper-border;
+  box-shadow: 0 0 7px 2px var(--c-wrapper-border);
 }
 
 @mixin box-shadow--tooltip {
-  box-shadow: 0 0 15px 2px $c-tooltip-shadow;
+  box-shadow: 0 0 15px 2px var(--c-tooltip-shadow);
+}
+
+@mixin box-shadow--big {
+  box-shadow: 0 0 10px 3px rgba(0,0,0,.1);
 }
 
 //- Mixin: Fluid Type

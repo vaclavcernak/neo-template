@@ -50,16 +50,16 @@ $runProgressTimer: 8.5s;
     }
   }
   &--warning {
-    background-color: $bg-error-warning;
-    color: $c-error-warning;
+    background-color: var(--c-bg-error-warning);
+    color: var(--c-error-warning);
   }
   &--success {
-    background-color: $bg-error-success;
-    color: $c-error-success;
+    background-color: var(--c-bg-error-success);
+    color: var(--c-error-success);
   }
   &--info {
-    background-color: $bg-error-info;
-    color: $c-error-info;
+    background-color: var(--c-bg-error-info);
+    color: var(--c-error-info);
   }
   &__text {
     font-size: 14px;
@@ -132,9 +132,9 @@ $runProgressTimer: 8.5s;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  color: $c-info-strip-text;
-  border: 1px solid $c-info-strip-border;
-  background-color: $c-info-strip-bg;
+  color: var(--c-info-strip-text);
+  border: 1px solid var(--c-info-strip-border);
+  background-color: var(--c-info-strip-bg);
   @include media-breakpoint-down(md) {
     padding: 10px 15px;
   }

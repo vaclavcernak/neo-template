@@ -24,4 +24,13 @@
       width: 35%;
     }
   }
+
+  &--category {
+    @include media-breakpoint-up(xl) {
+      width: 25%;
+    }
+    @include media-breakpoint-between(lg,xl) {
+      width: 35%;
+    }
+  }
 }

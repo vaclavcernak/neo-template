@@ -1,21 +1,21 @@
 .quantity-input {
   &__btn {
-    border: 1px solid $c-quantity-border;
+    border: 1px solid var(--c-quantity-border);
     border-radius: 5px;
-    background-color: $c-quantity-bg;
+    background-color: var(--c-quantity-bg);
     height: 30px;
     width: 30px;
     font-size: 20px;
     cursor: pointer;
     &:hover {
-      background-color: $c-quantity-border;
+      background-color: var(--c-quantity-border);
     }
   }
 
   &__number {
-    border: 1px solid $c-quantity-border;
+    border: 1px solid var(--c-quantity-border);
     border-radius: 5px;
-    background-color: $c-quantity-number-bg;
+    background-color: var(--c-quantity-number-bg);
     height: 50px;
     width: 60px;
     text-align: center;
@@ -34,8 +34,8 @@
     }
     .quantity-input__number,
     input:disabled {
-      background-color: $c-disabled;
-      color: $c-text;
+      background-color: var(--c-disabled);
+      color: var(--c-text);
     }
   }
 }

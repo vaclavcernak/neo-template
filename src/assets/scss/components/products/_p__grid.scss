@@ -1,34 +1,46 @@
 .pruducts-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -7px;
-  @include media-breakpoint-down(md) {
-    margin: 0;
-  }
+  margin: 0 -7px 20px;
 
   &.owl-carousel.off {
     display: flex;
   }
 
+  &.owl-carousel {
+    margin-right: 0;
+    margin-left: 0;
+    .item {
+      margin: 0;
+    }
+  }
+
+  &:not(.owl-carousel) {
+    .item {
+      @include media-breakpoint-between(sm,lg) {
+        width: calc(50% - 14px);
+      }
+      @include media-breakpoint-down(sm) {
+        width: calc(100% - 14px);
+      }
+    }
+  }
+
   .item {
+    width: 100%;
     position: relative;
-    background: $c-content;
-    border: 1px solid $c-wrapper-border;
+    background: var(--c-content);
+    border: 1px solid var(--c-wrapper-border);
     border-radius: 5px;
-    padding: 15px 15px 70px;
+    padding: 15px 13px 70px;
     margin: 7px;
+
     @include media-breakpoint-only(xxl) {
       width: calc(25% - 14px);
     }
     @include media-breakpoint-between(lg,xxl) {
-      width: calc(33% - 14px);
+      width: calc(33.333% - 14px);
     }
-    /*@include media-breakpoint-between(md,lg) {
-      width: calc(50% - 14px);
-    }
-    @include media-breakpoint-down(md) {
-      width: calc(100% - 14px);
-    }*/
 
     &:hover {
       @include box-shadow--card;
@@ -56,10 +68,10 @@
       float: left;
       clear: both;
       &--blue {
-        background-color: $c-blue;
+        background-color: var(--c-blue);
       }
       &--black {
-        background-color: $c-black;
+        background-color: var(--c-black);
       }
     }
 
@@ -73,7 +85,7 @@
         text-decoration: none;
         //opacity: 0;
         //display: none;
-        //color: $c-text;
+        //color: var(--c-text);
         background-color: transparent;
       }
 
@@ -90,13 +102,13 @@
 
       background: transparent;
       &--compare.active {
-        background-color: $c-red;
+        background-color: var(--c-red);
       }
       &--favourite.active {
-        background-color: $c-blue;
+        background-color: var(--c-blue);
       }
       &--search.active {
-        background-color: $c-black;
+        background-color: var(--c-black);
       }
       &.active {
         @include box-shadow--card;
@@ -110,7 +122,7 @@
       }
       a {
         padding: 5px 10px;
-        color: $c-text;
+        color: var(--c-text);
         display: flex;
         align-items: center;
       }
@@ -121,6 +133,20 @@
       i {
         margin-left: 5px;
       }
+    }
+
+    .sticky-number {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--c-primary);
+      color: #ffffff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &__image {
@@ -150,45 +176,22 @@
 
     .store {
       font-size: 12px;
+      padding-right: 10px;
+      text-align: left;
       //font-weight: $fw-medium;
     }
 
     &__rating {
-      display: flex;
       font-size: 14px;
-      .neo-icon {
-        color: #d4d4d4;
-        margin: 0;
-        &.neo-star,
-        &.neo-star-half {
-          color: #e9a400;
-        }
-        &.neo-star-half {
-          position: relative;
-          &:after {
-            @include neo-icon;
-            content: "\f131";
-            position: absolute;
-            left: 0;
-            z-index: -1;
-            bottom: 3px;
-            color: #d4d4d4;
-          }
-        }
-        &.neo-star-empty {
-          &:after {
-            @include neo-icon;
-            content: "\f131";
-          }
-        }
-      }
-
     }
 
     &__title {
       margin-bottom: 15px;
+      @include media-breakpoint-only(sm) {
+        font-size: 13px;
+      }
       a {
-        color: $c-text;
+        color: var(--c-text);
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -205,7 +208,7 @@
 
     &__gift {
       font-size: 14px;
-      color: $c-red;
+      color: var(--c-red);
       padding-left: 25px;
       position: relative;
       line-height: 1.4;
@@ -231,12 +234,12 @@
       }
 
       .text {
-        color: $c-gray;
+        color: var(--c-gray);
       }
 
       .value {
         font-weight: $fw-regular;
-        color: $c-text;
+        color: var(--c-text);
       }
     }
 
@@ -254,13 +257,58 @@
     &__price {
       font-size: 22px;
       font-weight: $fw-medium;
+      @include media-breakpoint-only(sm) {
+        font-size: 16px;
+      }
       &--old {
         font-weight: $fw-light;
         font-size: 14px;
         text-decoration: line-through;
       }
       &--new {
-        color: $c-red;
+        color: var(--c-red);
+      }
+    }
+
+
+
+    // .item--center
+    &--center {
+      text-align: center;
+      padding-bottom: 40px;
+      @include media-breakpoint-only(xxl) {
+        width: calc(20% - 14px);
+      }
+
+      .store {
+        @include media-breakpoint-up(md) {
+          font-size: 13px;
+        }
+      }
+
+      .item__rating {
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
+        }
+      }
+
+      .item__title {
+        font-size: 14px;
+      }
+
+      .item__price-buy {
+        justify-content: center;
+        .item__price {
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+
+          &--old {
+            font-size: 14px;
+            font-weight: $fw-light;
+            margin-right: 20px;
+          }
+        }
       }
     }
   }
@@ -268,17 +316,36 @@
   .owl-nav.owl-nav--general {
     top: 130px;
   }
-}
 
-.pruducts-grid--slider {
-  &.owl-carousel .owl-stage {
-    display: flex;
+  &--slider { // products-grid--slider
+    &.owl-carousel .owl-stage {
+      display: flex;
+    }
+    .item {
+      width: auto;
+      height: calc(100% - 14px);
+      @include media-breakpoint-down(md) {
+        height: auto;
+      }
+    }
   }
-  .item {
-    width: auto;
-    height: calc(100% - 14px);
-    @include media-breakpoint-down(md) {
-      height: auto;
+
+  &--4-items { // products-grid--4-items
+    .item {
+      @include media-breakpoint-only(xxl) {
+        width: calc(25% - 14px);
+      }
+    }
+  }
+
+  &--3-items { // products-grid--3-items
+    .item,
+    .inpage-banner--column {
+      @include media-breakpoint-only(xxl) {
+        width: calc(33.3333% - 14px);
+      }
     }
   }
 }
+
+

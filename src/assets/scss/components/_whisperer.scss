@@ -1,0 +1,247 @@
+.search-whisperer {
+  display: none;
+  position: absolute;
+  top: 50px;
+  width: 570px;
+  background-color: var(--c-background);
+  color: var(--c-text);
+  border-radius: 5px;
+  @include box-shadow--big;
+  padding: 20px;
+
+  .highlight {
+    color: var(--c-primary);
+    font-weight: $fw-medium;
+  }
+
+  a {
+    color: var(--c-text);
+  }
+
+  &__section {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .section {
+    &__heading {
+      font-weight: $fw-medium;
+      margin-bottom: 10px;
+    }
+
+    &__item {
+      margin-bottom: 8px;
+
+      &::before {
+        @include neo-icon;
+        margin-right: 8px;
+      }
+      &--recently {
+        &::before {
+          content: "\f10f";
+        }
+      }
+
+      &--search {
+        &::before {
+          content: "\f10b";
+        }
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__clear-history {
+      font-size: 14px;
+      margin-top: 15px;
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &--v2 {
+    padding: 10px;
+
+    .items {
+      display: table;
+      width: 100%;
+      margin-bottom: 20px;
+
+      .item {
+        display: table-row;
+        background-color: var(--c-content);
+
+        &:hover {
+          background-color: var(--c-whisperer-hover);
+          @include box-shadow--card;
+        }
+
+        &-separator {
+          padding: 3px;
+        }
+
+
+
+        > div {
+          display: table-cell;
+          vertical-align: middle;
+          padding: 6px 10px;
+          border-top: 1px solid var(--c-wrapper-border);
+          border-bottom: 1px solid var(--c-wrapper-border);
+
+          &:first-child {
+            padding-left: 15px;
+            padding-right: 0;
+            border-left: 1px solid var(--c-wrapper-border);
+          }
+
+          &:last-child {
+            padding-right: 15px;
+            border-right: 1px solid var(--c-wrapper-border);
+          }
+        }
+
+        &__text {
+          .title {
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+          a {
+            color: var(--c-text-light);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .store-rating {
+          display: flex;
+          align-items: center;
+
+          .store {
+            font-size: 12px;
+            margin-right: 10px;
+          }
+
+          .rating {
+            font-size: 12px;
+          }
+        }
+
+        &__price {
+          text-align: right;
+
+          .price {
+            color: var(--c-text-dark);
+            font-weight: $fw-medium;
+            font-size: 14px;
+            &--old {
+              font-size: 11px;
+              font-weight: $fw-regular;
+            }
+            &--new {
+              color: #e60000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .show-all {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: $fw-medium;
+    margin-bottom: 15px;
+
+    a {
+      color: var(--c-primary);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .search-sections {
+
+  }
+
+  .search-section {
+    padding-bottom: 5px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--c-wrapper-border);
+      margin-bottom: 15px;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      color: var(--c-text);
+      font-weight: $fw-medium;
+      margin-bottom: 10px;
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      font-size: 14px;
+      width: 50%;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+
+      &:before {
+        @include neo-icon;
+        content: "\f10e";
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        margin-top: -2px;
+        margin-right: 5px;
+      }
+
+      &--category {
+        &:before {
+          content: "\f10e";
+        }
+      }
+
+      &--article {
+        &:before {
+          content: "\f10d";
+        }
+      }
+    }
+
+    .list {
+      li {
+        display: inline-block;
+        &:not(:last-of-type) {
+          padding-right: 8px;
+          margin-right: 6px;
+          border-right: 1px solid var(--c-text);
+        }
+      }
+    }
+  }
+}

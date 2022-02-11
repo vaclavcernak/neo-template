@@ -31,7 +31,7 @@
   }
 
   &__icon {
-    color: $c-primary;
+    color: var(--c-primary);
     i {
       @include fluid-type(4rem, 6rem);
     }
@@ -45,7 +45,7 @@
   }
 
   &__heading {
-    color: $c-primary;
+    color: var(--c-primary);
     font-weight: $fw-bold;
     //@include rfs(40px);
     @include fluid-type(25px, 38px);
@@ -63,7 +63,7 @@
   }
 
   &__subheading {
-    color: $c-text;
+    color: var(--c-text);
     font-weight: $fw-bold;
     @include fluid-type(16px, 25px);
     //@include rfs(25px);

@@ -27,5 +27,16 @@
       }
     }
   }
+
+  &--category {
+    &--with-sidebar {
+      @include media-breakpoint-only(xxl) {
+        width: 75%;
+      }
+      @include media-breakpoint-between(lg,xxl) {
+        width: 65%;
+      }
+    }
+  }
 }
 

@@ -7,7 +7,7 @@
         display: block;
         content: "";
         height: 1px;
-        background-color: $c-wrapper-border;
+        background-color: var(--c-wrapper-border);
         margin-top: 20px;
         margin-left: -15px;
         margin-right: -15px;
@@ -44,41 +44,10 @@
       font-weight: $fw-medium;
     }
 
-    &__rating {
-      display: flex;
-      .neo-icon {
-        color: #d4d4d4;
-        margin: 0;
-        &.neo-star,
-        &.neo-star-half {
-          color: #e9a400;
-        }
-        &.neo-star-half {
-          position: relative;
-          &:after {
-            @include neo-icon;
-            content: "\f131";
-            position: absolute;
-            left: 0;
-            z-index: -1;
-            bottom: 3px;
-            color: #d4d4d4;
-          }
-        }
-        &.neo-star-empty {
-          &:after {
-            @include neo-icon;
-            content: "\f131";
-          }
-        }
-      }
-
-    }
-
     &__title {
       margin-bottom: 20px;
       a {
-        color: $c-text;
+        color: var(--c-text);
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -105,7 +74,7 @@
       .owl-prev,
       .owl-next {
         background-color: #fafafa;
-        border: 1px solid $c-wrapper-border;
+        border: 1px solid var(--c-wrapper-border);
         width: 38px;
         height: 60px;
         line-height: 50px;
@@ -116,7 +85,7 @@
         align-items: center;
 
         &:hover {
-          background-color: $c-wrapper-border;
+          background-color: var(--c-wrapper-border);
         }
 
         i {
@@ -143,7 +112,7 @@
   /*@include media-breakpoint-only(md) {
     .owl-item.active {
       &:not(:first-of-type) {
-        border-left: 1px solid $c-wrapper-border;
+        border-left: 1px solid var(--c-wrapper-border);
         padding-left: 15px
       }
     }

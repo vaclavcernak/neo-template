@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div class="header-fade-bg"></div>
   <header class="top-header">
       <div class="container">
           <div class="top-header__content">
@@ -38,10 +39,28 @@
                                       </span>
                   </div>
                   <div class="input-with-btn input-with-btn--search-input">
-                      <input class="input-with-btn__input no-border" type="text" placeholder="Hledaný výraz">
+                      <input class="input-with-btn__input no-border has-whisperer" type="text" placeholder="Hledaný výraz">
                       <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
+                      <div class="search-whisperer">
+                          <div class="search-whisperer__section">
+                              <div class="section__heading">
+                                  Naposledy jste hledali
+                              </div>
+                              <div class="section__item section__item--recently"><a href="#">koloběžka</a></div>
+                              <div class="section__item section__item--recently"><a href="#">náhradní kolo na koloběžku</a></div>
+                              <div class="section__item section__item--recently"><a href="#">odrazky</a></div>
+                              <div class="section__clear-history"><a href="#">Vymazat historii hledání</a></div>
+                          </div>
+                          <div class="search-whisperer__section">
+                              <div class="section__heading">
+                                  Nejčastěji hledáte
+                              </div>
+                              <div class="section__item section__item--search"><a href="#">koloběžka</a></div>
+                              <div class="section__item section__item--search"><a href="#">autosedačka</a></div>
+                          </div>
+                      </div>
                   </div>
-                  <button id="theme-switcher">Dark/light <přepínač></přepínač></button>
+                  <button id="theme-switcher">Dark/light</button>
               </div>
               <div class="user">
                   <div class="user__item user__login">
@@ -75,8 +94,94 @@
                           <span class="user__cart__icon">
                               <span class="notify-num notify-num--conversion">6</span>
                           </span>
-                          <span class="user__cart__price">12 900 Kč</span>
+                          <span class="user__cart__price">129 Kč</span>
                       </a>
+                      <div class="user__cart__open">
+                          <div class="cart-table">
+                              <div class="item">
+                                  <div class="item__image">
+                                      <a href="#"><img class="lazy" data-src="assets/images/samples/boty.png" alt=""></a>
+                                  </div>
+                                  <div class="item__text">
+                                      <div class="item__text__title">
+                                          <a href="#">Boty dětské sportovní</a>
+                                      </div>
+                                      <div class="item__text__desc">
+                                          Barva: Černá, Velikost: 40
+                                      </div>
+                                  </div>
+                                  <div class="item__quantity">
+                                      1 ks
+                                  </div>
+                                  <div class="item__price">
+                                      4 299 Kč
+                                  </div>
+                                  <div class="item__close">
+                                      <a href="#">✖</a>
+                                  </div>
+                              </div>
+                  
+                              <div class="item">
+                                  <div class="item__image">
+                                      <a href="#"><img class="lazy" data-src="assets/images/samples/triko.png" alt=""></a>
+                                  </div>
+                                  <div class="item__text">
+                                      <div class="item__text__title">
+                                          <a href="#">Tričko pánské</a>
+                                      </div>
+                                      <div class="item__text__desc">
+                                          Barva: Bílá, Velikost: XXL
+                                      </div>
+                                  </div>
+                                  <div class="item__quantity">
+                                      1 ks
+                                  </div>
+                                  <div class="item__price">
+                                      1 299 Kč
+                                  </div>
+                                  <div class="item__close">
+                                      <a href="#">✖</a>
+                                  </div>
+                              </div>
+                  
+                              <div class="item">
+                                  <div class="item__image">
+                                      <a href="#"><img class="lazy" data-src="assets/images/samples/triko.png" alt=""></a>
+                                  </div>
+                                  <div class="item__text">
+                                      <div class="item__text__title">
+                                          <a href="#">Vans B Otw Checker Fill B Navy/White/Grey S</a>
+                                      </div>
+                                      <div class="item__text__desc">
+                                          Velikost: XXL
+                                      </div>
+                                  </div>
+                                  <div class="item__quantity">
+                                      1 ks
+                                  </div>
+                                  <div class="item__price">
+                                      299 Kč
+                                  </div>
+                                  <div class="item__close">
+                                      <a href="#">✖</a>
+                                  </div>
+                              </div>
+                          </div>
+                  
+                          <div class="bottom">
+                              <div class="delivery-info">
+                                  <div class="delivery-info__text">
+                                      <i class="neo-shipped"></i> <span>Do dopravy zdarma zbývá ještě <span class="c-primary">525 Kč</span></span>
+                                  </div>
+                                  <progress id="progress-delivery" value="50" max="100"></progress>
+                              </div>
+                              <div class="right">
+                                  <a href="#" class="btn btn--conversion">Přejít do košíku</a>
+                              </div>
+                          </div>
+                  
+                  
+                      </div>
                   </div>
               </div>
           </div>
@@ -150,7 +255,7 @@
                   </div>
               </div>
       
-              <h2 class="section-title">Vybrané kategorie - obrázky</h2>
+              <h2 class="section-title section-title--center">Vybrané kategorie - obrázky</h2>
               <div class="featured-categories featured-categories--images owl-carousel">
                   <div class="item">
                       <a href="#" class="item__link">
@@ -195,8 +300,8 @@
                   </div>
               </div>
       
-              <h2 class="section-title">Nejprodávanější produkty</h2>
-              <div class="pruducts-grid pruducts-grid--grid owl-carousel">
+              <h2 class="section-title section-title--center">Nejprodávanější produkty</h2>
+              <div class="pruducts-grid pruducts-grid--grid owl-carousel-ready">
                   <div class="item">
                       <div class="item__image">
                           <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
@@ -222,7 +327,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--yes">Skladem více než 10 ks</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star-half"></span>
@@ -263,7 +368,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--yes">Skladem více než 10 ks</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star-half"></span>
@@ -299,7 +404,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--not">Není skladem</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
@@ -328,7 +433,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store">K dispozici více druhů</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
@@ -377,7 +482,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--yes">Skladem více než 10 ks</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star-half"></span>
@@ -400,7 +505,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store">K dispozici více druhů</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
@@ -449,7 +554,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--yes">Skladem více než 10 ks</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star-half"></span>
@@ -472,7 +577,7 @@
                       </div>
                       <div class="item__store-rating">
                           <div class="store">K dispozici více druhů</div>
-                          <div class="item__rating" title="Hodnocení: 50%">
+                          <div class="item__rating star-rating" title="Hodnocení: 50%">
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
                               <span class="neo-icon neo-star"></span>
@@ -498,7 +603,7 @@
                   </div>
               </div>
       
-              <h2 class="section-title">Nejprodávanější značky</h2>
+              <h2 class="section-title section-title--center">Nejprodávanější značky</h2>
               <div class="brands brands--slider owl-carousel">
                   <a class="item" href="#">
                       <img class="owl-lazy" data-src="assets/images/samples/brand.png" alt="">
@@ -523,7 +628,7 @@
                   </a>
               </div>
       
-              <h2 class="section-title">Poslední články z našeho magazínu</h2>
+              <h2 class="section-title section-title--center">Poslední články z našeho magazínu</h2>
               <div class="latest-news owl-carousel">
                   <div class="news__item">
                       <div class="news__item__image-wrapper">

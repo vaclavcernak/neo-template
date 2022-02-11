@@ -1,0 +1,32 @@
+.star-rating {
+  display: flex;
+  .neo-icon {
+    color: #d4d4d4;
+    margin: 0;
+    &.neo-star,
+    &.neo-star-half {
+      color: #e9a400;
+    }
+    &.neo-star-half {
+      position: relative;
+      &:before {
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        @include neo-icon;
+        content: "\f131";
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        color: #d4d4d4;
+      }
+    }
+    &.neo-star-empty {
+      &:after {
+        @include neo-icon;
+        content: "\f131";
+      }
+    }
+  }
+}

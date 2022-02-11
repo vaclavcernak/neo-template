@@ -1,9 +1,9 @@
 .footer {
-  color: $c-text-footer;
-  background-color: $c-content;
+  color: var(--c-text);
+  background-color: var(--c-content);
 
   a {
-    color: $c-text-footer;
+    color: var(--c-text);
   }
 
   // Footer top

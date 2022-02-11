@@ -23,9 +23,9 @@
 
 %content-wrapper {
   padding: 30px 30px 10px;
-  background-color: $c-content;
+  background-color: var(--c-content);
   //@include box-shadow;
-  border: 1px solid $c-wrapper-border;
+  border: 1px solid var(--c-wrapper-border);
   margin-bottom: 20px;
   border-radius: 10px;
   @include media-breakpoint-down(md) {

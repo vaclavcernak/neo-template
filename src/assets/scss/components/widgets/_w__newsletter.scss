@@ -6,7 +6,7 @@
   }
 
   .newsletter__heading {
-    color: $c-text;
+    color: var(--c-text);
     @include rfs(30px);
     font-weight: $fw-bold;
     margin-bottom: 5px;
@@ -39,6 +39,9 @@
       display: none;
     }
     .input-with-btn__input {
+      @include media-breakpoint-only(xxl) {
+        width: 220px;
+      }
       @include media-breakpoint-only(xl) {
         width: 170px;
       }

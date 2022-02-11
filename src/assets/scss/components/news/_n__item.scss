@@ -1,8 +1,8 @@
 .news__item {
-  background-color: $c-content;
+  background-color: var(--c-content);
   border-radius: 5px;
   overflow: hidden;
-  border: 1px solid $c-wrapper-border;
+  border: 1px solid var(--c-wrapper-border);
   margin: 5px;
   height: calc(100% - 10px);
   &:hover {
@@ -37,7 +37,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $c-primary;
+        background-color: var(--c-primary);
         opacity: .65;
       }
 
@@ -102,17 +102,17 @@
       text-decoration: none;
       font-size: 12px;
       border-radius: 20px;
-      border: 1px solid $c-tag-border;
-      background-color: $c-tag-bg;
+      border: 1px solid var(--c-tag-border);
+      background-color: var(--c-tag-bg);
       padding: 5px 15px;
-      color: $c-primary;
+      color: var(--c-primary);
       display: block;
       margin-bottom: 7px;
       &:hover {
         text-decoration: underline;
         color: #ffffff;
-        border-color: $c-primary;
-        background-color: $c-primary;
+        border-color: var(--c-primary);
+        background-color: var(--c-primary);
       }
     }
   }
