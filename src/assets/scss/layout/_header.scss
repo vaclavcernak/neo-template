@@ -52,9 +52,14 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+      position: absolute;
+      right: 108px;
+    }
 
     @include media-breakpoint-down(lg) {
-      display: none;
+      //display: none;
     }
 
     .input-with-btn__input {
@@ -67,8 +72,46 @@
       width: 46px;
     }
 
-    .input-with-btn--search-input {
-      position: relative;
+    &__top {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      i {
+        font-weight: bold;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .input-with-btn--search-input {
+    position: relative;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    &.on-mobile {
+      display: flex;
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+      > input {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      > button {
+        border-radius: 0;
+      }
+    }
+  }
+
+  #search-mobile {
+    display: none;
+    @include media-breakpoint-down(md) {
+      display: block;
     }
   }
 
@@ -83,12 +126,23 @@
 
       &:hover {
         background-color: rgba(255,255,255,.2);
+        @include media-breakpoint-down(lg) {
+          background-color: transparent;
+        }
       }
 
       &__wrapper {
         padding: 0 25px;
         display: flex;
         align-items: center;
+
+        @include media-breakpoint-down(lg) {
+          padding: 0 10px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          padding: 0 5px;
+        }
 
         a {
           &:hover {
@@ -102,16 +156,25 @@
     &__login {
       &__icon {
         padding-right: 10px;
+        @include media-breakpoint-down(sm) {
+          padding-right: 0;
+        }
         &:before {
           @include neo-icon;
           content: "\f107";
           font-size: 45px;
+          @include media-breakpoint-down(sm) {
+            font-size: 35px;
+          }
         }
       }
 
       &__text {
         display: flex;
         flex-direction: column;
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
       }
 
       &__heading {
@@ -125,7 +188,7 @@
       }
 
       @include media-breakpoint-down(sm) {
-        display: none;
+        //display: none;
       }
     }
 
@@ -175,7 +238,7 @@
         font-weight: $fw-bold;
         white-space: nowrap;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
           display: none;
         }
       }
@@ -189,12 +252,19 @@
         z-index: 5;
         width: 500px;
         color: var(--c-text);
+        @include media-breakpoint-down(sm) {
+          right: -15px;
+          width: 100vw;
+        }
 
         .cart-table {
           background-color: var(--c-user-cart);
           padding: 15px 25px;
           display: table;
           width: 100%;
+          @include media-breakpoint-down(sm) {
+            padding: 10px;
+          }
 
           a {
             color: var(--c-text);
@@ -223,6 +293,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include media-breakpoint-down(sm) {
+                  width: 45px;
+                  min-width: 45px;
+                  height: 45px;
+                }
               }
             }
 
@@ -231,6 +306,9 @@
                 font-size: 15px;
                 font-weight: $fw-medium;
                 margin-bottom: 3px;
+                @include media-breakpoint-down(sm) {
+                  font-size: 12px;
+                }
 
                 a {
                   &:hover {
@@ -249,6 +327,11 @@
               white-space: nowrap;
               padding-left: 20px;
               padding-right: 20px;
+              @include media-breakpoint-down(sm) {
+                font-size: 13px;
+                padding-left: 8px;
+                padding-right: 8px;
+              }
             }
 
             &__price {
@@ -256,10 +339,17 @@
               padding-right: 25px;
               font-weight: $fw-medium;
               text-align: right;
+              @include media-breakpoint-down(sm) {
+                font-size: 13px;
+                padding-right: 15px;
+              }
             }
 
             &__close{
               font-size: 20px;
+              @include media-breakpoint-down(sm) {
+                font-size: 15px;
+              }
 
               a {
                 color: var(--c-placeholder);
@@ -287,6 +377,9 @@
               align-items: center;
               font-size: 16px;
               font-weight: $fw-medium;
+              @include media-breakpoint-down(sm) {
+                font-size: 14px;
+              }
             }
           }
 

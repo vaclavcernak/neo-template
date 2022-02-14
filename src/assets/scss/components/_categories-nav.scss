@@ -2,6 +2,10 @@
   border: 1px solid var(--c-wrapper-border);
   border-radius: 5px;
 
+  .submenu {
+    display: none;
+  }
+
   > ul {
     > li {
       text-transform: uppercase;
@@ -95,6 +99,10 @@
           &.opened {
             > a {
               color: var(--c-primary);
+            }
+
+            > .submenu {
+              display: block;
             }
           }
 

@@ -312,6 +312,11 @@
       color: #ffffff;
       background-color: var(--c-primary)-dark;
     }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
   }
 }
 

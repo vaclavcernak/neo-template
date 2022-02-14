@@ -1,0 +1,22 @@
+<div class="widget widget--filter">
+    <h3 class="widget__heading">Filtrace produktu</h3>
+    <div class="widget__content">
+        <div class="products-filter">
+            <div class="section__row">
+                {{> products__filter__range}}
+            </div>
+
+            {{> products__filter__checkboxes}}
+
+            {{> products__filter__checkboxes--params}}
+
+            {{> products__filter__checkboxes--params--w-group}}
+
+            <div class="section__heading">Parametry s číselnou hodnotou</div>
+            <div class="section__row">
+                {{> products__filter__range}}
+            </div>
+            <div class="justify-content-center mt-30"><a href="#" class="btn btn--primary btn--filter">Podrobná filtrace</a></div>
+        </div>
+    </div>
+</div>

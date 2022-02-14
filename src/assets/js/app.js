@@ -60,7 +60,7 @@ $(function() {
             loop:false,
             margin:15,
             items:1,
-            nav: false,
+            nav: true,
             navText: ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
             dots: true,
             lazyLoad: false,
@@ -369,8 +369,8 @@ function FeaturedCategoriesSlider() {
     featuredCategories.owlCarousel({
         items             : 5,
         margin            : 10,
-        nav               : false,
-        dots              : false,
+        nav               : true,
+        dots              : true,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
@@ -381,23 +381,18 @@ function FeaturedCategoriesSlider() {
             0:{
                 items:1,
                 margin:0,
-                dots: true
             },
             576:{
                 items:2,
-                dots: true
             },
             768:{
                 items:3,
-                dots: true
             },
             992:{
                 items:4,
-                dots: true
             },
             1200:{
                 items:5,
-                nav: true
             },
         }
     });
@@ -416,8 +411,8 @@ function BrandsSlider() {
     brandsSlider.owlCarousel({
         items             : 7,
         margin            : 0,
-        nav               : false,
-        dots              : false,
+        nav               : true,
+        dots              : true,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
@@ -426,19 +421,15 @@ function BrandsSlider() {
         responsive:{
             0:{
                 items:2,
-                dots: true
             },
             576:{
                 items:2,
-                dots: true
             },
             768:{
                 items:3,
-                dots: true
             },
             992:{
                 items:5,
-                dots: true
             },
             1200:{
                 items:7
@@ -456,8 +447,8 @@ function LatestNewsSlider() {
     latestNews.owlCarousel({
         items             : 4,
         margin            : 0,
-        nav               : false,
-        dots              : false,
+        nav               : true,
+        dots              : true,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
@@ -467,24 +458,19 @@ function LatestNewsSlider() {
         responsive:{
             0:{
                 items:1,
-                dots: true
             },
             576:{
                 items:2,
                 margin: 10,
-                dots: true
             },
             768:{
                 items:2,
-                dots: true
             },
             992:{
                 items:3,
-                dots: true
             },
             1200:{
                 items:4,
-                nav: true
             },
         }
     });
@@ -499,8 +485,8 @@ function ProductsGridSlider() {
     productsGridSlider.owlCarousel({
         items             : 4,
         margin            : 10,
-        nav               : false,
-        dots              : false,
+        nav               : true,
+        dots              : true,
         lazyLoad          : true,
         lazyLoadEager     : 1,
         navContainerClass : "owl-nav owl-nav--general",
@@ -510,27 +496,21 @@ function ProductsGridSlider() {
         responsive:{
             0:{
                 items:1,
-                dots: true
             },
             576:{
                 items:2,
-                dots: true
             },
             768:{
                 items:2,
-                dots: true
             },
             992:{
                 items:3,
-                dots: true
             },
             1200:{
                 items:3,
-                dots: true
             },
             1400:{
                 items:4,
-                nav: true
             },
         }
     });
@@ -542,8 +522,8 @@ $(function() {
         owlOptions = {
             items             : 4,
             margin            : 0,
-            nav               : false,
-            dots              : false,
+            nav               : true,
+            dots              : true,
             lazyLoad          : true,
             lazyLoadEager     : 1,
             navContainerClass : "owl-nav owl-nav--general",
@@ -553,17 +533,14 @@ $(function() {
             responsive:{
                 0:{
                     items:1,
-                    dots: true
                 },
                 576:{
                     items:2,
                     margin: 15,
-                    dots: true
                 },
                 768:{
                     items:2,
                     margin: 15,
-                    dots: true
                 },
             }
         };
@@ -709,3 +686,18 @@ rangeSliders.forEach(function (rangeSlider) {
         }
     });
 });
+
+// search mobile
+$('#search-mobile').click(function (e) {
+    e.preventDefault();
+    var searchInput = $(this).next('.input-with-btn--search-input');
+    searchInput.clone().addClass('on-mobile').appendTo( ".top-header" );
+    searchInput.remove();
+
+    $('.has-whisperer').focus(function() {
+        $(this).nextAll('.search-whisperer').show();
+    });
+    $('.has-whisperer').focusout(function() {
+        $(this).nextAll('.search-whisperer').hide();
+    });
+})

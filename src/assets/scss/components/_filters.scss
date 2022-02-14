@@ -10,7 +10,7 @@
     &__row {
       display: flex;
       &:not(:last-of-type) {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
     }
 
@@ -44,14 +44,36 @@
   width: 100%;
   display: flex;
   align-items: center;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+  .sidebar & {
+    display: block;
+  }
 
   .name {
     margin-right: 20px;
+    @include media-breakpoint-only(sm) {
+      margin-right: 5px;
+    }
   }
 }
 
 .filter-range {
   width: 100%;
+  order: 2;
+  @include media-breakpoint-down(sm) {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .sidebar & {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }
 
 .input-w-value {
@@ -60,10 +82,33 @@
 
   &--min {
     margin-right: 30px;
+    order: 1;
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+      margin-right: 0;
+      display: block;
+      float: left;
+    }
+    .sidebar & {
+      width: 50%;
+      margin-right: 0;
+      display: block;
+      float: left;
+    }
   }
 
   &--max {
-    margin-left: 40px;
+    margin-left: 30px;
+    order: 3;
+    justify-content: end;
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+      margin-left: 0;
+    }
+    .sidebar & {
+      width: 50%;
+      margin-left: 0;
+    }
   }
 
   .range-input {
@@ -74,6 +119,17 @@
     padding: 10px;
     text-align: right;
     background-color: var(--c-content);
+    @include media-breakpoint-only(sm) {
+      width: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 80px;
+    }
+    .sidebar & {
+      width: 80px;
+    }
+
 
     &:focus {
       border: 1px solid var(--c-primary);
@@ -91,9 +147,10 @@
 
 .filter-checkboxes {
   .item {
-    display: inline-block;
+    display: flex;
     margin-bottom: 10px;
     float: left;
+    width: 100%;
 
     &:not(:last-of-type) {
       margin-right: 30px;
@@ -102,6 +159,10 @@
     .number {
       display: inline-block;
       margin-left: 5px;
+      color: var(--c-primary);
+    }
+
+    .checkbox:checked + label {
       color: var(--c-primary);
     }
   }
@@ -141,9 +202,19 @@
       &:not(:last-of-type) {
         margin-right: 0;
       }
+      @include media-breakpoint-only(xl) {
+        width: 33.333%;
+      }
+      @include media-breakpoint-down(xl) {
+        width: 50%;
+      }
 
-      .checkbox:checked + label {
-        color: var(--c-primary);
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+
+      .sidebar & {
+        width: 100%;
       }
     }
   }
