@@ -8,6 +8,14 @@
     padding-top: 20px;
   }
 
+  &--rounded {
+    border-radius: 10px;
+  }
+
+  &--wider {
+    width: 1000px;
+  }
+
   &--two-div {
     display: flex;
     @include media-breakpoint-down(sm) {
@@ -259,4 +267,10 @@
     }
   }
 
+  &__full-width {
+    padding: 20px;
+    @include media-breakpoint-down(sm) {
+      padding: 10px;
+    }
+  }
 }

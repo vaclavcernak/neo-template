@@ -157,6 +157,18 @@
       font-weight: $fw-bold;
     }
   }
+
+  &.btn--bigger {
+    padding: 18px 20px;
+  }
+
+  &.btn--no-background {
+    color: var(--c-text);
+    &:hover {
+      background-color: var(--c-back-btn);
+      color: var(--c-text);
+    }
+  }
 }
 
 .forward-link {
@@ -175,5 +187,19 @@
     @include neo-icon();
     content: "\f12f";
     padding-right: 5px;
+  }
+}
+
+.btns-wrapper {
+  display: flex;
+
+  &.btns-wrapper--end {
+    justify-content: end;
+  }
+
+  .btn {
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
   }
 }
