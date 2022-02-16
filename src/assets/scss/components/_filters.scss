@@ -407,6 +407,18 @@
     border: 1px solid var(--c-wrapper-border);
     border-radius: 5px;
     min-height: 48px;
+    cursor: pointer;
+    &.checked {
+      background-color: var(--c-filter-tag-bg);
+      border-color: var(--c-info-strip-border);
+    }
+    &:hover {
+      background-color: var(--c-background);
+      .label-text {
+        text-decoration: underline;
+        color: var(--c-primary);
+      }
+    }
 
     .modal & {
       @include media-breakpoint-down(lg) {
@@ -420,6 +432,7 @@
     label {
       display: flex;
       align-items: center;
+
     }
 
     .number {
