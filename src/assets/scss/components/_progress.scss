@@ -12,6 +12,14 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: var(--c-primary);
 }
-progress::-moz-progress-bar {
-  /* style rules */
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: var(--c-primary);
+}
+
+::-moz-progress-bar {
+  background-color: var(--c-primary);
 }

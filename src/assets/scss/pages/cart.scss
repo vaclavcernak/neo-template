@@ -202,6 +202,14 @@
       @include media-breakpoint-down(lg) {
         top: 0;
       }
+
+      a {
+        text-decoration: none;
+        color: var(--c-text);
+        &:hover {
+          color: var(--c-red);
+        }
+      }
     }
 
     &__bonus {

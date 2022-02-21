@@ -311,29 +311,36 @@ $(document).ready(function() {
 
 // Wait for document to load
 document.addEventListener("DOMContentLoaded", function(event) {
-    document.documentElement.setAttribute("data-theme", "dark");
-});
+    const themeSwitcher = document.getElementById('theme-switcher-checkbox');
+    let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// Wait for document to load
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.documentElement.setAttribute("data-theme", "light");
+    if (matched && themeSwitcher) {
+        //console.log('Currently in dark mode');
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeSwitcher.checked = true;
+    } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        //console.log('Currently not in dark mode');
+    }
 
-    // Get our button switcher
-    var themeSwitcher = document.getElementById("theme-switcher");
+    if (themeSwitcher) {
+        themeSwitcher.addEventListener('change', ()=>{
+            // Get the current selected theme, on the first run
+            // it should be `light`
+            var currentTheme = document.documentElement.getAttribute("data-theme");
 
-    // When our button gets clicked
-    themeSwitcher.onclick = function() {
-        // Get the current selected theme, on the first run
-        // it should be `light`
-        var currentTheme = document.documentElement.getAttribute("data-theme");
+            // Switch between `dark` and `light`
+            var switchToTheme = currentTheme === "dark" ? "light" : "dark"
 
-        // Switch between `dark` and `light`
-        var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+            // Set our currenet theme to the new one
+            document.documentElement.setAttribute("data-theme", switchToTheme);
 
-        // Set our currenet theme to the new one
-        document.documentElement.setAttribute("data-theme", switchToTheme);
+            themeSwitcher.classList.toggle('dark');
+        })
     }
 });
+
+
 
 
 $('.delivery-radio__item').click(function() {
@@ -420,7 +427,8 @@ function BrandsSlider() {
         loop              : false,
         responsive:{
             0:{
-                items:2,
+                items:1,
+                stagePadding : 60,
             },
             576:{
                 items:2,
@@ -701,3 +709,16 @@ $('#search-mobile').click(function (e) {
         $(this).nextAll('.search-whisperer').hide();
     });
 })
+
+// check if element has vertical scrollbar
+$(function() {
+
+    const scrollbareds = document.querySelectorAll(".scrollbared");
+
+    scrollbareds.forEach(function (scrollbared) {
+        if (scrollbared.scrollHeight > scrollbared.clientHeight) {
+            scrollbared.classList.add("has-scrollbar")
+        }
+    });
+});
+

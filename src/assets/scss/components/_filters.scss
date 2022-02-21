@@ -159,7 +159,11 @@
     display: flex;
     margin-bottom: 10px;
     float: left;
-    width: 100%;
+    //width: 100%;
+
+    .sidebar & {
+      width: 100%;
+    }
 
     &:not(:last-of-type) {
       margin-right: 30px;
