@@ -1,0 +1,1017 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="header-fade-bg"></div>
+  <header id="topHeader" class="top-header">
+      <div class="container">
+          <div class="top-header__content">
+              <div class="logo">
+                  <div class="logo__top">
+                      <div class="switcher switcher--lang">CZ</div>
+                      <div class="switcher switcher--currency">CZK</div>
+                  </div>
+                  <a href="index.html" class="logo__link">
+                      <img class="lazy" data-src="assets/images/samples/logo.png" alt="logo">
+                  </a>
+              </div>
+              <div class="search">
+                  <div class="search__top">
+                      <span class="contact contact--phone"><i class="neo-phone"></i> 777 123 456</span>
+                      <span class="contact contact--menu">
+                                          <ul>
+                                              <li><a href="#">Kontakt</a></li>
+                                              <li><a href="#">Obchodní podmínky</a></li>
+                                          </ul>
+                                      </span>
+                  </div>
+                  <a id="search-mobile" href="#" class="search-mobile"><i class="neo-search"></i></a>
+                  <div class="input-with-btn input-with-btn--search-input">
+                      <input class="input-with-btn__input no-border has-whisperer" type="text" placeholder="Hledaný výraz">
+                      <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
+                      <div class="search-whisperer">
+                          <div class="search-whisperer__section">
+                              <div class="section__heading">
+                                  Naposledy jste hledali
+                              </div>
+                              <div class="section__item section__item--recently"><a href="#">koloběžka</a></div>
+                              <div class="section__item section__item--recently"><a href="#">náhradní kolo na koloběžku</a></div>
+                              <div class="section__item section__item--recently"><a href="#">odrazky</a></div>
+                              <div class="section__clear-history"><a href="#">Vymazat historii hledání</a></div>
+                          </div>
+                          <div class="search-whisperer__section">
+                              <div class="section__heading">
+                                  Nejčastěji hledáte
+                              </div>
+                              <div class="section__item section__item--search"><a href="#">koloběžka</a></div>
+                              <div class="section__item section__item--search"><a href="#">autosedačka</a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="user">
+                  <div class="user__item user__login">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading"><a href="#">Přihlásit</a></span>
+                              <span class="user__login__subheading"><a href="#">Registrovat</a></span>
+                          </span>
+                      </div>
+                  </div>
+                  <!-- <div class="user__item user__login user__login--logged">
+                      <div class="user__item__wrapper">
+                          <span class="user__login__icon"></span>
+                          <span class="user__login__text">
+                              <span class="user__login__heading">Alexandr Solženicyn</span>
+                              <span class="user__login__subheading">Můj účet</span>
+                          </span>
+                      </div>
+                  </div>
+                   -->
+                  <div class="user__item user__compare">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__compare__icon">
+                              <span class="notify-num notify-num--secondary">12</span>
+                          </span>
+                      </a>
+                  </div>
+                  <div class="user__item user__cart">
+                      <a class="user__item__wrapper" href="#">
+                          <span class="user__cart__icon">
+                              <span class="notify-num notify-num--conversion">6</span>
+                          </span>
+                          <span class="user__cart__price">129 Kč</span>
+                      </a>
+                      <div class="user__cart__open">
+                          <div class="cart-table">
+                              <div class="item">
+                                  <div class="item__image">
+                                      <a href="#"><img class="lazy" data-src="assets/images/samples/boty.png" alt=""></a>
+                                  </div>
+                                  <div class="item__text">
+                                      <div class="item__text__title">
+                                          <a href="#">Boty dětské sportovní</a>
+                                      </div>
+                                      <div class="item__text__desc">
+                                          Barva: Černá, Velikost: 40
+                                      </div>
+                                  </div>
+                                  <div class="item__quantity">
+                                      1 ks
+                                  </div>
+                                  <div class="item__price">
+                                      4 299 Kč
+                                  </div>
+                                  <div class="item__close">
+                                      <a href="#">✖</a>
+                                  </div>
+                              </div>
+                  
+                              <div class="item">
+                                  <div class="item__image">
+                                      <a href="#"><img class="lazy" data-src="assets/images/samples/triko.png" alt=""></a>
+                                  </div>
+                                  <div class="item__text">
+                                      <div class="item__text__title">
+                                          <a href="#">Tričko pánské</a>
+                                      </div>
+                                      <div class="item__text__desc">
+                                          Barva: Bílá, Velikost: XXL
+                                      </div>
+                                  </div>
+                                  <div class="item__quantity">
+                                      1 ks
+                                  </div>
+                                  <div class="item__price">
+                                      1 299 Kč
+                                  </div>
+                                  <div class="item__close">
+                                      <a href="#">✖</a>
+                                  </div>
+                              </div>
+                  
+                              <div class="item">
+                                  <div class="item__image">
+                                      <a href="#"><img class="lazy" data-src="assets/images/samples/triko.png" alt=""></a>
+                                  </div>
+                                  <div class="item__text">
+                                      <div class="item__text__title">
+                                          <a href="#">Vans B Otw Checker Fill B Navy/White/Grey S</a>
+                                      </div>
+                                      <div class="item__text__desc">
+                                          Velikost: XXL
+                                      </div>
+                                  </div>
+                                  <div class="item__quantity">
+                                      1 ks
+                                  </div>
+                                  <div class="item__price">
+                                      299 Kč
+                                  </div>
+                                  <div class="item__close">
+                                      <a href="#">✖</a>
+                                  </div>
+                              </div>
+                          </div>
+                  
+                          <div class="bottom">
+                              <div class="delivery-info">
+                                  <div class="delivery-info__text">
+                                      <i class="neo-shipped"></i> <span>Do dopravy zdarma zbývá ještě <span class="c-primary">525 Kč</span></span>
+                                  </div>
+                                  <progress id="progress-delivery" value="50" max="100"></progress>
+                              </div>
+                              <div class="right">
+                                  <a href="#" class="btn btn--conversion">Přejít do košíku</a>
+                              </div>
+                          </div>
+                  
+                  
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="menu-fade-bg"></div>
+  <div class="main-menu-wrapper">
+      <div class="container">
+          <nav class="main-menu">
+              <ul class="main-menu__list">
+                  <li class="all-categories has-submenu"><a href="#">Všechny kategorie</a>
+                      <ul class="all-categories-menu">
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Akce a slevy</a>
+                              <ul class="wide-menu">
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Turistické batohy a tašky</a>
+                              <ul class="wide-menu">
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">bla bla bla</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">bla bla bla</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">bla bla bla</span>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="active"><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Cyklistika</a>
+                              <ul class="wide-menu">
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Koloběžky</a>
+                              <ul class="wide-menu">
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">bla bla bla</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">bla bla bla</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Horská kola</a>
+                                          <span class="text">bla bla bla</span>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Lyžařské helmy</a>
+                              <ul class="wide-menu">
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                                  <li class="wide-menu__item">
+                                      <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                                      <div class="wide-menu__item__text">
+                                          <a href="#" class="title">Skládací kola</a>
+                                          <span class="text">Dámská, dětská, pánská</span>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Lyžařské boty</a>
+                              <ul class="wide-menu">
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">bla bla bla</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">bla bla bla</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">bla bla bla</span>
+                              </div>
+                          </li>
+                      </ul>
+                      </li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Sportovní oblečení</a>
+                              <ul class="wide-menu">
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">bla bla bla</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">bla bla bla</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Horská kola</a>
+                                  <span class="text">bla bla bla</span>
+                              </div>
+                          </li>
+                      </ul>
+                      </li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Tenisové rakety</a></li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Fitness</a></li>
+                          <li><a href="#"><span class="all-categories-menu__icon"><img class="lazy" data-src="assets/images/samples/icon-menu-category.png" alt=""></span>Turistika</a></li>
+                          <li><a href="#"><span class="all-categories-menu__icon"></span>Výprodej</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Úvod</a></li>
+                  <li class="has-submenu"><a href="#">Doprava a platba</a>
+                      <ul class="main-menu__list__submenu submenu">
+                          <li><a href="#">Dodací podmínky</a></li>
+                          <li class="active"><a href="#">Ceny dopravy a platby</a></li>
+                          <li><a href="#">Výdejní místa</a></li>
+                          <li><a href="#">Možnosti platby</a></li>
+                      </ul>
+                  </li>
+                  <li class="has-submenu has-submenu--wide-menu"><a href="#">Akce a slevy</a>
+                      <ul class="wide-menu">
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                          <li class="wide-menu__item">
+                              <a href="#" class="wide-menu__item__img"><img class="lazy owl-lazy" data-src="assets/images/samples/wide-menu-bike.png" alt=""></a>
+                              <div class="wide-menu__item__text">
+                                  <a href="#" class="title">Skládací kola</a>
+                                  <span class="text">Dámská, dětská, pánská</span>
+                              </div>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="has-submenu"><a href="#">Magazín</a>
+                      <ul class="main-menu__list__submenu submenu">
+                          <li><a href="#">Další položka</a></li>
+                          <li><a href="#">Další položka</a></li>
+                          <li><a href="#">Další položka</a></li>
+                      </ul>
+                  </li>
+                  <li class="active"><a href="#">Prodejny</a></li>
+                  <li><a href="#">Obchodní podmínky</a></li>
+                  <li><a href="#">Kontakty</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+  
+
+  <nav class="breadcrumb">
+      <div class="container">
+          <ul>
+              <li><a href="index.html">Úvod</a></li>
+              <li><a href="">Další položka</a></li>
+              <li>Aktuální stránka</li>
+          </ul>
+      </div>
+  </nav>
+
+  <div class="wrapper container">
+    
+    <main class="main-content main-content--full">
+        <div class="product-detail">
+            <span class="product-detail__mobile-title h1">Under Armour Dámské Červené tričko JZSHOP s krátkým rukávem</span>
+            <div class="product-detail__row row">
+                <div class="product-detail__col row__col">
+                    <div class="product-detail__gallery">
+                        <div id="carousel__main-image" class="carousel__main-image owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="product-tags">
+                                    <ul>
+                                        <li class="product-tag product-tag--blue">Doporučujeme</li>
+                                        <li class="product-tag product-tag--black">Dárek zdarma</li>
+                                    </ul>
+                                </div>
+                                <span class="sticker">-50%</span>
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <span class="sticker">-25%</span>
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-3.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-4.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-5.jpg" alt="">
+                            </div>
+                        </div>
+                    
+                        <div id="carousel__thumbnails" class="carousel__thumbnails owl-carousel owl-theme">
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-3.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-4.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="owl-lazy" data-src="assets/images/samples/product-detail-photo-5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-detail__col row__col row__col--2">
+                    <div class="product-detail__info">
+                        <h1 class="title product-title">Under Armour Dámské Červené tričko JZSHOP s krátkým rukávem</h1>
+                        <p class="desc">Porttitor etiam sed velit ac, platea? Ridiculus, porta! Duis, parturient phasellus pid habitasse
+                            integer et lorem sit nec pid, integer, porttitor nisi, nec mattis? Rhoncus ultrices sit elementum integer cursus
+                            nascetur velit ac ellentesque, cursus montes rhoncus enim lectus ...</p>
+                    
+                    
+                        <div class="links-div">
+                            <a href="#" class="link-detailed-desc link-detailed-desc--params"><i class="neo-menu"></i>Podrobný popis a parametry</a>
+                            <div class="rating">
+                                <div class="star-rating" title="Hodnocení: 50%">
+                                    <span class="neo-icon neo-star"></span>
+                                    <span class="neo-icon neo-star"></span>
+                                    <span class="neo-icon neo-star-half"></span>
+                                    <span class="neo-icon neo-star-empty"></span>
+                                    <span class="neo-icon neo-star-empty"></span>
+                                </div>
+                                <span class="rating-count">(5)</span>
+                                <a href="#" class="link-detailed-desc">Zobrazit hodnocení</a>
+                            </div>
+                        </div>
+                    
+                        <div class="properties">
+                            <div class="property property--color">
+                                <div class="subheading">Barva</div>
+                                <div class="property__colors property__items">
+                                    <div class="property__color__item">
+                                        <input type="radio" id="1" name="color" value="1">
+                                        <label for="1" style="background-color: #096f69;"></label>
+                                    </div>
+                                    <div class="property__color__item">
+                                        <input type="radio" id="2" name="color" value="2" checked>
+                                        <label for="2" style="background-color: #9fc000;"></label>
+                                    </div>
+                                    <div class="property__color__item">
+                                        <input type="radio" id="3" name="color" value="3">
+                                        <label for="3" style="background-color: #e00d0d;"></label>
+                                    </div>
+                                    <div class="property__color__item">
+                                        <input type="radio" id="4" name="color" value="4">
+                                        <label for="4" style="background-color: #0d26e0;"></label>
+                                    </div>
+                                    <div class="property__color__item">
+                                        <input type="radio" id="5" name="color" value="5">
+                                        <label for="5" style="background-color: #ffffff;" class="label--white"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="property property--size">
+                                <div class="subheading">Velikost</div>
+                                <div class="property__sizes property__items">
+                                    <div class="property__size__item">
+                                        <input type="radio" id="XS" name="size" value="XS" disabled>
+                                        <label for="XS">XS</label>
+                                    </div>
+                                    <div class="property__size__item">
+                                        <input type="radio" id="S" name="size" value="S">
+                                        <label for="S">S</label>
+                                    </div>
+                                    <div class="property__size__item">
+                                        <input type="radio" id="M" name="size" value="M" checked>
+                                        <label for="M">M</label>
+                                    </div>
+                                    <div class="property__size__item">
+                                        <input type="radio" id="XXL" name="size" value="XXL">
+                                        <label for="XXL">XXL</label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="property property--edition">
+                                <div class="subheading">Střih</div>
+                                <div class="select-wrap">
+                                    <select name="" id="" class="form-control">
+                                        <option value="0">- Vyberte -</option>
+                                        <option value="slim fit">Slim fit</option>
+                                        <option value="regular fit">Regular fit Regular fit</option>
+                                        <option value="fit">Fit</option>
+                                        <option value="unfit">unFit</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="product-detail__add-to-cart product-detail__row-item">
+                            <div class="in-store">
+                                <span class="store store--yes">Skladem více než 10 ks</span> <span class="tooltip-item neo-info" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tooltip lorem ipsum lalalala lalala" aria-label="Tooltip lorem ipsum lalalala lalala"></span>
+                            </div>
+                            <div class="prices-amount-btn">
+                                <div class="prices">
+                                    <div class="prices__price">110 500 Kč<span class="note">/ks</span></div>
+                                    <div class="prices__wo-vat">82 313,22 Kč<span class="note">bez DPH</span></div>
+                                </div>
+                                <div class="amount-btn">
+                                    <div class="amount">
+                                        <div class="quantity-input quantity-input--inside">
+                                            <button class="quantity-input__btn quantity-input__btn--minus">-</button>
+                                            <input type="number" step="1" min="1" value="99" id="a" name="quantityCount" class="quantity-input__number">
+                                            <button class="quantity-input__btn quantity-input__btn--plus">+</button>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn--add-to-cart btn--add-to-cart--type-2">Přidat do košíku</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="product-detail__add-to-cart product-detail__row-item">
+                            <div class="in-store">
+                            </div>
+                            <div class="prices-amount-btn">
+                                <div class="prices">
+                                    <div class="prices__price">od 110 500 Kč<span class="note">/ks</span></div>
+                                    <div class="prices__wo-vat">od 82 313,22 Kč<span class="note">bez DPH</span></div>
+                                </div>
+                                <div class="amount-btn">
+                                    <span class="btn btn--gray-big">Nejprve vyberte variantu</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="product-detail__add-to-cart product-detail__row-item">
+                            <div class="in-store">
+                            </div>
+                            <div class="prices-amount-btn">
+                                <div class="prices">
+                                    <div class="prices__price">od 110 500 Kč<span class="note">/ks</span></div>
+                                    <div class="prices__wo-vat">od 82 313,22 Kč<span class="note">bez DPH</span></div>
+                                </div>
+                                <div class="amount-btn">
+                                    <span class="btn btn--primary">Vyberte variantu</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="cant-buy">
+                            <div class="img">
+                                <i class="neo-full-shopping-basket"></i>
+                            </div>
+                            <div class="content">
+                                <div class="heading">Litujeme, ale zboží nelze koupit</div>
+                                <div class="text">Tento produkt byl vyprodán nebo již není v nabídce</div>
+                            </div>
+                        </div>
+                        
+                    
+                        <div class="product-detail__gifts product-detail__row-item">
+                            <div class="product-detail__gifts__img">
+                                <img class="lazy" data-src="assets/images/samples/brasna.png" alt="">
+                            </div>
+                            <div class="product-detail__gifts__text">
+                                <span class="heading c-red--2">+ Dárek zdarma</span>
+                                <p>Podsedlový držák z odlehčené slitiny a nevim co ještě vymyslet na dva řádky, takže musím přidat ještě pár dalších slov.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="product-detail__others product-detail__row-item">
+                            <h3 class="title">Další v kategorii</h3>
+                            <ul class="list">
+                                <li class="item"><a href="#">Název kategorie</a>,</li>
+                                <li class="item"><a href="#">Další kategorie</a>,</li>
+                                <li class="item"><a href="#">Úplně jiná kategorie</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="additional-strip">
+                            <div class="additional-strip__icon">
+                                <i class="neo-shipped"></i>
+                            </div>
+                            <div class="additional-strip__text">
+                                K této objednávce získáváte <strong>DOPRAVU ZDARMA!</strong>
+                            </div>
+                        </div>
+                    
+                        <div class="product-detail__actions">
+                            <ul class="list">
+                                <li class="item"><a href="#"><i class="neo-scales"></i>Přidat k porovnání</a></li>
+                                <li class="item"><a href="#"><i class="neo-heart"></i>Přidat do oblíbených</a></li>
+                                <li class="item"><a href="#"><i class="neo-mail"></i>Dotaz na produkt</a></li>
+                                <li class="item"><a href="#"><i class="neo-share"></i>Sdílet</a></li>
+                            </ul>
+                        </div>
+                        
+                        <ul class="product-detail__product-info-note">
+                            <li class="item">Záruka: <span class="fw-medium">2 roky</span>,</li>
+                            <li class="item">Výrobce: <span class="fw-medium">s’Oliver</span>,</li>
+                            <li class="item">Kód výrobku: <span class="fw-medium">EA25666-2</span>,</li>
+                            <li class="item">Katalogové číslo: <span class="fw-medium">532158</span>,</li>
+                            <li class="item">EAN: <span class="fw-medium">8003558031146</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+  </div>
+
+  <footer class="footer">
+      <div class="footer__top">
+          <div class="container">
+              <div class="widget widget--newsletter">
+                  <h3 class="widget__heading">Nadpis widgetu</h3>
+                  <div class="widget__content">
+                      <div class="newsletter__text">
+                          <h3 class="newsletter__heading">Odebírat newsletter</h3>
+                          <div class="newsletter__desc">
+                              <p>Nechcete přijít o slevy a mimořádné akce?</p>
+                              <p>Zadejte nám Vaši e-mailovou adresu a zůstaňte v obraze.</p>
+                          </div>
+                      </div>
+                      <div class="newsletter__action">
+                          <div class="input-with-btn">
+                              <input class="input-with-btn__input" type="text" placeholder="Zadejte e-mail">
+                              <input class="input-with-btn__btn" type="submit" value="Odeslat">
+                          </div>
+                          <div class="newsletter__note">
+                              <p>Odesláním souhlasíte se <a href="#">zpracováním osobních údajů</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer__columns">
+          <div class="container">
+              <div class="footer__columns__row columns-5">
+                  <div class="widget widget--contact-info">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <h4 class="name">Název obchodu</h4>
+                          <ul>
+                              <li><i class="neo-phone"></i> <a href="tel:+420723115235">+420 723 115 235</a></li>
+                              <li><i class="neo-mail"></i> <a href="mailto:info@jzshop.cz">info@jzshop.cz</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="widget widget--menu">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <ul class="menu">
+                              <li><a href="#">Obchodní podmínky</a></li>
+                              <li><a href="#">Kontakty</a></li>
+                              <li><a href="#">O nás</a></li>
+                              <li><a href="#">Magazín</a></li>
+                              <li><a href="#">Doprava a platba</a></li>
+                              <li><a href="#">Jak nakupovat</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="widget widget--articles">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                  
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                  
+                          <article class="article">
+                              <h4 class="article__title"><a href="#">Pátek a sobota s dopravou ZDARMA</a></h4>
+                              <div class="article__text">
+                                  <p>Ve dnech 16.3.-17.3. bude doprava při nákupu nad 399 kč zdarma...</p>
+                              </div>
+                          </article>
+                      </div>
+                  </div>
+                  <div class="widget widget--pay">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <div class="widget--pay__logos-row">
+                              <img class="lazy" data-src="assets/images/samples/kreditky.png" alt="">
+                          </div>
+                          <div class="widget--pay__logos-row">
+                              <img class="lazy" data-src="assets/images/samples/gopay-logo-big.png" alt="" style="max-width: 30%">
+                              <img class="lazy" data-src="assets/images/samples/PayPal-logo.png" alt="" style="max-width: 70%">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="widget widget--newsletter">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <div class="newsletter__text">
+                              <h3 class="newsletter__heading">Odebírat newsletter</h3>
+                              <div class="newsletter__desc">
+                                  <p>Nechcete přijít o slevy a mimořádné akce?</p>
+                                  <p>Zadejte nám Vaši e-mailovou adresu a zůstaňte v obraze.</p>
+                              </div>
+                          </div>
+                          <div class="newsletter__action">
+                              <div class="input-with-btn">
+                                  <input class="input-with-btn__input" type="text" placeholder="Zadejte e-mail">
+                                  <input class="input-with-btn__btn" type="submit" value="Odeslat">
+                              </div>
+                              <div class="newsletter__note">
+                                  <p>Odesláním souhlasíte se <a href="#">zpracováním osobních údajů</a></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Pokud chci 6+ sloupce, musím vytvořit novou row, protože flex-basis nefunguje správně, když je uvnitř nějaký flexbox element jako třeba input pro newsletter s tlačítkem odeslat -->
+              <!--<div class="footer__columns__row">
+                  <div class="widget widget--contact-info">
+                      <h3 class="widget__heading">Nadpis widgetu</h3>
+                      <div class="widget__content">
+                          <h4 class="name">Název obchodu</h4>
+                          <ul>
+                              <li><i class="neo-phone"></i> <a href="tel:+420723115235">+420 723 115 235</a></li>
+                              <li><i class="neo-mail"></i> <a href="mailto:info@jzshop.cz">info@jzshop.cz</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>-->
+          </div>
+      </div>
+  </footer>
+
+  <div class="footer__bottom">
+      <div class="container">
+          <div class="footer__bottom__inner">
+              <div class="footer__bottom__inner__left">
+                  <p class="copyright">Copyright © 2021&nbsp;<a href="#">demo.jzshop.cz</a> | <a href="">Cookies</a></p>
+          
+                  <div class="theme-switcher-wrapper">
+                      <span class="text">Režim zobrazení</span>
+                      <input type="checkbox" class="theme-switcher-checkbox" id="theme-switcher-checkbox">
+                      <label for="theme-switcher-checkbox" class="theme-switcher-label">
+                          <i class="neo-info"></i>
+                          <i class="neo-ok"></i>
+                          <div class='theme-switcher-ball'></div>
+                      </label>
+                  </div>
+              </div>
+              <div>
+                  <p>Vytvořil <strong>JZShop.cz</strong> | Tvorba a pronájem eshopů</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Custom JS -->
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

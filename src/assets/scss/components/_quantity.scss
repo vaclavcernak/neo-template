@@ -1,4 +1,5 @@
 .quantity-input {
+  position: relative;
   &__btn {
     border: 1px solid var(--c-quantity-border);
     border-radius: 5px;
@@ -36,6 +37,28 @@
     input:disabled {
       background-color: var(--c-disabled);
       color: var(--c-text);
+    }
+  }
+
+  &--inside {
+    width: 60px;
+    margin-right: 15px;
+
+    .quantity-input__btn {
+      position: absolute;
+      right: -15px;
+      &--plus {
+        top: 0;
+        border-radius: 0 5px 0 0;
+      }
+      &--minus {
+        bottom: 0;
+        border-radius: 0 0 5px 0;
+      }
+    }
+    .quantity-input__number {
+      height: 60px;
+      padding-right: 15px;
     }
   }
 }

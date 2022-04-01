@@ -4,6 +4,7 @@ import 'magnific-popup';
 import { Tooltip, Accordion } from 'bootstrap';
 import LazyLoad from 'vanilla-lazyload'; // https://github.com/verlok/vanilla-lazyload
 import noUiSlider from 'nouislider';
+import 'sticky-kit/dist/sticky-kit.min';
 
 
 // vanilla-lazyload
@@ -64,6 +65,7 @@ $(function() {
             navText: ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
             dots: true,
             lazyLoad: false,
+            dotsEach: true,
             responsive:{
                 0:{
                     items:1
@@ -227,16 +229,18 @@ $(document).ready(function() {
 
     var main = $("#carousel__main-image");
     var thumbnails = $("#carousel__thumbnails");
-    var slidesPerPage = 3; //globaly define number of elements per page
+    var slidesPerPage = 5; //globaly define number of elements per page
     var syncedSecondary = true;
 
     main.owlCarousel({
         items: 1,
         slideSpeed: 2000,
         lazyLoad: true,
-        nav: false,
+        nav: true,
+        navContainerClass : "owl-nav owl-nav--general",
+        navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         autoplay: false,
-        dots: false,
+        dots: true,
         loop: false,
         responsiveRefreshRate: 200,
     }).on('changed.owl.carousel', syncPosition);
@@ -248,13 +252,12 @@ $(document).ready(function() {
         .owlCarousel({
             items: slidesPerPage,
             dots: false,
-            nav: true,
+            nav: false,
             margin: 5,
             lazyLoad: true,
-            navText: ['<i class="neo-back-2"></i>','<i class="neo-forward-2"></i>'],
             smartSpeed: 200,
             slideSpeed: 500,
-            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            slideBy: 1, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
             responsiveRefreshRate: 100
         }).on('changed.owl.carousel', syncPosition2);
 
@@ -283,6 +286,8 @@ $(document).ready(function() {
         var onscreen = thumbnails.find('.owl-item.active').length - 1;
         var start = thumbnails.find('.owl-item.active').first().index();
         var end = thumbnails.find('.owl-item.active').last().index();
+
+        console.log(current, start, end, onscreen);
 
         if (current > end) {
             thumbnails.data('owl.carousel').to(current, 500, true);
@@ -384,6 +389,7 @@ function FeaturedCategoriesSlider() {
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
         autoHeight        : true,
+        dotsEach          : true,
         responsive:{
             0:{
                 items:1,
@@ -425,6 +431,7 @@ function BrandsSlider() {
         navContainerClass : "owl-nav owl-nav--general",
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
+        dotsEach          : true,
         responsive:{
             0:{
                 items:1,
@@ -462,7 +469,7 @@ function LatestNewsSlider() {
         navContainerClass : "owl-nav owl-nav--general",
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
-        autoHeight        : true,
+        dotsEach          : true,
         responsive:{
             0:{
                 items:1,
@@ -501,6 +508,7 @@ function ProductsGridSlider() {
         navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
         loop              : false,
         autoHeight        : true,
+        dotsEach          : true,
         responsive:{
             0:{
                 items:1,
@@ -576,6 +584,48 @@ $(function() {
         }
     });
 });
+
+ProductsGridAlternativeSlider()
+
+function ProductsGridAlternativeSlider() {
+
+    var ProductsGridAlternativeSlider = $(".pruducts-grid--alternative");
+
+    ProductsGridAlternativeSlider.owlCarousel({
+        items             : 5,
+        margin            : 10,
+        nav               : true,
+        dots              : true,
+        lazyLoad          : true,
+        lazyLoadEager     : 1,
+        navContainerClass : "owl-nav owl-nav--general",
+        navText           : ['<i class="neo-back"></i>','<i class="neo-forward"></i>'],
+        loop              : false,
+        autoHeight        : true,
+        dotsEach          : true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            576:{
+                items:2,
+            },
+            768:{
+                items:2,
+            },
+            992:{
+                items:3,
+            },
+            1200:{
+                items:3,
+            },
+            1400:{
+                items:5,
+            },
+        }
+    });
+}
+
 
 
 // News thumbnail hover effect
@@ -722,3 +772,55 @@ $(function() {
     });
 });
 
+
+//product detail tabs
+$(function() {
+    $('.tab-title').click(function () {
+        $(this).toggleClass('active');
+    })
+});
+
+moveScroller();
+//fixed to top when scrollto
+function moveScroller() {
+    var $anchor = $("#scroller-anchor");
+    var $scroller = $('#scroller');
+
+    var move = function() {
+        var st = $(window).scrollTop();
+        var ot = $anchor.offset().top;
+        if(st > ot) {
+            $scroller.addClass('fixedToTop');
+        } else {
+            $scroller.removeClass('fixedToTop');
+        }
+    };
+    $(window).scroll(move);
+    move();
+}
+
+
+//$(".product-detail__gallery").stick_in_parent();
+
+//product detail tabs scrolling
+$(function() {
+    const sections = document.querySelectorAll(".product-detail__tab");
+    const navLi = document.querySelectorAll(".product-detail__tabs .item");
+    window.onscroll = () => {
+        var current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 20) {
+                current = section.getAttribute("id"); }
+            console.log(current)
+        });
+
+        navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.classList.contains(current)) {
+                li.classList.add("active");
+            }
+        });
+    };
+});

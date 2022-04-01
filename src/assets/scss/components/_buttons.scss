@@ -78,6 +78,27 @@
         font-size: 18px;
       }
     }
+
+    &--type-2 {
+      padding: 13px 18px 11px 50px;
+      border-radius: 5px;
+      white-space: nowrap;
+      &:before {
+        @include neo-icon();
+        content: "\f112";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 10px;
+        width: auto;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        font-size: 30px;
+      }
+    }
   }
 
   &.btn--order {
@@ -168,6 +189,21 @@
       background-color: var(--c-back-btn);
       color: var(--c-text);
     }
+  }
+
+  &.btn--w-icon {
+    padding-left: 35px;
+    i {
+      position: absolute;
+      left: 10px;
+      font-size: 18px;
+    }
+  }
+
+  &.btn--gray-big {
+    padding: 15px 15px;
+    text-transform: none;
+    background-color: var(--c-back-btn);
   }
 }
 

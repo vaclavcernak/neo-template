@@ -9,6 +9,40 @@
   border-radius: 5px;
   margin-right: 3px;
   margin-bottom: 6px;
+  &--blue {
+    background-color: var(--c-blue);
+  }
+  &--black {
+    background-color: var(--c-black);
+  }
+}
+
+
+
+.product-tags {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+}
+
+.product-tag {
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: $fw-light;
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: inline-block;
+  float: left;
+  clear: both;
+  &--blue {
+    background-color: var(--c-blue);
+  }
+  &--black {
+    background-color: var(--c-black);
+  }
 }
 
 .sticker {

@@ -170,7 +170,7 @@
               font-weight: $fw-regular;
             }
             &--new {
-              color: #e60000;
+              color: var(--c-red--2);
             }
           }
         }

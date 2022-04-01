@@ -57,8 +57,16 @@
   color: var(--c-red);
 }
 
+.c-red--2 {
+  color: var(--c-red--2);
+}
+
 .c-primary {
   color: var(--c-primary);
+}
+
+.c-text {
+  color: var(--c-text);
 }
 
 .link--dotted {
@@ -167,4 +175,32 @@
 .justify-content-center {
   display: flex;
   justify-content: center;
+}
+
+.fw-medium {
+  font-weight: $fw-medium;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.full-width {
+    width: calc(100vw - 5px);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.fixedToTop {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
 }

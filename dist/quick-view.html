@@ -16,7 +16,7 @@
 
 <body>
   <div class="header-fade-bg"></div>
-  <header class="top-header">
+  <header id="topHeader" class="top-header">
       <div class="container">
           <div class="top-header__content">
               <div class="logo">
@@ -675,8 +675,8 @@
           </div>
           <div class="modal__half-div modal__half-div--right">
               <div class="tags">
-                  <span class="tag">Doporučujeme</span>
-                  <span class="tag">Nedoporučujeme</span>
+                  <span class="tag tag--blue">Doporučujeme</span>
+                  <span class="tag tag--black">Nedoporučujeme</span>
               </div>
       
               <div class="description">
@@ -687,64 +687,66 @@
                   <span class="tooltip-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Produkt je skladem. Odesíláme do druhého pracovního dne.">Skladem 10 ks</span>
               </div>
       
-              <div class="property property--color">
-                  <h3 class="subheading">Barva</h3>
-                  <div class="property__colors property__items">
-                      <div class="property__color__item">
-                          <input type="radio" id="1" name="color" value="1">
-                          <label for="1" style="background-color: #096f69;"></label>
-                      </div>
-                      <div class="property__color__item">
-                          <input type="radio" id="2" name="color" value="2" checked>
-                          <label for="2" style="background-color: #9fc000;"></label>
-                      </div>
-                      <div class="property__color__item">
-                          <input type="radio" id="3" name="color" value="3">
-                          <label for="3" style="background-color: #e00d0d;"></label>
-                      </div>
-                      <div class="property__color__item">
-                          <input type="radio" id="4" name="color" value="4">
-                          <label for="4" style="background-color: #0d26e0;"></label>
-                      </div>
-                      <div class="property__color__item">
-                          <input type="radio" id="5" name="color" value="5">
-                          <label for="5" style="background-color: #ffffff;"></label>
-                      </div>
-                  </div>
-              </div>
-      
-              <div class="property property--size">
-                  <h3 class="subheading">Velikost</h3>
-                  <div class="property__sizes property__items">
-                      <div class="property__size__item">
-                          <input type="radio" id="XS" name="size" value="XS" disabled>
-                          <label for="XS">XS</label>
-                      </div>
-                      <div class="property__size__item">
-                          <input type="radio" id="S" name="size" value="S">
-                          <label for="S">S</label>
-                      </div>
-                      <div class="property__size__item">
-                          <input type="radio" id="M" name="size" value="M" checked>
-                          <label for="M">M</label>
-                      </div>
-                      <div class="property__size__item">
-                          <input type="radio" id="XXL" name="size" value="XXL">
-                          <label for="XXL">XXL</label>
+              <div class="properties">
+                  <div class="property property--color">
+                      <div class="subheading">Barva</div>
+                      <div class="property__colors property__items">
+                          <div class="property__color__item">
+                              <input type="radio" id="1" name="color" value="1">
+                              <label for="1" style="background-color: #096f69;"></label>
+                          </div>
+                          <div class="property__color__item">
+                              <input type="radio" id="2" name="color" value="2" checked>
+                              <label for="2" style="background-color: #9fc000;"></label>
+                          </div>
+                          <div class="property__color__item">
+                              <input type="radio" id="3" name="color" value="3">
+                              <label for="3" style="background-color: #e00d0d;"></label>
+                          </div>
+                          <div class="property__color__item">
+                              <input type="radio" id="4" name="color" value="4">
+                              <label for="4" style="background-color: #0d26e0;"></label>
+                          </div>
+                          <div class="property__color__item">
+                              <input type="radio" id="5" name="color" value="5">
+                              <label for="5" style="background-color: #ffffff;" class="label--white"></label>
+                          </div>
                       </div>
                   </div>
-              </div>
-      
-              <div class="property property--edition">
-                  <h3 class="subheading">Střih</h3>
-                  <div class="select-wrap">
-                      <select name="" id="" class="form-control">
-                          <option value="0">- Vyberte -</option>
-                          <option value="slim fit">Slim fit</option>
-                          <option value="regular fit">Regular fit Regular fit</option>
-                          <option value="fit">Fit</option>
-                          <option value="unfit">unFit</option>
-                      </select>
+              
+                  <div class="property property--size">
+                      <div class="subheading">Velikost</div>
+                      <div class="property__sizes property__items">
+                          <div class="property__size__item">
+                              <input type="radio" id="XS" name="size" value="XS" disabled>
+                              <label for="XS">XS</label>
+                          </div>
+                          <div class="property__size__item">
+                              <input type="radio" id="S" name="size" value="S">
+                              <label for="S">S</label>
+                          </div>
+                          <div class="property__size__item">
+                              <input type="radio" id="M" name="size" value="M" checked>
+                              <label for="M">M</label>
+                          </div>
+                          <div class="property__size__item">
+                              <input type="radio" id="XXL" name="size" value="XXL">
+                              <label for="XXL">XXL</label>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="property property--edition">
+                      <div class="subheading">Střih</div>
+                      <div class="select-wrap">
+                          <select name="" id="" class="form-control">
+                              <option value="0">- Vyberte -</option>
+                              <option value="slim fit">Slim fit</option>
+                              <option value="regular fit">Regular fit Regular fit</option>
+                              <option value="fit">Fit</option>
+                              <option value="unfit">unFit</option>
+                          </select>
+                      </div>
                   </div>
               </div>
       
@@ -927,29 +929,30 @@
               </div>-->
           </div>
       </div>
-      <div class="footer__bottom">
-          <div class="container">
-              <div class="footer__bottom__inner">
-                  <div class="footer__bottom__inner__left">
-                      <p>Copyright © 2021&nbsp;<a href="#">demo.jzshop.cz</a> | <a href="">Cookies</a></p>
-              
-                      <div class="theme-switcher-wrapper">
-                          <span class="text">Režim zobrazení</span>
-                          <input type="checkbox" class="theme-switcher-checkbox" id="theme-switcher-checkbox">
-                          <label for="theme-switcher-checkbox" class="theme-switcher-label">
-                              <i class="neo-info"></i>
-                              <i class="neo-ok"></i>
-                              <div class='theme-switcher-ball'></div>
-                          </label>
-                      </div>
+  </footer>
+
+  <div class="footer__bottom">
+      <div class="container">
+          <div class="footer__bottom__inner">
+              <div class="footer__bottom__inner__left">
+                  <p class="copyright">Copyright © 2021&nbsp;<a href="#">demo.jzshop.cz</a> | <a href="">Cookies</a></p>
+          
+                  <div class="theme-switcher-wrapper">
+                      <span class="text">Režim zobrazení</span>
+                      <input type="checkbox" class="theme-switcher-checkbox" id="theme-switcher-checkbox">
+                      <label for="theme-switcher-checkbox" class="theme-switcher-label">
+                          <i class="neo-info"></i>
+                          <i class="neo-ok"></i>
+                          <div class='theme-switcher-ball'></div>
+                      </label>
                   </div>
-                  <div>
-                      <p>Vytvořil <strong>JZShop.cz</strong> | Tvorba a pronájem eshopů</p>
-                  </div>
+              </div>
+              <div>
+                  <p>Vytvořil <strong>JZShop.cz</strong> | Tvorba a pronájem eshopů</p>
               </div>
           </div>
       </div>
-  </footer>
+  </div>
 
   <!-- Custom JS -->
   <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->

@@ -1,5 +1,5 @@
 .required {
-  color: #e60000;
+  color: var(--c-red--2);
 }
 
 [type="submit"] {
@@ -195,6 +195,15 @@
 }
 
 /**** SELECT BOX ****/
+
+.select-w-label {
+  .select-label {
+    font-weight: $fw-medium;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}
 
 /* The container must be positioned relative: */
 .select-wrap {

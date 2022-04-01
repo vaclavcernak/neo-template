@@ -50,31 +50,6 @@
       }
     }
 
-    &__tags {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-    }
-
-    &__tag {
-      border-radius: 5px;
-      padding: 5px 10px;
-      color: #ffffff;
-      text-transform: uppercase;
-      font-weight: $fw-light;
-      font-size: 12px;
-      margin-bottom: 5px;
-      display: inline-block;
-      float: left;
-      clear: both;
-      &--blue {
-        background-color: var(--c-blue);
-      }
-      &--black {
-        background-color: var(--c-black);
-      }
-    }
-
     &__quick-actions {
       position: absolute;
       top: 15px;
@@ -317,7 +292,8 @@
     //top: 130px;
   }
 
-  &--slider { // products-grid--slider
+  &--slider,
+  &--alternative { // products-grid--slider
     &.owl-carousel .owl-stage {
       display: flex;
     }
