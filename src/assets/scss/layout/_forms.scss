@@ -146,7 +146,7 @@
 
   // Box checked
   &:checked + label:before {
-    //background: var(--c-primary);
+    background: var(--c-primary);
   }
 
   // Disabled state label.
@@ -169,7 +169,7 @@
     position: absolute;
     left: -25px;
     top: 4px;
-    color: var(--c-primary);
+    color: #ffffff;
     font-size: 12px;
     font-weight: bold;
     text-decoration: none !important;

@@ -164,7 +164,7 @@
     background-color: var(--c-mobile-menu-bg);
   }
   &__backdrop {
-    background-color: rgba(0,0,0,.3);
+    background-color: var(--c-fade-bg);
   }
 }
 

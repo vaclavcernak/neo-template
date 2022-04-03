@@ -27,7 +27,10 @@
 
   .noUi-connect {
     background: var(--c-primary);
+    transition: none;
   }
 
-
+  .noUi-origin {
+    transition: none;
+  }
 }

@@ -198,6 +198,42 @@
   display: none !important;
 }
 
+.d-xxl-flex {
+  @include media-breakpoint-only(xxl) {
+    display: flex !important;
+  }
+}
+
+.d-xl-flex {
+  @include media-breakpoint-only(xl) {
+    display: flex !important;
+  }
+}
+
+.d-lg-flex {
+  @include media-breakpoint-only(lg) {
+    display: flex !important;
+  }
+}
+
+.d-md-flex {
+  @include media-breakpoint-only(md) {
+    display: flex !important;
+  }
+}
+
+.d-sm-flex {
+  @include media-breakpoint-only(sm) {
+    display: flex !important;
+  }
+}
+
+.d-xs-flex {
+  @include media-breakpoint-only(xs) {
+    display: flex !important;
+  }
+}
+
 .fixedToTop {
   position: fixed;
   top: 0;

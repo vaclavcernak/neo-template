@@ -179,6 +179,9 @@
             font-size: 35px;
           }
         }
+        &:hover {
+          text-decoration: none !important;
+        }
       }
 
       &__text {

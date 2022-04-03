@@ -39,7 +39,7 @@
       width: calc(25% - 14px);
     }
     @include media-breakpoint-between(lg,xxl) {
-      width: calc(33.333% - 14px);
+      width: calc(100% / 3 - 14px);
     }
 
     &:hover {
@@ -318,7 +318,10 @@
     .item,
     .inpage-banner--column {
       @include media-breakpoint-only(xxl) {
-        width: calc(33.3333% - 14px);
+        width: calc(100% / 3 - 14px);
+      }
+      @include media-breakpoint-between(lg,xxl) {
+        width: calc(50% - 14px);
       }
     }
   }
