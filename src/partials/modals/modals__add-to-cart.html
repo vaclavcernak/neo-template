@@ -1,0 +1,60 @@
+<div id="modal-add-to-cart" class="modal modal--add-to-cart modal--rounded mfp-hide">
+    <button title="Zavřít (Esc)" type="button" class="mfp-close">×</button>
+    <div class="modal__full-width">
+        <h3 class="modal__heading h1">Zboží bylo přidáno do košíku</h3>
+
+        <div class="added-product">
+            <div class="added-product__left">
+                <div class="added-product__img">
+                    <img class="lazy" data-src="assets/images/samples/boty.png" alt="">
+                </div>
+                <div class="added-product__content">
+                    <div class="name">Boty dětské sportovní</div>
+                    <div class="desc">Barva: Černá, Velikost: 40</div>
+                </div>
+                <div class="added-product__quantity">
+                    <div class="count">1</div>
+                    <div class="item">Ks</div>
+                </div>
+            </div>
+            <div class="added-product__right">
+                <div class="added-product__price-per-item">
+                    1 299 Kč / ks
+                </div>
+                <div class="added-product__price">
+                    1 299 Kč
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-progress cart-progress--delivery cart-progress--no-padding">
+            <div class="cart-progress__icon">
+                <i class="neo-shipped"></i>
+            </div>
+            <div class="cart-progress__content">
+                <div class="cart-progress__text">
+                    Objednejte ještě za <strong>510 Kč</strong> a získáte <strong>DOPRAVU ZDARMA!</strong>
+                </div>
+                <div class="cart-progress__bar">
+                    <progress id="progress-delivery" value="50" max="100"></progress>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons-row">
+            <a href="#" class="btn btn--no-background">Zpět k nákupu</a>
+            <a href="#" class="btn btn--primary">Do košíku a objednat</a>
+        </div>
+
+        <div class="modal-bg-gray">
+            <h3 class="title">Ostatní také zakoupili</h3>
+
+            <div class="product-accessories">
+                {{> product__accessories__item}}
+                {{> product__accessories__item-2}}
+                {{> product__accessories__item-3}}
+                {{> product__accessories__item}}
+            </div>
+        </div>
+    </div>
+</div>

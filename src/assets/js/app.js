@@ -5,6 +5,7 @@ import { Tooltip, Accordion } from 'bootstrap';
 import LazyLoad from 'vanilla-lazyload'; // https://github.com/verlok/vanilla-lazyload
 import noUiSlider from 'nouislider';
 import 'sticky-kit/dist/sticky-kit.min';
+import 'mmenu-light/dist/mmenu-light.js';
 
 
 // vanilla-lazyload

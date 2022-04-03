@@ -19,6 +19,12 @@
   @include media-breakpoint-up(xxl) {
     max-width: 1480px;
   }
+
+  &--menu {
+    @include media-breakpoint-down(md) {
+      max-width: none;
+    }
+  }
 }
 
 .row {

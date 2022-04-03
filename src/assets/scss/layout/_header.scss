@@ -4,6 +4,9 @@
   position: relative;
   z-index: 9;
   //padding: 17px 0 22px;
+  @include media-breakpoint-down(md) {
+    height: 60px;
+  }
 
   a {
     color: var(--c-header-text);
@@ -14,6 +17,10 @@
     display: flex;
     justify-content: space-between;
     //align-items: center;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      height: 60px;
+    }
   }
 
   .logo {
@@ -24,10 +31,13 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    @include media-breakpoint-down(md) {
+      margin-left: 60px;
+    }
 
     &__top {
       display: flex;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         display: none;
       }
     }
@@ -36,8 +46,8 @@
       display: block;
       img {
         float: left;
-        @include media-breakpoint-down(sm) {
-          max-height: 35px;
+        @include media-breakpoint-down(md) {
+          max-height: 33px;
         }
       }
     }
@@ -52,14 +62,16 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    @include media-breakpoint-down(lg) {
+      padding-right: 0;
+    }
     @include media-breakpoint-down(md) {
       padding-right: 0;
       position: absolute;
-      right: 108px;
+      right: 115px;
     }
-
-    @include media-breakpoint-down(lg) {
-      //display: none;
+    @include media-breakpoint-down(sm) {
+      right: 90px;
     }
 
     .input-with-btn__input {
@@ -156,14 +168,14 @@
     &__login {
       &__icon {
         padding-right: 10px;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
           padding-right: 0;
         }
         &:before {
           @include neo-icon;
           content: "\f107";
           font-size: 45px;
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(md) {
             font-size: 35px;
           }
         }
@@ -194,6 +206,9 @@
 
     // user-compare box
     &__compare {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
       &__icon {
         position: relative;
         &:before {
@@ -225,10 +240,19 @@
           @include neo-icon;
           content: "\f104";
           @include fluid-type(30px, 45px);
+          @include media-breakpoint-only(md) {
+            font-size: 40px;
+          }
         }
 
         .notify-num {
           right: -10px;
+          @include media-breakpoint-down(md) {
+            width: 22px;
+            height: 22px;
+            right: -7px;
+            top: -7px;
+          }
         }
       }
 

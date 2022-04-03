@@ -564,7 +564,11 @@
   margin-right: auto;
   position: relative;
   @include media-breakpoint-down(md) {
-    padding: 10px;
+    padding: 10px !important;
+  }
+
+  &--no-padding {
+    padding: 0;
   }
 
   &-wrapper {

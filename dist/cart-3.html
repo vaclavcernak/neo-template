@@ -17,7 +17,7 @@
 <body>
   <div class="header-fade-bg"></div>
   <header id="topHeader" class="top-header">
-      <div class="container">
+      <div class="container container--menu">
           <div class="top-header__content">
               <div class="logo">
                   <div class="logo__top">
@@ -186,6 +186,93 @@
               </div>
           </div>
       </div>
+      <div class="mobile-menu-burger">
+          <div id="mobileMenuToggle">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+          </div>
+      </div>
+      <nav id="mobileMenu">
+          <div id="mobileMenuClose" class="mobile-menu-close">Zavřít <span>×</span></div>
+          <ul>
+              <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy</a></li>
+              <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy</a>
+                  <ul>
+                      <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 2</a></li>
+                      <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy s opravdu dlouhým názvem</a>
+                          <ul>
+                              <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 3</a>
+                              <ul>
+                                  <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 4</a></li>
+                                  <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 4</a></li>
+                                  <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 4</a></li>
+                                  <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 4</a></li>
+                                  <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 4</a></li>
+                              </ul>
+                              </li>
+                              <li><a href=""><img src="assets/images/samples/batoh-icon.png" alt="">Turistické batohy 3</a></li>
+                              <li><a href=""><img src="assets/images/samples/kolobezka-icon.png" alt="">Koloběžky 3</a></li>
+                          </ul>
+                      </li>
+                      <li><a href=""><img src="assets/images/samples/helma-icon.png" alt="">Helmy</a></li>
+                  </ul>
+              </li>
+              <li><a href=""><img src="assets/images/samples/kolobezka-icon.png" alt="">Koloběžky</a></li>
+              <li><a href=""><img src="assets/images/samples/kolobezka-icon.png" alt="">Koloběžky</a></li>
+              <li class="last-product-item"><a href=""><img src="assets/images/samples/helma-icon.png" alt="">Helmy</a></li>
+              <li><a href="">Doprava a platba</a></li>
+              <li><a href="">Akce a slevy</a></li>
+              <li><a href="">Magazín</a>
+                  <ul>
+                      <li><a href="">Magazín 2</a></li>
+                  </ul>
+              </li>
+              <li class="compare"><a href=""><i class="neo-scales"><span class="notify-num notify-num--secondary">12</span></i>Srovnání produktů</a></li>
+          </ul>
+          <div class="mobile-menu-bottom">
+              <div class="dropdown-wrapper">
+                  <div class="dropdown-ul dropdown-ul--currency">
+                      <div class="dropdown-ul__li active">CZK</div>
+                  </div>
+                  <div class="dropdown-ul dropdown-ul-language">
+                      <div class="dropdown-ul__li active">Česky</div>
+                  </div>
+              </div>
+              <div class="mobile-menu-bottom__contact">
+                  <div class="contact__phone"><a href="tel:775123556"><i class="neo-phone"></i>775 123 556</a></div>
+                  <div class="contact__email"><a href="mailto:email@nazeveshopu.cz"><i class="neo-mail"></i>email@nazeveshopu.cz</a></div>
+              </div>
+          </div>
+      </nav>
+      
+      <script>
+          document.addEventListener(
+              "DOMContentLoaded", () => {
+                  const menu = new MmenuLight(
+                      document.querySelector( "#mobileMenu" ),
+                      "(max-width: 768px)"
+                  );
+      
+                  const navigator = menu.navigation();
+                  const drawer = menu.offcanvas();
+      
+                  console.log(menu);
+      
+                  document.querySelector( "#mobileMenuToggle" )
+                      .addEventListener( "click", ( evnt ) => {
+                          evnt.preventDefault();
+                          drawer.open();
+                      });
+      
+                  document.querySelector( "#mobileMenuClose" )
+                      .addEventListener( "click", ( evnt ) => {
+                          evnt.preventDefault();
+                          drawer.close();
+                      });
+              }
+          );
+      </script>
   </header>
 
   <nav class="cart-nav">
