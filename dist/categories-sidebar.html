@@ -30,13 +30,13 @@
               </div>
               <div class="search">
                   <div class="search__top">
-                      <span class="contact contact--phone"><i class="neo-phone"></i> 777 123 456</span>
-                      <span class="contact contact--menu">
+                      <div class="contact contact--phone"><a href="tel:775123556"><i class="neo-phone"></i>775 123 556</a></div>
+                      <div class="contact contact--menu">
                                           <ul>
                                               <li><a href="#">Kontakt</a></li>
                                               <li><a href="#">Obchodní podmínky</a></li>
                                           </ul>
-                                      </span>
+                                      </div>
                   </div>
                   <a id="search-mobile" href="#" class="search-mobile"><i class="neo-search"></i></a>
                   <div class="input-with-btn input-with-btn--search-input">
@@ -566,7 +566,28 @@
                   </div>
               
                   <div class="products-filter__section">
-                      <h4 class="section__heading section__heading--big">Vybrane parametry</h4>
+                      <div class="section__heading">Parametry s hodnotou mimo rozsah</div>
+                      <div class="filter-range-wrapper">
+                          <div class="filter-range">
+                              <div class="range-slider range-slider--disabled"></div>
+                          </div>
+                      
+                          <div class="input-w-value input-w-value--min">
+                              <input type="text" class="range-input range-input--min range-input--disabled" value="-" disabled>
+                              <span class="value">mm</span>
+                          </div>
+                      
+                          <div class="input-w-value input-w-value--max">
+                              <input type="text" class="range-input range-input--max range-input--disabled" value="-" disabled>
+                              <span class="value">mm</span>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="justify-content-center my-30"><a href="#modal-filter" class="btn btn--primary btn--filter popup-modal">Podrobná filtrace</a></div>
+              
+                  <div class="products-filter__section">
+                      <h4 class="section__heading section__heading--big">Vybrané parametry</h4>
                   
                       <div class="section__row">
                           <div class="filter-tags">

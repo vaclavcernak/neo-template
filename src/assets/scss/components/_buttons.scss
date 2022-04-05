@@ -179,10 +179,6 @@
     }
   }
 
-  &.btn--bigger {
-    padding: 18px 20px;
-  }
-
   &.btn--no-background {
     color: var(--c-text);
     padding: 12px 15px;
@@ -205,6 +201,10 @@
     padding: 15px 15px;
     text-transform: none;
     background-color: var(--c-back-btn);
+  }
+
+  &.btn--bigger {
+    padding: 18px 20px;
   }
 }
 

@@ -40,6 +40,10 @@
     }
     @include media-breakpoint-between(lg,xxl) {
       width: calc(100% / 3 - 14px);
+
+      .main-content--category--with-sidebar & {
+        width: calc(50% - 14px);
+      }
     }
 
     &:hover {

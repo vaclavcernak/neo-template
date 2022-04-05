@@ -139,9 +139,15 @@
       width: 80px;
     }
 
-
     &:focus {
       border: 1px solid var(--c-primary);
+    }
+
+    &--disabled,
+    &:disabled {
+      border-color: var(--c-categories-bg);
+      background-color: var(--c-disabled);
+      text-align: center;
     }
   }
 

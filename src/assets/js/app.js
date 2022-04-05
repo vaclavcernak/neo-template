@@ -288,8 +288,6 @@ $(document).ready(function() {
         var start = thumbnails.find('.owl-item.active').first().index();
         var end = thumbnails.find('.owl-item.active').last().index();
 
-        console.log(current, start, end, onscreen);
-
         if (current > end) {
             thumbnails.data('owl.carousel').to(current, 500, true);
         }
@@ -321,12 +319,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     if (matched && themeSwitcher) {
-        //console.log('Currently in dark mode');
         document.documentElement.setAttribute("data-theme", "dark");
         themeSwitcher.checked = true;
     } else {
         document.documentElement.setAttribute("data-theme", "light");
-        //console.log('Currently not in dark mode');
     }
 
     if (themeSwitcher) {
@@ -784,20 +780,23 @@ $(function() {
 moveScroller();
 //fixed to top when scrollto
 function moveScroller() {
-    var $anchor = $("#scroller-anchor");
-    var $scroller = $('#scroller');
+    if (!$('#scroller').length == 0) {
+        var $anchor = $("#scroller-anchor");
+        var $scroller = $('#scroller');
 
-    var move = function() {
-        var st = $(window).scrollTop();
-        var ot = $anchor.offset().top;
-        if(st > ot) {
-            $scroller.addClass('fixedToTop');
-        } else {
-            $scroller.removeClass('fixedToTop');
-        }
-    };
-    $(window).scroll(move);
-    move();
+        var move = function() {
+            var st = $(window).scrollTop();
+            var ot = $anchor.offset().top;
+            if(st > ot) {
+                $scroller.addClass('fixedToTop');
+            } else {
+                $scroller.removeClass('fixedToTop');
+            }
+        };
+        $(window).scroll(move);
+        move();
+    }
+
 }
 
 
@@ -814,7 +813,6 @@ $(function() {
             const sectionTop = section.offsetTop;
             if (pageYOffset >= sectionTop - 20) {
                 current = section.getAttribute("id"); }
-            console.log(current)
         });
 
         navLi.forEach((li) => {

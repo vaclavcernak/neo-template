@@ -33,4 +33,10 @@
   .noUi-origin {
     transition: none;
   }
+
+  &--disabled {
+    .noUi-base {
+      display: none;
+    }
+  }
 }
