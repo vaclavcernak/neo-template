@@ -1,0 +1,28 @@
+.tab-menu {
+  &--mobile {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  &__link {
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    color: var(--c-text);
+
+    &.active {
+      border-color: var(--c-primary);
+    }
+  }
+}
+
+.tabcontent {
+  animation: fadeEffect .5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

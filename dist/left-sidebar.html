@@ -38,8 +38,9 @@
                                           </ul>
                                       </div>
                   </div>
-                  <a id="search-mobile" href="#" class="search-mobile"><i class="neo-search"></i></a>
+                  <a id="searchMobile" href="#" class="search-mobile"><i class="neo-search"></i></a>
                   <div class="input-with-btn input-with-btn--search-input">
+                      <button id="mobileBack" class="mobile-back"><i class="neo-back"></i></button>
                       <input class="input-with-btn__input no-border has-whisperer" type="text" placeholder="Hledaný výraz">
                       <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
                       <div class="search-whisperer">
@@ -257,8 +258,6 @@
                   const navigator = menu.navigation();
                   const drawer = menu.offcanvas();
       
-                  console.log(menu);
-      
                   document.querySelector( "#mobileMenuToggle" )
                       .addEventListener( "click", ( evnt ) => {
                           evnt.preventDefault();
@@ -326,12 +325,12 @@
               
                   <h3>Fotogalerie</h3>
                   <p>
-                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff" alt="test obrázek"></a>&nbsp;&nbsp;
-                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff"
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/338x220/000/fff" alt="test obrázek"></a>&nbsp;&nbsp;
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/338x220/000/fff"
                                                                                                       alt=""></a>&nbsp;&nbsp;
-                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff"
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/338x220/000/fff"
                                                                                                       alt=""></a>&nbsp;&nbsp;
-                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/320x220/000/fff"
+                      <a class="lightbox-image" href="https://dummyimage.com/600x400/fff/414dd4"><img class="lazy" data-src="https://dummyimage.com/338x220/000/fff"
                                                                                                       alt=""></a>
                   </p>
               
@@ -388,10 +387,10 @@
           <div class="widget widget--featured">
               <h3 class="widget__heading">Nadpis widgetu</h3>
               <div class="widget__content">
-                  <div class="featured-wrapper featured-carousel owl-carousel">
+                  <div class="featured-wrapper featured-carousel slick-slider">
                       <div class="featured">
                           <div class="featured__image">
-                              <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                              <a href=""><img src="assets/images/samples/produkt.png" alt=""></a>
                           </div>
                           <div class="featured__store-rating">
                               <div class="store store--not">Není skladem</div>
@@ -416,7 +415,7 @@
                           <div class="featured__image">
                               <a href="">
                                   <span class="sticker">-50%</span>
-                                  <img class="lazy" data-src="assets/images/samples/produkt.png" alt="">
+                                  <img src="assets/images/samples/produkt.png" alt="">
                               </a>
                           </div>
                           <div class="featured__store-rating">
@@ -437,6 +436,8 @@
                               </div>
                           </div>
                       </div>
+          
+          
           
                   </div>
               </div>

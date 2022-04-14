@@ -38,8 +38,9 @@
                                           </ul>
                                       </div>
                   </div>
-                  <a id="search-mobile" href="#" class="search-mobile"><i class="neo-search"></i></a>
+                  <a id="searchMobile" href="#" class="search-mobile"><i class="neo-search"></i></a>
                   <div class="input-with-btn input-with-btn--search-input">
+                      <button id="mobileBack" class="mobile-back"><i class="neo-back"></i></button>
                       <input class="input-with-btn__input no-border has-whisperer" type="text" placeholder="Hledaný výraz">
                       <button class="input-with-btn__btn" type="submit" value="Hledat"><i class="neo-search"></i></button>
                       <div class="search-whisperer">
@@ -257,8 +258,6 @@
                   const navigator = menu.navigation();
                   const drawer = menu.offcanvas();
       
-                  console.log(menu);
-      
                   document.querySelector( "#mobileMenuToggle" )
                       .addEventListener( "click", ( evnt ) => {
                           evnt.preventDefault();
@@ -337,7 +336,7 @@
                   <div class="item item--center">
                       <div class="item__image">
                           <span class="sticky-number">1.</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--yes">Skladem u dodavetele více než 10&nbsp;ks</div>
@@ -357,7 +356,7 @@
                   <div class="item item--center">
                       <div class="item__image">
                           <span class="sticky-number">1.</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--yes">Skladem u dodavetele více než 10&nbsp;ks</div>
@@ -377,7 +376,7 @@
                   <div class="item item--center">
                       <div class="item__image">
                           <span class="sticky-number">2.</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/notebook.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/notebook.png" alt=""></a>
                       </div>
                       <div class="item__store-rating">
                           <div class="store store--not">Není skladem</div>
@@ -401,7 +400,7 @@
                       <div class="item__image">
                           <span class="sticker">-50%</span>
                           <span class="sticky-number">3.</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
                       </div>
                       <div class="item__store-rating">
                           <div class="store">K dispozici více druhů</div>
@@ -645,19 +644,19 @@
                   <div class="order-left">
                       <div class="name">Řadit podle:</div>
                       <ul class="items ul-to-dropdown">
-                          <li class="item init"><a href="#" class="active">Doporučení</a></li>
-                          <li class="item"><a href="#">Nejlevnější</a></li>
-                          <li class="item"><a href="#">Nejdražší</a></li>
-                          <li class="item"><a href="#">Názvu</a></li>
-                          <li class="item"><a href="#">Hodnocení</a></li>
+                          <li class="item init"><a href="" class="active">Doporučení</a></li>
+                          <li class="item"><a href="">Nejlevnější</a></li>
+                          <li class="item"><a href="">Nejdražší</a></li>
+                          <li class="item"><a href="">Názvu</a></li>
+                          <li class="item"><a href="">Hodnocení</a></li>
                       </ul>
                   </div>
                   <div class="order-right">
                       <div class="name">Položek na stránku</div>
                       <ul class="items-per-page">
-                          <li class="item"><a href="#">16</a></li>
-                          <li class="item"><a href="#" class="active">32</a></li>
-                          <li class="item"><a href="#">64</a></li>
+                          <li class="item"><a href="">16</a></li>
+                          <li class="item"><a href="" class="active">32</a></li>
+                          <li class="item"><a href="">64</a></li>
                       </ul>
                   </div>
               </div>
@@ -665,7 +664,7 @@
               <div class="pruducts-grid pruducts-grid--3-items">
                   <div class="item">
                       <div class="item__image">
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
                       </div>
                       <div class="product-tags">
                           <ul>
@@ -682,7 +681,7 @@
                                   <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
                               </li>
                               <li class="item__quick-action item__quick-action--search">
-                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                                  <a href="#"><span class="name">Rychlý náhled</span> <i class="neo-search"></i></a>
                               </li>
                           </ul>
                       </div>
@@ -706,7 +705,7 @@
                   </div>
                   <div class="item">
                       <div class="item__image">
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
                       </div>
                       <div class="product-tags">
                           <ul>
@@ -723,7 +722,7 @@
                                   <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
                               </li>
                               <li class="item__quick-action item__quick-action--search">
-                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                                  <a href="#"><span class="name">Rychlý náhled</span> <i class="neo-search"></i></a>
                               </li>
                           </ul>
                       </div>
@@ -748,7 +747,7 @@
                   <div class="item">
                       <div class="item__image">
                           <span class="sticker">-50%</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/notebook.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/notebook.png"  alt=""></a>
                       </div>
                       <div class="item__quick-actions">
                           <ul>
@@ -759,7 +758,7 @@
                                   <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
                               </li>
                               <li class="item__quick-action item__quick-action--search">
-                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                                  <a href="#"><span class="name">Rychlý náhled</span> <i class="neo-search"></i></a>
                               </li>
                           </ul>
                       </div>
@@ -792,7 +791,7 @@
                   <div class="item">
                       <div class="item__image">
                           <span class="sticker">-50%</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/brasna.png"  alt=""></a>
                       </div>
                       <div class="item__store-rating">
                           <div class="store">K dispozici více druhů</div>
@@ -825,7 +824,7 @@
                   <div class="item">
                       <div class="item__image">
                           <span class="sticker">-50%</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/brasna.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/brasna.png"  alt=""></a>
                       </div>
                       <div class="item__store-rating">
                           <div class="store">K dispozici více druhů</div>
@@ -855,7 +854,7 @@
                   </div>
                   <div class="item">
                       <div class="item__image">
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
                       </div>
                       <div class="product-tags">
                           <ul>
@@ -872,7 +871,7 @@
                                   <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
                               </li>
                               <li class="item__quick-action item__quick-action--search">
-                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                                  <a href="#"><span class="name">Rychlý náhled</span> <i class="neo-search"></i></a>
                               </li>
                           </ul>
                       </div>
@@ -896,7 +895,7 @@
                   </div>
                   <div class="item">
                       <div class="item__image">
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/produkt.png" alt=""></a>
                       </div>
                       <div class="product-tags">
                           <ul>
@@ -913,7 +912,7 @@
                                   <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
                               </li>
                               <li class="item__quick-action item__quick-action--search">
-                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                                  <a href="#"><span class="name">Rychlý náhled</span> <i class="neo-search"></i></a>
                               </li>
                           </ul>
                       </div>
@@ -941,7 +940,7 @@
                   <div class="item">
                       <div class="item__image">
                           <span class="sticker">-50%</span>
-                          <a href=""><img class="lazy owl-lazy" data-src="assets/images/samples/notebook.png" alt=""></a>
+                          <a href=""><img class="lazy" data-src="assets/images/samples/notebook.png"  alt=""></a>
                       </div>
                       <div class="item__quick-actions">
                           <ul>
@@ -952,7 +951,7 @@
                                   <a href="#"><span class="name">Do oblíbených</span> <i class="neo-heart"></i></a>
                               </li>
                               <li class="item__quick-action item__quick-action--search">
-                                  <a href="#"><span class="name">Vyhledat</span> <i class="neo-search"></i></a>
+                                  <a href="#"><span class="name">Rychlý náhled</span> <i class="neo-search"></i></a>
                               </li>
                           </ul>
                       </div>

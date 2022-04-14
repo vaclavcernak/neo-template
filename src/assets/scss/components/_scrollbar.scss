@@ -1,12 +1,14 @@
-/* Works on Firefox */
+  /* Works on Firefox */
 * {
   scrollbar-width: thin;
+  scrollbar-height: thin;
   scrollbar-color: #b8b8b8 #ebebeb;
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 7px;
+  height: 3px;
   border-radius: 7px;
 }
 

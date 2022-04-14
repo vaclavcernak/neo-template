@@ -3,8 +3,8 @@
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid var(--c-wrapper-border);
-  margin: 5px;
-  height: calc(100% - 10px);
+  //margin: 5px;
+  //height: calc(100% - 10px);
   &:hover {
     @include box-shadow--card;
   }

@@ -14,6 +14,14 @@
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
+  @include media-breakpoint-down(md) {
+    display: block;
+    top: 55px;
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+    border-top: 1px solid var(--c-wrapper-border);
+  }
 
   .highlight {
     color: var(--c-primary);
@@ -71,6 +79,12 @@
           text-decoration: none;
         }
       }
+    }
+  }
+
+  &__tab-item {
+    @include media-breakpoint-down(md) {
+      display: none;
     }
   }
 
@@ -203,6 +217,9 @@
 
   .search-section {
     padding-bottom: 5px;
+    @include media-breakpoint-down(md) {
+      padding-top: 15px;
+    }
 
     &:not(:last-of-type) {
       border-bottom: 1px solid var(--c-wrapper-border);
@@ -220,6 +237,9 @@
       color: var(--c-text);
       font-weight: $fw-medium;
       margin-bottom: 10px;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
 
     &__content {

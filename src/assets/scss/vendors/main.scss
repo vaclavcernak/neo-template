@@ -2,8 +2,10 @@
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 @import "../../../../node_modules/bootstrap/scss/transitions";
+@import "../../../../node_modules/bootstrap/scss/modal";
 @import "../../../../node_modules/nouislider/dist/nouislider";
 @import "../../../../node_modules/mmenu-light/src/mmenu-light";
+@import "../../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../../node_modules/slick-carousel/slick/slick-theme.scss";
 
-@import 'owlCarousel/owl.carousel';
 @import 'magnificPopup/main';

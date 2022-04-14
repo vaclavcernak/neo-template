@@ -403,9 +403,9 @@
     color: var(--c-gray);
     .item {
       display: inline-block;
-      @include media-breakpoint-down(sm) {
-        display: block;
-        margin-bottom: 5px;
+      margin-bottom: 5px;
+      a {
+        color: inherit;
       }
     }
   }
@@ -461,8 +461,18 @@
 
     &.fixedToTop {
       background-color: var(--c-content);
+
+      .container {
+        max-width: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+      }
+
       .product-add-to-cart {
         display: flex;
+        margin-left: 15px;
       }
     }
     .product-add-to-cart {
@@ -528,7 +538,8 @@
       }
     }
     .list {
-
+      display: flex;
+      overflow-x: auto;
     }
 
 
@@ -556,6 +567,7 @@
         padding: 17px 15px 17px 12px;
         color: var(--c-text);
         text-decoration: none;
+        white-space: nowrap;
         &::before {
           @include neo-icon;
           content: "\f12c";

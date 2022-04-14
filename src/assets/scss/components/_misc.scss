@@ -100,17 +100,14 @@
 }
 
 .section-title {
-  margin-top: 40px;
-  margin-bottom: 10px;
+  padding-top: 40px;
+  margin-bottom: 20px;
 
   &--center {
     text-align: center;
   }
   @include media-breakpoint-down(md) {
-    margin-top: 30px;
-  }
-  @include media-breakpoint-down(sm) {
-    margin-top: 20px;
+    padding-top: 30px;
   }
 }
 
@@ -239,4 +236,8 @@
   top: 0;
   z-index: 999;
   width: 100%;
+}
+
+.notransform {
+  transform: none !important;
 }

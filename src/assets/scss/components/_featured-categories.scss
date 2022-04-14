@@ -1,18 +1,16 @@
 .featured-categories {
   margin-top: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
-  &.owl-carousel .owl-stage {
-    display: flex;
+  .slick-slide {
+    margin: 0 5px;
   }
-
-  &.owl-carousel .owl-dots {
-    margin-top: 15px;
+  .slick-list {
+    margin: 0 -5px;
   }
 
   // images type
   &--images {
-    display: flex;
 
     .item {
       background-color: var(--c-content);
@@ -21,8 +19,8 @@
       overflow: hidden;
       border: 1px solid var(--c-wrapper-border);
       //padding: 15px 10px;
-      margin: 5px 0;
-      height: calc(100% - 10px);
+      //margin: 5px 0;
+      //height: calc(100% - 10px);
       &:hover {
         @include box-shadow--card;
       }
