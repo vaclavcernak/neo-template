@@ -21,7 +21,7 @@
     width: 1000px;
   }
 
-  &--two-div {
+  &.modal--two-div {
     display: flex;
     @include media-breakpoint-down(sm) {
       display: block;

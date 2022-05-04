@@ -35,8 +35,8 @@
   --c-wrapper-border: #eeeeee;
   --c-header-text: #ffffff;
   --c-btn-text: #ffffff;
-  --c-input-border: #e2e2e2;
-  --c-placeholder: #b9b9b9;
+  --c-input-border: #b2b9bf;
+  --c-placeholder: #868686;
   --c-modal-half-bg: var(--c-primary);
   --c-info-strip-bg: #ecf5fb;
   --c-info-strip-border: #c4deef;
@@ -52,6 +52,9 @@
   --c-quantity-border: #cdcdcd;
   --c-quantity-bg: #f1f1f1;
   --c-quantity-number-bg: #ffffff;
+  --c-quantity-btn: var(--c-text);
+  --c-quantity-btn-bg: var(--c-quantity-bg);
+  --c-quantity-btn-bg-hover: var(--c-quantity-border);
   --c-disabled: #f5f5f5;
   --c-back-btn: #e8e8e8;
   --c-category-bg: #f2f7fa;
@@ -69,6 +72,9 @@
   --c-carousel-dots: #e5e5e5;
   --c-progress-border: #e3e3e3;
   --c-summary-bg: #ecf5fb;
+  --c-footer-border: #d7d7d7;
+  --c-cart-step: #eeeeee;
+  --c-header-item-hover: rgba(255,255,255,.2);
 
   --c-red: #eb3333;
   --c-red--2: #e60000;
@@ -104,7 +110,7 @@
   --c-wrapper-border: #191f28;
   --c-header-text: var(--c-text);
   --c-btn-text: #1a1d24;
-  --c-input-border: var(--c-text-input);
+  --c-input-border: #3b4556;
   --c-placeholder: #b9b9b9;
   --c-modal-half-bg: var(--c-navigation);
   --c-info-strip-bg: var(--c-bg-error-info);
@@ -116,11 +122,14 @@
   --c-tag-bg: var(--c-background);
   --c-tag-border: var(--c-content-dark);
   --c-tooltip-shadow: rgba(35,35,35,.1);
-  --c-cart-bonus-bg: var(--c-background);
-  --c-cart-bonus-border: var(--c-wrapper-border);
-  --c-quantity-border: #ccc;
+  --c-cart-bonus-bg: #313849;
+  --c-cart-bonus-border: #232b38;
+  --c-quantity-border: var(--c-input-border);
   --c-quantity-bg: var(--c-placeholder);
-  --c-quantity-number-bg: #ccc;
+  --c-quantity-number-bg: var(--c-input-bg);
+  --c-quantity-btn: var(--c-header-text);
+  --c-quantity-btn-bg: #3b4556;
+  --c-quantity-btn-bg-hover: #353e4d;
   --c-disabled: #8c8c8c;
   --c-back-btn: #3a4150;
   --c-category-bg: var(--c-content-dark);
@@ -132,12 +141,15 @@
   --c-categories-bg: #404c60;
   --c-whisperer-hover: #47546a;
   --c-user-cart: var(--c-content-dark);
-  --c-fade-bg: rgba(155,155,155,.3);
+  --c-fade-bg: rgba(11,11,11,.5);
   --c-range-input-border: #596d8e;
   --c-mobile-menu-bg: #242b38;
   --c-carousel-dots: #596d8e;
   --c-progress-border: #596d8e;
   --c-summary-bg: #404c60;
+  --c-footer-border: var(--c-text);
+  --c-cart-step: #2d3443;
+  --c-header-item-hover: #3b4556;
 
   --c-red: #eb3333;
   --c-red--2: #e60000;

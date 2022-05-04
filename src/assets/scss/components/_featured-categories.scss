@@ -1,6 +1,9 @@
 .featured-categories {
   margin-top: 15px;
   margin-bottom: 30px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 10px;
+  }
 
   .slick-slide {
     margin: 0 5px;

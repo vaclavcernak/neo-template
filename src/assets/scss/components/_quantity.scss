@@ -3,19 +3,21 @@
   &__btn {
     border: 1px solid var(--c-quantity-border);
     border-radius: 5px;
-    background-color: var(--c-quantity-bg);
+    background-color: var(--c-quantity-btn-bg);
     height: 30px;
     width: 30px;
     font-size: 20px;
     cursor: pointer;
+    color: var(--c-quantity-btn);
     &:hover {
-      background-color: var(--c-quantity-border);
+      background-color: var(--c-quantity-btn-bg-hover);
     }
   }
 
   &__number {
     border: 1px solid var(--c-quantity-border);
     border-radius: 5px;
+    color: var(--c-text);
     background-color: var(--c-quantity-number-bg);
     height: 50px;
     width: 60px;

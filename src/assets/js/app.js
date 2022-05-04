@@ -53,6 +53,10 @@ $(document).ready(function() {
     $('.info-strip__close-icon').click(function() {
         $(this).parents('.info-strip').fadeOut();
     });
+
+    // buttons 2-layered style
+    $( ".btn:not('.btn--add-to-cart'):not('.btn--back'):not('.btn--bigger')" ).wrapInner( "<span class='btn-front'><span class='btn-front-text'></span></span>");
+
 });
 
 
@@ -389,4 +393,13 @@ $(function() {
             }
         });
     };
+});
+
+//product detail tabs
+$(function() {
+    $('#yourOrderTitle').click(function () {
+        $(this).toggleClass('active');
+        $('#orderEditLink').toggleClass('active');
+        $('#orderList').toggleClass('active');
+    })
 });

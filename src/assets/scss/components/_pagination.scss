@@ -29,6 +29,11 @@
       color: var(--c-text);
       text-decoration: none;
       background-color: var(--c-content);
+      @include media-breakpoint-down(sm) {
+        width: 35px;
+        height: 35px;
+      }
+
       &.active {
         background-color: var(--c-primary);
         color: #ffffff;
@@ -50,6 +55,11 @@
     background-color: var(--c-primary);
     color: #ffffff;
     text-decoration: none;
+    @include media-breakpoint-down(sm) {
+      width: 35px;
+      height: 35px;
+    }
+
     &:hover {
       background-color: var(--c-primary-dark);
     }
@@ -57,6 +67,9 @@
     &:before {
       @include neo-icon();
       font-size: 40px;
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
     }
 
     &--prev {

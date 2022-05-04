@@ -191,6 +191,7 @@ function ProductsGridCarousel() {
             nextArrow: '<div class="slick-custom-arrow slick-custom-arrow--next"><i class="neo-forward"></i></div>',
             focusOnSelect: true,
             mobileFirst: true,
+            adaptiveHeight: true,
             responsive: [
                 {
                     breakpoint: 1199,
@@ -436,6 +437,7 @@ function ProductsGridSlider() {
             lazyLoad: 'progressive',
             focusOnSelect: true,
             mobileFirst: true,
+            adaptiveHeight: true,
             responsive: [
                 {
                     breakpoint: 1399,

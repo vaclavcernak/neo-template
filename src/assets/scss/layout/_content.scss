@@ -26,6 +26,12 @@
         width: 65%;
       }
     }
+
+    .content-wrapper {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &--category {

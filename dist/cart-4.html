@@ -255,10 +255,10 @@
         <aside class="sidebar sidebar--cart sidebar--right row__col">
             <div class="your-order content-wrapper">
                 <div class="title-wrap">
-                    <h2 class="title">Vaše objednávka</h2>
-                    <span class="edit-link"><i class="neo-edit"></i> <a href="cart-1.html">upravit</a></span>
+                    <h2 id="yourOrderTitle" class="title">Vaše objednávka</h2>
+                    <span id="orderEditLink"  class="edit-link"><i class="neo-edit"></i> <a href="cart-1.html">upravit</a></span>
                 </div>
-                <div class="order-list scrollbared">
+                <div id="orderList" class="order-list scrollbared">
                     <div class="item">
                         <div class="item__main">
                             <div class="item__image">
@@ -448,6 +448,8 @@
                 </div>
             
                 <a href="#" class="btn btn--conversion btn--order">Odeslat objednávku</a>
+            
+                <div class="next-step-text">S povinností platby</div>
             </div>
         </aside>
     </div>
@@ -471,7 +473,7 @@
                   </div>
               </div>
               <div>
-                  <p>Vytvořil <strong>JZShop.cz</strong> | Tvorba a pronájem eshopů</p>
+                  <p>Vytvořil <strong><a href="https://www.jzshop.cz/" target="_blank">jzshop.cz</a></strong> | Tvorba a pronájem eshopů</p>
               </div>
           </div>
       </div>

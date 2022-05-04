@@ -77,24 +77,27 @@
   @include placeholder { color: var(--c-placeholder); }
 
   &--submit {
-    background-color: var(--c-primary);
-    color: var(--c-input-bg);
-    font-weight: $fw-medium;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    width: auto;
     text-transform: uppercase;
-    //box-shadow: inset 0px -3px 0px var(--c-primary-dark);
-    @include media-breakpoint-down(sm) {
-      width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    &.btn {
+      font-size: 16px;
     }
-    &:hover {
-      background-color: var(--c-primary-dark);
+
+    .btn-front {
+      padding: 15px 25px !important;
+      transform: translateY(-5px) !important;
     }
-    &:active {
-      background-color: var(--c-primary);
+
+    .btn-front-text {
+      top: 2.5px !important;
     }
+  }
+
+  &--error {
+    border-color: #ff6969;
+    background-color: #feeaea;
+    color: #e60000;
   }
 }
 
@@ -360,5 +363,11 @@
       border-radius: 50%;
       background: var(--c-primary);
     }
+  }
+}
+
+input {
+  &:focus {
+    border-color: var(--c-primary);
   }
 }

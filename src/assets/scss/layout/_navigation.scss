@@ -84,7 +84,7 @@
       color: var(--c-text);
       text-align: center;
       &:hover {
-        background-color: var(--c-wrapper-border);
+        background-color: var(--c-cart-step);
       }
 
       @include media-breakpoint-down(xxl) {

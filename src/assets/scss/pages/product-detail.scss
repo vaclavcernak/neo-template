@@ -401,6 +401,7 @@
   &__product-info-note {
     margin-bottom: 20px;
     color: var(--c-gray);
+    font-size: 14px;
     .item {
       display: inline-block;
       margin-bottom: 5px;
@@ -430,6 +431,13 @@
 
       .name {
         font-size: 14px;
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
 
       .store {

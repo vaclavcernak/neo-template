@@ -1,7 +1,8 @@
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
+  //padding: 10px 20px;
+  padding: 0;
   font-size: 14px;
   border-radius: 5px;
   text-decoration: none;
@@ -10,33 +11,80 @@
   position: relative;
   cursor: pointer;
   font-weight: $fw-medium;
+  min-height: 40px;
 
   &:active {
     //transform: translateY(5px);
   }
 
-  &.btn--primary {
-    padding: 12px 15px;
-    background-color: var(--c-primary);
-    box-shadow: inset 0 0 5px var(--c-primary-dark);
-    color: var(--c-input-bg);
-    &:hover {
-      background-color: var(--c-primary-dark);
+  .btn-front {
+    border-radius: 5px;
+    display: block;
+    padding: 10px 20px;
+    transform: translateY(-2px);
+    position: relative;
+  }
+
+  .btn-front-text {
+    position: relative;
+    top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--mobile-fullwidth {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      .btn-front {
+        width: 100%;
+      }
     }
-    &:active {
+  }
+
+  &.btn--primary {
+    //padding: 12px 15px;
+    background-color: var(--c-primary-dark);
+    //box-shadow: inset 0 0 5px var(--c-primary-dark);
+    color: var(--c-input-bg);
+
+    .btn-front {
+      padding: 12px 15px;
       background-color: var(--c-primary);
+      &:hover {
+        background-color: var(--c-primary-dark);
+      }
+    }
+
+    &:active {
+      .btn-front {
+        background-color: var(--c-primary);
+      }
+    }
+
+    &.btn--bigger {
+      background-color: var(--c-primary);
+      &:hover {
+        background-color: var(--c-primary-dark);
+      }
     }
   }
 
   &.btn--conversion {
-    background-color: var(--c-conversion);
+    background-color: var(--c-conversion-dark);
     color: var(--c-btn-text);
-    box-shadow: inset 0 0 5px var(--c-conversion-dark);
-    &:hover {
-      background-color: var(--c-conversion-dark);
-    }
-    &:active {
+
+    .btn-front {
       background-color: var(--c-conversion);
+      &:hover {
+        background-color: var(--c-conversion-dark);
+      }
+    }
+
+    &:active {
+      .btn-front {
+        background-color: var(--c-conversion);
+      }
     }
   }
 
@@ -103,31 +151,36 @@
 
   &.btn--order {
     width: 100%;
-    padding: 18px;
     justify-content: center;
     border-radius: 10px;
     font-size: 25px;
     font-weight: $fw-medium;
+    text-align: center;
 
     @include media-breakpoint-only(xl) {
       font-size: 20px;
-      padding: 15px;
     }
 
     @include media-breakpoint-down(sm) {
       font-size: 22px;
-      padding: 12px 10px;
     }
 
-    /*&::before {
-      content: "";
+    .btn-front {
       width: 100%;
-      background-color: var(--c-conversion-dark);
-      position: absolute;
-      top: 0;
-      height: 10px;
-      border-radius: 10px 10px 0 0;
-    }*/
+      padding: 18px;
+      border-radius: 10px;
+      transform: translateY(-5px);
+      @include media-breakpoint-only(xl) {
+        padding: 15px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 12px 10px;
+      }
+    }
+
+    .btn-front-text {
+      top: 2.5px;
+    }
 
     i {
       font-size: 45px;
@@ -168,20 +221,25 @@
   &.btn--filter {
     font-size: 18px;
     font-weight: $fw-regular;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     white-space: nowrap;
-    &:before {
-      @include neo-icon();
-      content: "\f11e";
-      margin-right: 10px;
-      font-weight: $fw-bold;
+
+    .btn-front {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    i {
+      padding-right: 5px;
+      position: relative;
+      top: -1px;
     }
   }
 
   &.btn--no-background {
     color: var(--c-text);
     padding: 12px 15px;
+    background-color: transparent;
     &:hover {
       background-color: var(--c-back-btn);
       color: var(--c-text);
@@ -235,7 +293,7 @@
   }
 
   .btn {
-    &:not(:last-of-type) {
+    &:not(:last-child) {
       margin-right: 20px;
     }
   }
