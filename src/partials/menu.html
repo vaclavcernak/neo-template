@@ -1,7 +1,7 @@
 <div class="menu-fade-bg"></div>
 <div class="main-menu-wrapper">
-    <div class="container">
-        <nav class="main-menu">
+    <div class="container main-menu-wrapper__container">
+        <nav id="mainMenu" class="main-menu">
             <ul class="main-menu__list">
                 <li class="all-categories has-submenu"><a href="#">Všechny kategorie</a>
                     {{> menu__all-categories}}
@@ -29,6 +29,10 @@
                 <li><a href="#">Obchodní podmínky</a></li>
                 <li><a href="#">Kontakty</a></li>
             </ul>
+            <div id="mainMenuNext" class="main-menu__next">
+                <a href="#" id="mainMenuNextOpen"><i class="neo-more"></i></a>
+                <ul id="mainMenuNextNav" class="main-menu__next__nav"></ul>
+            </div>
         </nav>
     </div>
 </div>

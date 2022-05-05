@@ -77,9 +77,20 @@
                       <div class="user__item__wrapper">
                           <span class="user__login__icon"></span>
                           <span class="user__login__text">
-                              <span class="user__login__heading">Alexandr Solženicyn</span>
+                              <span class="user__login__heading">Alexandr S.</span>
                               <span class="user__login__subheading">Můj účet</span>
                           </span>
+                      </div>
+                  
+                      <div class="user-menu">
+                          <ul class="user-menu__submenu submenu">
+                              <li><a href="#">Dodací a fakturační údaje</a></li>
+                              <li><a href="#">Moje objednávky a faktury</a></li>
+                              <li><a href="#">Seznam přání</a></li>
+                              <li><a href="#">Změna hesla</a></li>
+                              <li><a href="#">Udělené souhlasy</a></li>
+                              <li><a href="#">Odhlásit</a></li>
+                          </ul>
                       </div>
                   </div>
                    -->
@@ -276,8 +287,8 @@
 
   <div class="menu-fade-bg"></div>
   <div class="main-menu-wrapper">
-      <div class="container">
-          <nav class="main-menu">
+      <div class="container main-menu-wrapper__container">
+          <nav id="mainMenu" class="main-menu">
               <ul class="main-menu__list">
                   <li class="all-categories has-submenu"><a href="#">Všechny kategorie</a>
                       <ul class="all-categories-menu">
@@ -675,6 +686,10 @@
                   <li><a href="#">Obchodní podmínky</a></li>
                   <li><a href="#">Kontakty</a></li>
               </ul>
+              <div id="mainMenuNext" class="main-menu__next">
+                  <a href="#" id="mainMenuNextOpen"><i class="neo-more"></i></a>
+                  <ul id="mainMenuNextNav" class="main-menu__next__nav"></ul>
+              </div>
           </nav>
       </div>
   </div>

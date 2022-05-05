@@ -403,3 +403,22 @@ $(function() {
         $('#orderList').toggleClass('active');
     })
 });
+
+
+// Horizontální menu JS pokud se nevejde do obsahu
+$(window).on('load resize', function () {
+    if ($('body').width() < 768) {
+        return;
+    }
+    let sum = 0;
+    const width = $('#mainMenu').width();
+    $('#mainMenu > ul > li').each(function () {
+        sum += $(this).innerWidth();
+        if (sum > (width - 90)) {
+            $('#mainMenuNextNav').append(this);
+        }
+    });
+    if (sum > (width - 90)) {
+        $('#mainMenuNext').addClass('active');
+    }
+});
