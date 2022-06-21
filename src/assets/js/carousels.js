@@ -2,7 +2,7 @@ import {Modal} from "bootstrap";
 
 function FeaturedCarousel() {
 
-    var carousel = $(".featured-carousel");
+    let carousel = $(".featured-carousel");
 
     let settings;
     if (carousel.length) {
@@ -42,7 +42,7 @@ function FeaturedCarousel() {
 
 function FeaturedCategoriesSlider() {
 
-    var carousel = $(".featured-categories--images");
+    let carousel = $(".featured-categories--images");
 
     if (carousel.length) {
         carousel.slick({
@@ -87,7 +87,7 @@ function FeaturedCategoriesSlider() {
 
 function BrandsSlider() {
 
-    var carousel = $(".brands--slider");
+    let carousel = $(".brands--slider");
 
     if (carousel.length) {
         carousel.slick({
@@ -132,7 +132,7 @@ function BrandsSlider() {
 
 function LatestNewsSlider() {
 
-    var carousel = $(".latest-news");
+    let carousel = $(".latest-news");
 
     if (carousel.length) {
         carousel.slick({
@@ -177,7 +177,7 @@ function LatestNewsSlider() {
 
 function ProductsGridCarousel() {
 
-    var carousel = $(".pruducts-grid--grid");
+    let carousel = $(".pruducts-grid--grid");
 
     let settings;
     if (carousel.length) {
@@ -225,7 +225,7 @@ function ProductsGridCarousel() {
 
 function QuickviewCarousel() {
 
-    var carouselMain = $(".carousel__main-image--quickview"),
+    let carouselMain = $(".carousel__main-image--quickview"),
         carouselThumbnails = $(".carousel__thumbnails--quickview");
 
     if (carouselMain.length) {
@@ -289,14 +289,14 @@ if (popupWithCasrousel.length) {
 }
 
 $('.carousel__main-image').on('click', '.slick-slide', function(){
-    var productDetailGalleryModalInit = new Modal(document.getElementById("productDetailGalleryModal"), {});
+    let productDetailGalleryModalInit = new Modal(document.getElementById("productDetailGalleryModal"), {});
     // This click event will not trigger when you drag the carousel
     productDetailGalleryModalInit.show();
 })
 
 function ProductDetailCarousel() {
 
-    var carouselMain = $(".carousel__main-image--detail"),
+    let carouselMain = $(".carousel__main-image--detail"),
         carouselThumbnails = $(".carousel__thumbnails--detail");
 
     if (carouselMain.length) {
@@ -352,7 +352,7 @@ function ProductDetailCarousel() {
     }
 }
 
-var productDetailGalleryModal = document.getElementById('productDetailGalleryModal')
+let productDetailGalleryModal = document.getElementById('productDetailGalleryModal')
 
 if (productDetailGalleryModal) {
     productDetailGalleryModal.addEventListener('shown.bs.modal', function (event) {
@@ -364,13 +364,13 @@ if (productDetailGalleryModal) {
 
 function ProductDetailModalCarousel() {
 
-    var carouselMain = $(".carousel__main-image--modal"),
+    let carouselMain = $(".carousel__main-image--modal"),
         carouselThumbnails = $(".carousel__thumbnails--modal"),
         status = $('.slide-number');
 
     carouselMain.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
         //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-        var i = (currentSlide ? currentSlide : 0) + 1;
+        let i = (currentSlide ? currentSlide : 0) + 1;
         status.text(i + '/' + slick.slideCount);
     });
 
@@ -424,7 +424,7 @@ function ProductDetailModalCarousel() {
 
 function ProductsGridSlider() {
 
-    var carousel = $(".pruducts-grid--slider");
+    let carousel = $(".pruducts-grid--slider");
 
     if (carousel.length) {
         carousel.slick({
@@ -464,7 +464,7 @@ function ProductsGridSlider() {
 
 function ProductsGridAlternativeSlider() {
 
-    var carousel = $(".pruducts-grid--alternative");
+    let carousel = $(".pruducts-grid--alternative");
 
     if (carousel.length) {
         carousel.slick({
@@ -503,7 +503,7 @@ function ProductsGridAlternativeSlider() {
 
 function MainBannerSlider() {
 
-    var carousel = $("#mainBanner");
+    let carousel = $("#mainBanner");
 
     if (carousel.length) {
         carousel.slick({
@@ -521,7 +521,7 @@ function MainBannerSlider() {
 
 function MainBannerSecondarySlider() {
 
-    var carousel = $(".main-banner--secondary");
+    let carousel = $(".main-banner--secondary");
 
     let settings;
     if (carousel.length) {
@@ -555,7 +555,7 @@ function MainBannerSecondarySlider() {
 
 $(document).ready(function() {
     // Slick carousels dots limit
-    var slickSlider = $('.slick-slider'),
+    let slickSlider = $('.slick-slider'),
         maxDots = 6,
         transformXIntervalNext = -25,
         transformXIntervalPrev = 25;
@@ -569,7 +569,7 @@ $(document).ready(function() {
     }
 
     slickSlider.on('init', function (event, slick) {
-        var totalCount = $(this).find('.slick-dots li').length;
+        let totalCount = $(this).find('.slick-dots li').length;
 
         if (totalCount <= maxDots + 1) {
             return;
@@ -583,20 +583,20 @@ $(document).ready(function() {
         setBoundries($(this),'default');
     });
 
-    var transformCount = 0;
+    let transformCount = 0;
     slickSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        var totalCount = $(this).find('.slick-dots li').length;
+        let totalCount = $(this).find('.slick-dots li').length;
         if (totalCount > maxDots) {
             if (nextSlide > currentSlide) {
                 if ($(this).find('ul.slick-dots li.dot-index-' + nextSlide).hasClass('n-small-1')) {
                     if (!$(this).find('ul.slick-dots li:last-child').hasClass('n-small-1')) {
                         transformCount = transformCount + transformXIntervalNext;
                         $(this).find('ul.slick-dots li.dot-index-' + nextSlide).removeClass('n-small-1');
-                        var nextSlidePlusOne = nextSlide + 1;
+                        let nextSlidePlusOne = nextSlide + 1;
                         $(this).find('ul.slick-dots li.dot-index-' + nextSlidePlusOne).addClass('n-small-1');
                         $(this).find('ul.slick-dots').css('transform', 'translateX(' + transformCount + 'px)');
-                        var pPointer = nextSlide - (maxDots - 1);
-                        var pPointerMinusOne = pPointer - 1;
+                        let pPointer = nextSlide - (maxDots - 1);
+                        let pPointerMinusOne = pPointer - 1;
                         $(this).find('ul.slick-dots li').eq(pPointerMinusOne).removeClass('p-small-1');
                         $(this).find('ul.slick-dots li').eq(pPointer).addClass('p-small-1');
                     }
@@ -607,11 +607,11 @@ $(document).ready(function() {
                     if (!$(this).find('ul.slick-dots li:first-child').hasClass('p-small-1')) {
                         transformCount = transformCount + transformXIntervalPrev;
                         $(this).find('ul.slick-dots li.dot-index-' + nextSlide).removeClass('p-small-1');
-                        var nextSlidePlusOne = nextSlide - 1;
+                        let nextSlidePlusOne = nextSlide - 1;
                         $(this).find('ul.slick-dots li.dot-index-' + nextSlidePlusOne).addClass('p-small-1');
                         $(this).find('ul.slick-dots').css('transform', 'translateX(' + transformCount + 'px)');
-                        var nPointer = currentSlide + (maxDots - 1);
-                        var nPointerMinusOne = nPointer - 1;
+                        let nPointer = currentSlide + (maxDots - 1);
+                        let nPointerMinusOne = nPointer - 1;
                         $(this).find('ul.slick-dots li').eq(nPointer).removeClass('n-small-1');
                         $(this).find('ul.slick-dots li').eq(nPointerMinusOne).addClass('n-small-1');
                     }
